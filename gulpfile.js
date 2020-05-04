@@ -1,9 +1,9 @@
 const gulp = require('gulp');
 const browserSync = require('browser-sync').create();
-var cleanCSS = require('gulp-clean-css');
-var csslint = require('gulp-csslint');
-var concat = require('gulp-concat');
-var minifyCSS = require('gulp-minify-css');
+const cleanCSS = require('gulp-clean-css');
+const csslint = require('gulp-csslint');
+const concat = require('gulp-concat');
+const minifyCSS = require('gulp-minify-css');
 
 gulp.task('hello', function(done) {
     console.log('Привет, мир');
