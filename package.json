@@ -17,7 +17,11 @@
   },
   "homepage": "https://github.com/krio10/Repair-Design#readme",
   "devDependencies": {
-    "gulp": "^4.0.2"
+    "gulp": "^4.0.2",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-csslint": "^1.0.1",
+    "gulp-minify-css": "^1.2.4"
   },
   "dependencies": {
     "browser-sync": "^2.26.7"
