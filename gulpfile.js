@@ -17,13 +17,7 @@ gulp.task('browser-sync', function() {
             baseDir: "./"
         }
     });
-    gulp.watch("app/*.html").on('change', browserSync.reload);
-});
-
-gulp.task('minify-css', () => {
-  return gulp.src('src/css/*.css')
-    .pipe(cleanCSS({compatibility: 'ie8'}))
-    .pipe(gulp.dest('dist/css'));
+    gulp.watch("src/*.html").on('change', browserSync.reload);
 });
 
 gulp.task('css', () => {
