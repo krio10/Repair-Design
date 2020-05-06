@@ -1,28 +1,38 @@
-const gulp = require('gulp');
+const {src, dest, watch} = require('gulp');
 const browserSync = require('browser-sync').create();
 const concat = require('gulp-concat');
 const minifyCSS = require('gulp-minify-css');
+const sass = require('gulp-sass');
 
-gulp.task('hello', function(done) {
-    console.log('Привет, мир');
-    done();
-});
+sass.compiler = require('node-sass');
 
 // Static server
-gulp.task('browser-sync', function() {
+function bs() {
+    serveSass();
     browserSync.init({
         server: {
             baseDir: "src/"
         }
     });
-    gulp.watch("src/*.html").on('change', browserSync.reload);
-});
+    watch("src/*.html").on('change', browserSync.reload);
+    watch("src/cass/*.cass").on('change', browserSync.stream);
+    watch("src/js/*.js").on('change', browserSync.reload);
+};
 
-gulp.task('minify', () => {
-    return gulp.src('src/css/*.css')
+function serveSass() {
+    return src('src/sass/*.sass')
+      .pipe(sass())
+      .pipe(dest('src/css'))
+      .pipe(browserSync.stream());
+  };
+ 
+function minify() {
+    return src('src/css/*.css')
       .pipe(concat('styles.min.css'))
       .pipe(minifyCSS({
         keepBreaks: true
         }))
-      .pipe(gulp.dest('dist/css'));
-  });
+      .pipe(dest('dist/css'));
+  };
+ 
+exports.serve = bs;
