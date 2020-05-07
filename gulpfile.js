@@ -4,9 +4,6 @@ const concat = require('gulp-concat');
 const minifyCSS = require('gulp-minify-css');
 const sass = require('gulp-sass');
 
-sass.compiler = require('node-sass');
-
-// Static server
 function bs() {
     serveSass();
     browserSync.init({
@@ -15,12 +12,12 @@ function bs() {
         }
     });
     watch("src/*.html").on('change', browserSync.reload);
-    watch("src/cass/*.cass").on('change', browserSync.stream);
+    watch("src/cass/**/*.cass").on('change', browserSync.stream);
     watch("src/js/*.js").on('change', browserSync.reload);
 };
 
 function serveSass() {
-    return src('src/sass/*.sass')
+    return src('src/sass/**/*.sass')
       .pipe(sass())
       .pipe(dest('src/css'))
       .pipe(browserSync.stream());
