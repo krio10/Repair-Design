@@ -20,13 +20,12 @@ function bs() {
 function serveSass() {
     return src('./src/sass/*.sass')
       .pipe(sass())
-      .pipe(dest('./src/css'))
       .pipe(autoprefixer({
         cascade: false
       }))
-      .pipe(dest("./src/css))"))
+      .pipe(dest("./src/css"))
       .pipe(browserSync.stream());
-  };
+};
  
 function minify() {
     return src('./src/css/*.css')
@@ -35,6 +34,6 @@ function minify() {
         keepBreaks: true
         }))
       .pipe(dest('dist/css'));
-  };
+};
  
 exports.serve = bs;
