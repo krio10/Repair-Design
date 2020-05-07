@@ -3,23 +3,28 @@ const browserSync = require('browser-sync').create();
 const concat = require('gulp-concat');
 const minifyCSS = require('gulp-minify-css');
 const sass = require('gulp-sass');
+const autoprefixer = require('gulp-autoprefixer');
 
 function bs() {
     serveSass();
     browserSync.init({
         server: {
-            baseDir: "src/"
+            baseDir: "./src"
         }
     });
-    watch("src/*.html").on('change', browserSync.reload);
-    watch("src/cass/**/*.cass").on('change', browserSync.stream);
-    watch("src/js/*.js").on('change', browserSync.reload);
+    watch("./src/cass/**/*.cass", serveSass);
+    watch("./src/js/*.js").on('change', browserSync.reload);
+    watch("./src/*.html").on('change', browserSync.reload);
 };
 
 function serveSass() {
-    return src('src/sass/**/*.sass')
+    return src('./src/sass/*.sass')
       .pipe(sass())
       .pipe(dest('src/css'))
+      .pipe(autoprefixer({
+        cascade: false
+      }))
+      .pipe(dest(".src/css))"))
       .pipe(browserSync.stream());
   };
  
