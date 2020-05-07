@@ -12,7 +12,7 @@ function bs() {
             baseDir: "./src"
         }
     });
-    watch("./src/cass/**/*.sass", serveSass);
+    watch("./src/sass/**/*.sass", serveSass);
     watch("./src/js/*.js").on('change', browserSync.reload);
     watch("./src/*.html").on('change', browserSync.reload);
 };
