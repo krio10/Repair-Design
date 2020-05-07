@@ -12,7 +12,7 @@ function bs() {
             baseDir: "./src"
         }
     });
-    watch("./src/cass/**/*.cass", serveSass);
+    watch("./src/cass/**/*.sass", serveSass);
     watch("./src/js/*.js").on('change', browserSync.reload);
     watch("./src/*.html").on('change', browserSync.reload);
 };
@@ -20,16 +20,16 @@ function bs() {
 function serveSass() {
     return src('./src/sass/*.sass')
       .pipe(sass())
-      .pipe(dest('src/css'))
+      .pipe(dest('./src/css'))
       .pipe(autoprefixer({
         cascade: false
       }))
-      .pipe(dest(".src/css))"))
+      .pipe(dest("./src/css))"))
       .pipe(browserSync.stream());
   };
  
 function minify() {
-    return src('src/css/*.css')
+    return src('./src/css/*.css')
       .pipe(concat('styles.min.css'))
       .pipe(minifyCSS({
         keepBreaks: true
