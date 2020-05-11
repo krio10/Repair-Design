@@ -319,7 +319,7 @@ template {
   display: none; }
 
 .button {
-  padding: 13px 20px;
+  padding: 11px 21px;
   border: none;
   border-radius: 2px;
   text-transform: uppercase;
@@ -327,13 +327,17 @@ template {
   .button:hover {
     cursor: pointer; }
   .button--primary {
+    padding: 16px 18px 17px 1.7rem;
     background-color: #E3B873;
     color: #ffffff;
     box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.2);
     transition: box-shadow 0.3s; }
     .button--primary:hover {
-      box-shadow: none; }
+      box-shadow: none;
+      background-color: #ffffff;
+      color: #E3B873; }
   .button--outline {
+    padding: 16px 18px 17px 1.2rem;
     border: 1px solid #ffffff;
     background-color: transparent;
     color: #ffffff; }
@@ -384,14 +388,19 @@ body {
 
 .logo {
   color: #E3B873;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  font-family: 'Futura Demi', sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 16px; }
 
 .nav__item {
   color: #ffffff;
   text-decoration: none;
   text-transform: uppercase;
-  margin-right: 2.87rem;
-  transition: color 0.2s; }
+  margin-right: 2.64rem;
+  transition: color 0.2s;
+  line-height: 16px; }
   .nav__item:hover {
     color: #E3B873; }
 
@@ -400,6 +409,9 @@ body {
 
 .contacts__phone {
   margin-right: 45px; }
+
+.contacts__button {
+  font-size: 0.99rem; }
 
 .hero {
   position: relative;
@@ -424,9 +436,20 @@ body {
     margin-left: 4.28rem; }
   .hero__text {
     font-size: 1.57rem;
-    max-width: 35.71rem; }
+    max-width: 35.71rem;
+    line-height: 2.14rem;
+    margin-top: 1.15rem;
+    margin-bottom: 3.38rem; }
   .hero__button {
-    margin-right: 1.43rem; }
+    min-width: 207px;
+    margin-right: 1.2rem;
+    font-size: 1rem; }
+    .hero__button:hover {
+      color: #E3B873;
+      background-color: #ffffff;
+      cursor: pointer; }
+    .hero__button:focus {
+      border: 1px solid #E3B873; }
   .hero__instagram {
     position: absolute;
     left: 0;
@@ -442,6 +465,9 @@ body {
     bottom: 0;
     min-width: 17.6rem;
     min-height: 6.92rem;
+    font-family: 'Yeseva One';
+    font-size: 0.85rem;
+    line-height: 138.6%;
     background-color: #131313;
     text-transform: uppercase;
     text-decoration: none;
@@ -453,7 +479,9 @@ body {
       height: 30px;
       border: 2px solid #E3B873;
       border-radius: 50%;
-      margin-left: 12px; }
+      margin-left: 17px; }
+    .hero__scroll-down:hover {
+      color: #E3B873; }
 
 .instagram {
   display: flex;
@@ -467,19 +495,25 @@ body {
     text-decoration: none;
     color: #E3B873;
     transform: rotate(90deg);
-    line-height: 0.8; }
+    line-height: 0.8;
+    font-size: 1.06rem;
+    line-height: 16px;
+    font-stretch: semi-expanded; }
+    .instagram__link:hover {
+      color: #ffffff; }
     .instagram__link::after {
       content: '';
       width: 50px;
       height: 1px;
       background-color: #E3B873;
-      margin-left: 8px; }
+      margin-left: 13px; }
 
 .title {
   margin: 0;
   font-family: 'Yeseva One', cursive;
   text-transform: uppercase;
-  font-size: 1.857rem; }
+  font-size: 2.857rem;
+  line-height: 3.78rem; }
   .title--primary {
     color: #E3B873; }
 
