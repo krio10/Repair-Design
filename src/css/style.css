@@ -508,12 +508,6 @@ body {
   text-decoration: none;
   color: #ffffff; }
 
-@media screen and (min-width: 1200px) {
-  html {
-    font-size: 14px; }
-  .nav__item {
-    margin-right: 2rem; } }
-
 @media screen and (max-width: 1200px) {
   html {
     font-size: 12px; }
@@ -594,7 +588,7 @@ body {
 
 @media screen and (min-width: 320px) {
   .menu__logo {
-    margin-right: 80px; }
+    margin-right: 50px; }
   .hero {
     align-items: center;
     align-content: center; } }
