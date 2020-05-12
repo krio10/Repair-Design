@@ -19,11 +19,18 @@
     max-width: 47.85rem
     position: relative
     margin-left: 4.28rem
+  &__title
+    margin-top: 0
+    margin-bottom: 1.357rem
   &__text
+    margin-top: 0
     font-size: 1.57rem
     max-width: 500px
+    margin-bottom: 2.928rem
   &__button
     margin-right: 20px
+    min-width: 207px
+    min-height: 51px
   &__instagram
     position: absolute
     left: 0
@@ -39,10 +46,6 @@
     bottom: 0
     min-width: 17.6rem
     min-height: 6.92rem
-    background-color: $dark
-    text-transform: uppercase
-    text-decoration: none
-    color: $light
     &::after
       content: ''
       background: url('../img/arrow-down.svg') no-repeat center
@@ -56,6 +59,10 @@
   justify-content: center
   align-items: center
   background-color: $dark
+  font-family: "Futura Demi", sans-serif
+  font-size: 1rem
+  line-height: 1.14rem
+  text-align: center
   &__link
     display: flex
     align-items: center
@@ -71,7 +78,6 @@
       background-color: $primary
       margin-left: 8px
 .title
-  margin: 0
   font-family: 'Yeseva One', cursive
   text-transform: uppercase
   font-size: 2.857rem
@@ -79,3 +85,13 @@
   line-height: 1.35
   &--primary
     color: $primary
+.scroll-down
+  font-family: 'Yeseva One', cursive
+  font-style: normal
+  font-weight: normal
+  font-size: 12px
+  line-height: 138.6%
+  background-color: $dark
+  text-transform: uppercase
+  text-decoration: none
+  color: $light  
