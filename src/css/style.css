@@ -319,26 +319,28 @@ template {
   display: none; }
 
 .button {
-  padding: 11px 21px;
+  padding: 13px 20px;
   border: none;
   border-radius: 2px;
   text-transform: uppercase;
   font-size: 0.93rem; }
+  .button:hover {
+    cursor: pointer; }
   .button--primary {
-    padding: 16px 1.1rem 1.25rem 1.5rem;
     background-color: #E3B873;
     color: #ffffff;
     box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.2);
     transition: box-shadow 0.3s; }
+    .button--primary:hover {
+      box-shadow: none; }
   .button--outline {
-    padding: 16px 18px 17px 1.2rem;
     border: 1px solid #ffffff;
     background-color: transparent;
     color: #ffffff; }
 
 .container {
-  width: 87.6%;
-  max-width: 1438px;
+  width: 85%;
+  max-width: 1256px;
   margin: auto; }
 
 *, *:before, *:after {
@@ -373,48 +375,39 @@ body {
   width: 100%;
   z-index: 99;
   background-color: #131313;
-  padding: 23px 0; }
+  padding: 24px 0; }
 
 .menu {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  width: 99.2%; }
-  .menu__logo {
-    margin-left: -6px;
-    margin-right: 1.46rem; }
-  .menu__nav {
-    margin-right: 0.1rem; }
+  align-items: center; }
 
 .logo {
   color: #E3B873;
-  text-transform: uppercase;
-  font-family: 'Futura Demi', sans-serif;
-  font-size: 1rem;
-  font-weight: 500;
-  line-height: 16px; }
+  text-transform: uppercase; }
+  .logo__link {
+    color: #E3B873;
+    text-decoration: none;
+    transition: color 0.2s; }
+    .logo__link:hover {
+      color: #ffffff;
+      cursor: pointer; }
 
 .nav__item {
   color: #ffffff;
   text-decoration: none;
   text-transform: uppercase;
-  margin-right: 2.64rem;
-  transition: color 0.2s;
-  line-height: 16px; }
+  margin-right: 2.85rem;
+  transition: color 0.2s; }
   .nav__item:hover {
-    color: #E3B873; }
+    color: #E3B873;
+    cursor: pointer; }
 
 .phone {
-  line-height: 16px;
   color: #E3B873; }
 
 .contacts__phone {
-  margin-right: 1.76rem; }
-
-.contacts__button {
-  font-size: 0.99rem;
-  margin-left: 20px;
-  padding: 1rem 21px 0.64rem 20px; }
+  margin-right: 45px; }
 
 .hero {
   position: relative;
@@ -422,8 +415,6 @@ body {
   flex-direction: column;
   justify-content: center;
   padding-top: 100px;
-  top: 0;
-  left: 0;
   background: #131313 url("../img/hero-bg.jpg") no-repeat center/cover;
   height: 100vh;
   color: #ffffff; }
@@ -436,38 +427,29 @@ body {
     height: 100%;
     background-color: rgba(19, 19, 19, 0.7); }
   .hero__content {
+    max-width: 47.85rem;
     position: relative;
-    margin-left: 3.78rem; }
-  .hero__title {
-    margin-bottom: 1.15rem; }
+    margin-left: 4.28rem; }
   .hero__text {
     font-size: 1.57rem;
-    max-width: 35.71rem;
-    line-height: 2.14rem;
-    margin-top: 0;
-    margin-bottom: 3.38rem; }
+    max-width: 500px; }
   .hero__button {
-    min-width: 207px;
-    margin-right: 1.2rem;
-    font-size: 1rem; }
+    margin-right: 20px; }
   .hero__instagram {
     position: absolute;
-    left: -3px;
-    top: -8.1px;
-    max-width: 88px;
-    height: 82.9%; }
+    left: 0;
+    top: 0;
+    max-width: 80px;
+    height: 100%; }
   .hero__scroll-down {
     position: absolute;
     display: flex;
     justify-content: center;
     align-items: center;
-    left: 1px;
-    bottom: 173px;
+    left: 0;
+    bottom: 0;
     min-width: 17.6rem;
     min-height: 6.92rem;
-    font-family: 'Yeseva One';
-    font-size: 0.85rem;
-    line-height: 138.6%;
     background-color: #131313;
     text-transform: uppercase;
     text-decoration: none;
@@ -479,15 +461,12 @@ body {
       height: 30px;
       border: 2px solid #E3B873;
       border-radius: 50%;
-      margin-left: 17px; }
-    .hero__scroll-down:hover {
-      color: #E3B873; }
+      margin-left: 12px; }
 
 .instagram {
   display: flex;
   justify-content: center;
   align-items: center;
-  align-content: center;
   background-color: #131313; }
   .instagram__link {
     display: flex;
@@ -496,26 +475,21 @@ body {
     text-decoration: none;
     color: #E3B873;
     transform: rotate(90deg);
-    line-height: 0.8;
-    font-size: 1.06rem;
-    line-height: 16px;
-    font-stretch: semi-expanded; }
-    .instagram__link:hover {
-      color: #ffffff; }
+    line-height: 0.8; }
     .instagram__link::after {
       content: '';
       width: 50px;
       height: 1px;
       background-color: #E3B873;
-      margin-left: 13px; }
+      margin-left: 8px; }
 
 .title {
-  max-width: 600px;
-  margin-top: -256px;
+  margin: 0;
   font-family: 'Yeseva One', cursive;
   text-transform: uppercase;
-  font-size: 2.8rem;
-  line-height: 3.79rem; }
+  font-size: 2.857rem;
+  font-weight: 400;
+  line-height: 1.35; }
   .title--primary {
     color: #E3B873; }
 
@@ -533,55 +507,28 @@ body {
   .hero__content {
     margin-left: 0; } }
 
-@media screen and (max-width: 570px) {
+@media screen and (max-width: 576px) {
   .contacts__phone {
     margin-right: 0;
     color: #ffffff;
-    text-decoration: none;
-    font-size: 1rem; }
+    text-decoration: none; }
   .contacts__button {
     display: none; }
   .title {
-    font-size: 1.64rem;
-    line-height: 1.6;
-    letter-spacing: 2px; }
+    font-size: 1.64rem; }
   .hero__scroll-down {
     display: none; }
   .hero__content {
     max-width: 22.86rem; }
-  .hero__title {
-    margin-bottom: 0.9rem; }
   .hero__text {
-    font-size: 1.5rem;
-    margin-top: 0;
-    margin-bottom: 2.6rem;
-    min-width: 320px; }
+    font-size: 1.29rem;
+    line-height: 135.84%;
+    margin-bottom: 2.28rem; }
   .hero__button {
     display: block;
-    min-width: 337px;
-    margin-bottom: 2.1rem;
-    margin-right: 0;
-    padding: 19px 76px 19px 72px;
-    font-size: 1.07rem; }
-  .button--outline {
-    padding: 17px 76px 19px 76px; } }
+    min-width: 22.86rem;
+    margin-bottom: 1.85rem; } }
 
-@media screen and (max-height: 520px) {
+@media screen and (max-height: 540px) {
   .hero__scroll-down {
     display: none; } }
-
-@media screen and (max-width: 992px) {
-  .hero__scroll-down {
-    display: none; } }
-
-@media screen and (min-width: 991px) {
-  .button:hover {
-    color: #E3B873;
-    background-color: #ffffff;
-    cursor: pointer; }
-  .button--primary:hover {
-    box-shadow: none;
-    background-color: #ffffff;
-    color: #E3B873; }
-  .button:focus {
-    border: 1px solid #E3B873; } }

@@ -4,9 +4,7 @@
   flex-direction: column
   justify-content: center
   padding-top: 100px
-  top: 0
-  left: 0
-  background: $dark url('../img/hero-bg.jpg') no-repeat center/cover
+  background: $dark url('../img/hero-bg.jpg') no-repeat center / cover
   height: 100vh
   color: $light
   &::before
@@ -18,38 +16,29 @@
     height: 100%
     background-color:  rgba($dark, 0.7) 
   &__content
+    max-width: 47.85rem
     position: relative
-    margin-left: 3.78rem
-  &__title
-    margin-bottom: 1.15rem
+    margin-left: 4.28rem
   &__text
     font-size: 1.57rem
-    max-width: 35.71rem
-    line-height: 2.14rem
-    margin-top: 0
-    margin-bottom: 3.38rem
+    max-width: 500px
   &__button
-    min-width: 207px
-    margin-right: 1.2rem
-    font-size: 1rem
+    margin-right: 20px
   &__instagram
     position: absolute
-    left: -3px
-    top: -8.1px
-    max-width: 88px
-    height: 82.9%
+    left: 0
+    top: 0
+    max-width: 80px
+    height: 100%
   &__scroll-down
     position: absolute
     display: flex
     justify-content: center
     align-items: center
-    left: 1px
-    bottom: 173px
+    left: 0 
+    bottom: 0
     min-width: 17.6rem
     min-height: 6.92rem
-    font-family: 'Yeseva One'
-    font-size: 0.85rem
-    line-height: 138.6%
     background-color: $dark
     text-transform: uppercase
     text-decoration: none
@@ -61,14 +50,11 @@
       height: 30px
       border: 2px solid $primary
       border-radius: 50%
-      margin-left: 17px
-    &:hover
-      color: $primary
+      margin-left: 12px
 .instagram
   display: flex
   justify-content: center
   align-items: center
-  align-content: center
   background-color: $dark
   &__link
     display: flex
@@ -78,23 +64,18 @@
     color: $primary
     transform: rotate(90deg)
     line-height: 0.8
-    font-size: 1.06rem
-    line-height: 16px
-    font-stretch: semi-expanded
-    &:hover
-      color: $light
     &::after
       content: ''
       width: 50px
       height: 1px
       background-color: $primary
-      margin-left: 13px
+      margin-left: 8px
 .title
-  max-width: 600px
-  margin-top: -256px
+  margin: 0
   font-family: 'Yeseva One', cursive
   text-transform: uppercase
-  font-size: 2.8rem
-  line-height: 3.79rem
+  font-size: 2.857rem
+  font-weight: 400
+  line-height: 1.35
   &--primary
     color: $primary

@@ -5,43 +5,34 @@
   width: 100%
   z-index: 99
   background-color: $dark
-  padding: 23px 0
+  padding: 24px 0
 .menu
   display: flex
   justify-content: space-between
   align-items: center
-  width: 99.2%
-  &__logo
-    margin-left: -6px
-    margin-right: 1.46rem
-  &__nav
-    margin-right: 0.1rem
 .logo
   color: $primary
   text-transform: uppercase
-  font-family: 'Futura Demi', sans-serif
-  font-size: 1rem
-  font-weight: 500
-  line-height: 16px
+  &__link
+    color: $primary
+    text-decoration: none
+    transition: color 0.2s
+    &:hover
+      color: $light
+      cursor: pointer
 .nav
   &__item
     color: $light
     text-decoration: none
     text-transform: uppercase
-    margin-right: 2.64rem
+    margin-right: 2.85rem
     transition: color 0.2s
-    line-height: 16px
     &:hover
       color: $primary
+      cursor: pointer
 .phone
-  line-height: 16px
   color: $primary
 .contacts
   &__phone
-    margin-right: 1.76rem
-  &__button
-    font-size: 0.99rem
-    margin-left: 20px
-    padding: 1rem 21px 0.64rem 20px
-
+    margin-right: 45px
     
