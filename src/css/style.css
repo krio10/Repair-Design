@@ -583,16 +583,21 @@ body {
   .hero__scroll-down {
     display: none; }
   .hero__content {
-    max-width: 22.86rem;
+    max-width: 100%;
     margin: auto; }
+  .hero__title {
+    margin-bottom: 1.03rem; }
   .hero__text {
     font-size: 1.5rem;
+    font-style: normal;
+    font-weight: normal;
     line-height: 135.84%;
-    margin-bottom: 32px; }
+    max-width: 26rem;
+    margin-bottom: 2.9rem; }
   .hero__button {
     display: block;
     min-width: 100%;
-    margin-bottom: 26px; } }
+    margin-bottom: 2.16rem; } }
 
 @media screen and (max-height: 615px) {
   .hero__scroll-down {
