@@ -324,8 +324,7 @@ template {
   border-radius: 2px;
   font-family: 'Futura Demi', sans-serif;
   font-size: 13px;
-  text-transform: uppercase;
-  font-size: 0.93rem; }
+  text-transform: uppercase; }
   .button--primary {
     background-color: #E3B873;
     color: #ffffff;
@@ -381,19 +380,21 @@ body {
   align-items: center; }
 
 .logo {
+  font-family: 'Futura Demi', sans-serif;
   color: #E3B873;
   text-transform: uppercase; }
   .logo__link {
     color: #E3B873;
-    text-decoration: none;
-    transition: color 0.2s; }
+    text-decoration: none; }
 
 .nav__item {
   color: #ffffff;
   text-decoration: none;
   text-transform: uppercase;
-  margin-right: 2.85rem;
-  transition: color 0.2s; }
+  margin-right: 2.64rem; }
+
+.nav:last-child {
+  margin-right: 0; }
 
 .phone {
   font-family: 'Futura Demi', sans-serif;
@@ -434,7 +435,8 @@ body {
   .hero__text {
     margin-top: 0;
     font-size: 1.57rem;
-    max-width: 500px;
+    line-height: 2.14rem;
+    max-width: 35.71rem;
     margin-bottom: 2.928rem; }
   .hero__button {
     margin-right: 20px;
@@ -527,40 +529,46 @@ body {
     cursor: default; } }
 
 @media screen and (min-width: 992px) {
-  .logo__link:hover {
-    color: #ffffff;
-    cursor: pointer; }
-  .nav__item:hover {
-    color: #E3B873;
-    cursor: pointer; }
-  .contacts__phone:hover {
-    color: #ffffff; }
-  .button:hover {
-    color: #131313;
-    background-color: #ffffff;
-    cursor: pointer; }
-  .button--primary:hover {
-    box-shadow: none;
-    cursor: pointer; }
-  .hero__scroll-down:hover {
-    color: #E3B873; }
-  .hero__scroll-down::after:hover {
-    border: 2px solid #ffffff; }
-  .instagram__link:hover {
-    color: #ffffff; }
-  .instagram__link::after:hover {
-    display: none;
-    color: #ffffff; } }
+  .logo__link {
+    transition: color 0.2s; }
+    .logo__link:hover {
+      color: #ffffff;
+      cursor: pointer; }
+  .nav__item {
+    transition: color 0.2s; }
+    .nav__item:hover {
+      color: #E3B873;
+      cursor: pointer; }
+  .contacts__phone {
+    transition: color 0.2s; }
+    .contacts__phone:hover {
+      color: #ffffff; }
+  .button {
+    transition: color 0.2s; }
+    .button:hover {
+      color: #131313;
+      background-color: #ffffff;
+      cursor: pointer; }
+    .button--primary:hover {
+      box-shadow: none;
+      cursor: pointer; }
+  .hero__scroll-down {
+    transition: color 0.2s; }
+    .hero__scroll-down:hover {
+      color: #E3B873; }
+    .hero__scroll-down::after:hover {
+      border: 2px solid #ffffff; }
+  .instagram__link {
+    transition: color 0.2s; }
+    .instagram__link:hover {
+      color: #131313;
+      background-color: #E3B873; } }
 
 @media screen and (max-width: 768px) {
   .menu {
     font-size: 12px; } }
 
 @media screen and (max-width: 576px) {
-  .container {
-    display: flex;
-    justify-content: center;
-    align-items: center; }
   .contacts__phone {
     margin-right: 0;
     color: #ffffff;
@@ -568,27 +576,21 @@ body {
   .contacts__button {
     display: none; }
   .title {
-    font-size: 1.64rem; }
+    font-size: 1.91rem; }
   .hero__scroll-down {
     display: none; }
   .hero__content {
-    max-width: 22.86rem; }
+    max-width: 22.86rem;
+    margin: auto; }
   .hero__text {
-    font-size: 1.29rem;
+    font-size: 1.5rem;
     line-height: 135.84%;
-    margin-bottom: 2.28rem; }
+    margin-bottom: 32px; }
   .hero__button {
     display: block;
-    min-width: 22.86rem;
-    margin-bottom: 1.85rem; } }
+    min-width: 100%;
+    margin-bottom: 26px; } }
 
-@media screen and (max-height: 560px) {
+@media screen and (max-height: 615px) {
   .hero__scroll-down {
     display: none; } }
-
-@media screen and (min-width: 320px) {
-  .menu__logo {
-    margin-right: 50px; }
-  .hero {
-    align-items: center;
-    align-content: center; } }

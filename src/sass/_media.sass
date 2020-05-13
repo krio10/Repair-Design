@@ -23,19 +23,23 @@
 @media screen and ( min-width: 992px )
   .logo
     &__link
+      transition: color 0.2s
       &:hover
         color: $light
         cursor: pointer
   .nav
     &__item
+      transition: color 0.2s
       &:hover
         color: $primary
         cursor: pointer
   .contacts
     &__phone
+      transition: color 0.2s
       &:hover
         color: $light
   .button
+    transition: color 0.2s
     &:hover
       color: $dark
       background-color: $light
@@ -46,6 +50,7 @@
         cursor: pointer
   .hero
     &__scroll-down
+      transition: color 0.2s
       &:hover
         color: $primary
       &::after
@@ -53,20 +58,16 @@
           border: 2px solid $light
   .instagram
     &__link
+      transition: color 0.2s
       &:hover
-        color: $light
-      &::after
-        &:hover
-          display: none
-          color: $light
+        color: $dark
+        background-color: $primary
+        &::after:hover
+          display:none
 @media screen and ( max-width: 768px )
   .menu
     font-size: 12px
 @media screen and ( max-width: 576px )
-  .container
-    display: flex
-    justify-content: center
-    align-items: center
   .contacts
     &__phone
       margin-right: 0
@@ -75,36 +76,25 @@
     &__button
       display: none
   .title
-    font-size: 1.64rem
+    font-size: 1.91rem
   .hero
     &__scroll-down
       display: none
     &__content
       max-width: 22.86rem
+      margin: auto
     &__text
-      font-size: 1.29rem
+      font-size: 1.5rem
       line-height: 135.84%
-      margin-bottom: 2.28rem
+      margin-bottom: 32px
     &__button
       display: block
-      min-width: 22.86rem
-      margin-bottom: 1.85rem
-@media screen and ( max-height: 560px )
+      min-width: 100%
+      margin-bottom: 26px
+@media screen and ( max-height: 615px )
   .hero
     &__scroll-down
       display: none
-@media screen and ( min-width: 320px )
-  .menu
-    &__logo
-      margin-right: 50px
-  .hero
-    align-items: center
-    align-content: center
 
-  
-  
-
-  
-    
   
   
