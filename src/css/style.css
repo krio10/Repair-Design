@@ -640,7 +640,7 @@ img {
   .hero__scroll-down {
     display: none; }
   .hero__content {
-    max-width: 100%;
+    max-width: 99%;
     margin: auto; }
   .hero__title {
     max-width: 25rem;
@@ -654,16 +654,16 @@ img {
     margin-bottom: 2.9rem; }
   .hero__button {
     display: block;
-    min-width: 100%;
+    min-width: 28.21rem;
     margin-bottom: 2.16rem; } }
 
 @media screen and (max-height: 615px) {
   .hero__scroll-down {
     display: none; } }
 
-@media screen and (max-width: 377px) {
+@media screen and (max-width: 375px) {
   .hero__content {
-    min-width: 375px; }
+    margin: auto; }
   .hero__title {
     max-width: 25rem; }
   .hero__text {
