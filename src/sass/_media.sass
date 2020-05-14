@@ -93,13 +93,14 @@
       max-width: 100%
       margin: auto
     &__title
+      max-width: 25rem
       margin-bottom: 1.03rem
     &__text
       font-size: 1.5rem
       font-style: normal
       font-weight: normal
       line-height: 135.84%
-      max-width: 26rem
+      max-width: 26.5rem
       margin-bottom: 2.9rem
     &__button
       display: block
@@ -109,6 +110,12 @@
   .hero
     &__scroll-down
       display: none
-
-  
+@media screen and ( max-width: 377px )
+  .hero
+    &__content
+      min-width: 375px
+    &__title
+      max-width: 25rem
+    &__text
+      max-width: 26.5rem
   

@@ -643,13 +643,14 @@ img {
     max-width: 100%;
     margin: auto; }
   .hero__title {
+    max-width: 25rem;
     margin-bottom: 1.03rem; }
   .hero__text {
     font-size: 1.5rem;
     font-style: normal;
     font-weight: normal;
     line-height: 135.84%;
-    max-width: 26rem;
+    max-width: 26.5rem;
     margin-bottom: 2.9rem; }
   .hero__button {
     display: block;
@@ -659,3 +660,11 @@ img {
 @media screen and (max-height: 615px) {
   .hero__scroll-down {
     display: none; } }
+
+@media screen and (max-width: 377px) {
+  .hero__content {
+    min-width: 375px; }
+  .hero__title {
+    max-width: 25rem; }
+  .hero__text {
+    max-width: 26.5rem; } }
