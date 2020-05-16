@@ -10,6 +10,9 @@ img
   max-width: 100%
 h2
   font-size: 1.428rem
+  font-weight: normal
+h3
+  font-weight: normal
 .section
   padding: 60px 0
   &-title
@@ -17,7 +20,7 @@ h2
     text-transform: uppercase
     font-family: 'Yeseva One', cursive
     line-height: 2rem
-    color: $darkgray
+    color: $dark_primary
     font-weight: normal
     &__heading
       margin-bottom: 0.9rem
@@ -36,9 +39,49 @@ h2
     font-family: 'Futura Book', sans-serif
     font-size: 1.428rem
     font-weight: normal
-    line-height: 1.928rem
     text-align: center 
     text-transform: none
-    max-width: 52.92rem   
+    max-width: 52.92rem
+.row
+  display: flex
+  align-items: flex-start
+  justify-content: space-between
+.col
+  flex-basis: 32%
+.card
+  &-text
+    position: relative
+    max-width: 23.6rem
+    padding: 1.79rem 2.14rem
+    background-color: #fff
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.03)
+  &__title
+    font-family: 'Yeseva One', cursive
+    font-size: 1.29rem
+    margin-top: 0
+    margin-bottom: 0.6rem
+    margin-left: 0.25rem
+    color: $dark_h3
+  &__image
+    display: block
+  &-list
+    font-size: 1.07rem
+    color: $secondary
+    margin-bottom: 2.5rem
+  &__item
+    line-height: 1.8rem
+    margin-left: 0.2rem
+  &-pricetag
+    position: absolute
+    font-size: 1.28rem
+    font-weight: normal
+    min-width: 16.28rem
+    font-family: 'Yeseva One', cursive
+    text-transform: uppercase
+    font-style: normal
+    font-weight: normal
+    background-color: $primary
+    color: $light
+
         
         
