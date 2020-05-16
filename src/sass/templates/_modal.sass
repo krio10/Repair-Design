@@ -1,4 +1,6 @@
 .modal
+  opacity: 0
+  visibility: hidden
   z-index: 199
   position: fixed
   left: 0
@@ -11,6 +13,9 @@
   display: flex
   align-items: center
   justify-content: center
+  &--visible
+    opacity: 1
+    visibility: visible
   &__dialog
     position: relative
     max-width: 36.36rem
@@ -29,9 +34,11 @@
     cursor: pointer
   &__title
     font-family: 'Yeseva One', cursive
+    font-weight: normal
     font-size: 1.357rem
     text-align: center
     margin: 0 0 2.428rem 0
+    line-height: 1.857rem
   &__form
     display: flex
     flex-direction: column
