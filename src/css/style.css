@@ -621,8 +621,7 @@ h3 {
   .design__image {
     position: relative;
     margin-bottom: 1.3rem;
-    max-width: 28.1rem;
-    max-height: 30.15rem; }
+    max-width: 28.1rem; }
     .design__image::before {
       content: '';
       position: absolute;
@@ -700,6 +699,8 @@ h3 {
     margin-bottom: 6.58rem; }
   .card__text {
     margin-left: 0; }
+  .card__image {
+    display: block; }
   .design {
     background: none;
     background-color: #252525; }
@@ -743,6 +744,8 @@ h3 {
   .card__text {
     margin-top: -12.2rem;
     max-width: 22.5rem; }
+  .card__image {
+    display: block; }
   .design {
     background-color: #252525;
     padding-bottom: 6.3rem; }
