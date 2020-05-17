@@ -707,7 +707,7 @@ h3 {
     top: 0;
     width: 28px;
     height: 28px;
-    background: transparent, url("../img/close.svg") no-repeat center;
+    background: transparent url("../img/close.svg") no-repeat center;
     border: none;
     margin: 12px;
     cursor: pointer; }
