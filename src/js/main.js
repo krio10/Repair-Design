@@ -30,20 +30,41 @@
     if (isEscape) {
       switchModal();
     }
-  };
+  }
 });
 */
+
 $(document).ready(function () {
   var modal = $('.modal'),
       modalBtn = $('[data-toggle=modal]'),
       closeBtn = $('.modal__close');
   
   modalBtn.on('click', function () {
-    modal.toggleClass('modal--visible');
+    modal.show();
   });
 
   closeBtn.on('click', function () {
-    modal.toggleClass('modal--visible');
+    modal.hide();
   });
 
+  // функция закрытия модального окна по клику мышью за его пределами
+  $(document).mouseup(function (e){ // событие клика по веб-документу
+		if (modal.is(e.target) && modal.has(e.target).length === 0) {
+      modal.hide();
+		}
+	});
+
+  // функция закрытия модального окна по нажатию на клавишу Escape
+  $(document).on('keydown', function(event) {
+    event = event || window.event;
+    var isEscape = false;
+    if ("key" in event) {
+        isEscape = (event.key === "Escape" || event.key === "Esc");
+    } else {
+        isEscape = (event.keyCode === 27);
+    }
+    if (isEscape) {
+      modal.hide();
+    }
+  });  
 });
