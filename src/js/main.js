@@ -37,8 +37,13 @@
 $(document).ready(function () {
   var modal = $('.modal'),
       modalBtn = $('[data-toggle=modal]'),
-      closeBtn = $('.modal__close');
+      closeBtn = $('.modal__close'),
+      backTop = $('.back-top')
+      scrollUp = $('back-top__scroll-up');
   
+  modal.hide();
+  backTop.hide();
+
   modalBtn.on('click', function () {
     modal.show();
   });
@@ -66,5 +71,20 @@ $(document).ready(function () {
     if (isEscape) {
       modal.hide();
     }
+  }); 
+
+  $(window).scroll(function (){
+    if ($(this).scrollTop() > $(window).height()-150){
+      backTop.fadeIn();
+    } else {
+      backTop.fadeOut();
+    }
+  });
+
+  scrollUp.click(function (){
+    $("body,html").animate({
+      scrollTop:0
+    }, 5000);
+    return false;
   });  
 });
