@@ -73,6 +73,8 @@ $(document).ready(function () {
     }
   }); 
 
+  // функция плавного появления кнопки возврата вначало при прокрутке страницы вниз
+// и плавного скрывания этой кнопки при прокрутке страницы вверх
   $(window).scroll(function (){
     if ($(this).scrollTop() > $(window).height()-150){
       backTop.fadeIn();
@@ -81,6 +83,8 @@ $(document).ready(function () {
     }
   });
 
+
+  // Функция плавногй прокрутки страницы вверх при нажатии кнопки со стрелкой вверх
   scrollUp.click(function (){
     $("body,html").animate({
       scrollTop:0

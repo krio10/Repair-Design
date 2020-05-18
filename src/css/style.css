@@ -477,7 +477,8 @@ h3 {
   color: #363636; }
 
 .card__image {
-  display: block; }
+  display: block;
+  width: 100%; }
 
 .card-list {
   font-size: 1.07rem;
@@ -498,7 +499,8 @@ h3 {
   font-style: normal;
   font-weight: normal;
   background-color: #E3B873;
-  color: #ffffff; }
+  color: #ffffff;
+  box-shadow: 5px 5px 10px rgba(227, 184, 115, 0.1); }
 
 .header {
   position: fixed;
@@ -664,7 +666,8 @@ h3 {
 .types__pricetag {
   left: 0;
   bottom: -2.09rem;
-  padding: 1.214rem 2.5rem 1.214rem 2.9rem; }
+  padding: 1.214rem 2.1rem 1.214rem 2.9rem;
+  box-shadow: 5px 5px 10px rgba(227, 184, 115, 0.3); }
 
 .design {
   background: linear-gradient(to bottom, #ffffff 52.9%, #131313 47.1%); }
@@ -759,16 +762,26 @@ h3 {
     margin-right: 0.7rem; } }
 
 @media screen and (max-width: 992px) {
-  .logo__link:hover {
-    cursor: default; }
   .nav {
     display: none; }
   .hero__instagram {
     display: none; }
   .hero__content {
     margin-left: 0; }
-  .contacts__phone:hover {
-    cursor: default; } }
+  .row {
+    flex-direction: column;
+    align-items: center; }
+  .types__card, .design__card {
+    margin-bottom: 6.58rem; }
+  .card__text {
+    margin-left: 0; }
+  .card__image {
+    display: block; }
+  .design {
+    background: none;
+    background-color: #252525; }
+    .design__section-title {
+      color: #ffffff; } }
 
 @media screen and (min-width: 992px) {
   .logo__link {
@@ -806,22 +819,6 @@ h3 {
       color: #ffffff; }
       .instagram__link:hover::after {
         background-color: #ffffff; } }
-
-@media screen and (max-width: 768px) {
-  .row {
-    flex-direction: column;
-    align-items: center; }
-  .types__card, .design__card {
-    margin-bottom: 6.58rem; }
-  .card__text {
-    margin-left: 0; }
-  .card__image {
-    display: block; }
-  .design {
-    background: none;
-    background-color: #252525; }
-    .design__section-title {
-      color: #ffffff; } }
 
 @media screen and (max-width: 576px) {
   .menu {
