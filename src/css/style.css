@@ -12,6 +12,13 @@
   font-style: normal;
   font-display: swap; }
 
+@font-face {
+  font-family: 'FuturaMediumC';
+  src: url("../fonts/futura/futuramediumc.woff") format("woff"), url("../fonts/futura/futuramediumc.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap; }
+
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -336,15 +343,21 @@ template {
     color: #ffffff; }
 
 .label {
-  font-size: 1.07rem; }
+  font-style: normal;
+  font-weight: normal;
+  letter-spacing: 0.063rem; }
   .label--light {
     color: rgba(255, 255, 255, 0.5); }
 
 .input {
+  font-family: 'FuturaMediumC', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.485rem;
+  line-height: 1.785rem;
   background-color: transparent;
   border: none;
   border-bottom: 1px solid rgba(54, 54, 54, 0.3);
-  font-size: 1.285rem;
   color: #ffffff;
   padding: 0.5rem 0; }
   .input::-webkit-input-placeholder {
@@ -366,7 +379,12 @@ template {
 
 .policy__label {
   display: flex;
-  align-items: center; }
+  align-items: center;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.27rem;
+  line-height: 1.571rem;
+  letter-spacing: 0.035rem; }
   .policy__label::before {
     content: '';
     width: 18px;
@@ -380,22 +398,13 @@ template {
   position: fixed;
   z-index: 2000;
   top: 92vh;
-  right: -92%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  left: 0;
-  bottom: 0;
-  min-width: 17.6rem;
-  min-height: 6.92rem; }
-  .back-top::after {
-    content: '';
-    background: url("../img/arrow-up.svg") no-repeat center;
-    width: 30px;
-    height: 30px;
-    border: 2px solid #E3B873;
-    border-radius: 50%;
-    margin-left: 1.257rem; }
+  right: 2%;
+  background: url("../img/arrow-up.svg") no-repeat center;
+  width: 30px;
+  height: 30px;
+  border: 2px solid #E3B873;
+  border-radius: 50%;
+  margin-left: 1.257rem; }
 
 .container {
   width: 90%;
@@ -684,11 +693,11 @@ h3 {
     padding: 1.214rem 2.8rem 1.214rem 2.5rem; }
   .design__card-title {
     margin-left: 0.15rem; }
-  .design__image {
+  .design__wrap-img {
     position: relative;
     margin-bottom: 1.3rem;
     max-width: 28.1rem; }
-    .design__image::before {
+    .design__wrap-img::before {
       content: '';
       position: absolute;
       top: 0;
@@ -722,14 +731,14 @@ h3 {
     visibility: visible; }
   .modal__dialog {
     position: relative;
-    max-width: 36.36rem;
+    min-width: 36.142rem;
     background: #131313 url("../img/bg-lines.svg") no-repeat center;
-    padding: 2.357rem 3.5rem 1.928rem;
+    padding: 2.1rem 3.3rem 1.928rem 4.3rem;
     color: #ffffff; }
   .modal__close {
     position: absolute;
-    right: 0;
-    top: 0;
+    right: 0.2rem;
+    top: 0.09rem;
     width: 28px;
     height: 28px;
     background: transparent url("../img/close.svg") no-repeat center;
@@ -739,21 +748,29 @@ h3 {
   .modal__title {
     font-family: 'Yeseva One', cursive;
     font-weight: normal;
-    font-size: 1.357rem;
+    font-size: 1.54rem;
     text-align: center;
-    margin: 0 0 2.428rem 0;
-    line-height: 1.857rem; }
+    margin: 0.5rem 1.1rem 1.928rem 0;
+    line-height: 2.3rem;
+    max-width: 33.757rem;
+    letter-spacing: 0.029rem; }
   .modal__form {
     display: flex;
     flex-direction: column; }
   .modal__input {
     margin-bottom: 3.428rem; }
     .modal__input:last-of-type {
-      margin-bottom: 1.142rem; }
+      margin-bottom: 0.1rem; }
   .modal__policy {
-    margin-bottom: 2.7rem; }
+    margin-bottom: 3.2rem; }
   .modal__button {
-    align-self: flex-end; }
+    align-self: flex-end;
+    min-width: 213px;
+    min-height: 51px;
+    margin-right: 1rem; }
+
+.form__label {
+  margin: 0.49rem auto 0 0; }
 
 @media screen and (max-width: 1200px) {
   html {
