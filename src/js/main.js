@@ -51,5 +51,24 @@ $(document).ready(function () {
       scrollTop:0
     }, 2000);
     return false;
-  });  
+  });
+
+  //initialize swiper when document ready
+  var mySwiper = new Swiper ('.swiper-container', {
+    loop: true,
+    pagination: {
+      el: '.swiper-pagination',
+      type: 'bullets',
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  });
+  var next = $('.swiper-button-next');
+  var prev = $('.swiper-button-prev');
+  var bullets = $('.swiper-pagination');
+  const bulletsOffset = 25;
+  next.css('left', prev.width() + bulletsOffset + bullets.width() + bulletsOffset);
+  bullets.css('left', prev.width() + bulletsOffset);
 });

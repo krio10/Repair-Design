@@ -15,6 +15,9 @@ h3
   font-weight: normal
 .section
   padding: 60px 0
+  &--dark
+    color: $light
+    background-color: $dark  
   &-title
     text-align: center
     text-transform: uppercase
@@ -22,8 +25,25 @@ h3
     line-height: 2rem
     color: $dark_primary
     font-weight: normal
+    &--left
+      text-align: left
     &__heading
       margin-bottom: 0.9rem
+      &--primary
+        color: $primary
+        font-size: 1.928rem
+        line-height: 2.642rem
+        letter-spacing: -0.07em
+    &__word
+      display: flex
+      align-items: center
+      margin-bottom: 1.6rem
+      &::after
+        content: ''
+        width: 6.571rem
+        height: 0.14rem
+        background-color: $primary
+        margin-left: 2.4rem
     &__image
       display: flex
       justify-content: center
@@ -35,6 +55,15 @@ h3
         height: 2px
         background-color: $primary
         margin: 0 10px
+    &__text
+      font-family: 'Futura Book', sans-serif
+      font-style: normal
+      font-weight: normal
+      font-size: 1.285rem
+      line-height: 2.071rem
+      text-transform: none
+      color: $light
+      max-width: 31.571rem
   &-subtitle
     font-family: 'Futura Book', sans-serif
     font-size: 1.428rem
@@ -42,12 +71,6 @@ h3
     text-align: center 
     text-transform: none
     max-width: 52.92rem
-.row
-  display: flex
-  align-items: flex-start
-  justify-content: space-between
-.col
-  flex-basis: 32%
 .card
   &-text
     position: relative

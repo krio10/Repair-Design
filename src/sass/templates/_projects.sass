@@ -1,0 +1,59 @@
+.projects
+  &__text
+    margin-bottom: 2.2rem
+.swiper
+  &-slide
+    display: flex
+    flex-wrap: wrap
+    &__image
+      margin-top: 1.8rem
+    &__text
+      flex-basis: 50%
+      margin-bottom: 1.42rem
+      max-width: 13.6rem
+      &:nth-child(2)
+        margin-right: 4.5rem
+      &:last-of-type
+        margin-bottom: 7.32rem      
+    &__heading
+      font-family: 'Yeseva One', cursive
+      font-style: normal
+      font-weight: normal
+      font-size: 1.285rem
+      line-height: 1.785rem
+      text-transform: uppercase
+      color: $primary
+      margin-bottom: 0.442rem
+    &__value
+      font-family: 'Futura Book'
+      font-style: normal
+      font-weight: normal
+      font-size: 1.071rem
+      line-height: 1.428rem
+      max-width: 11.5rem
+      margin-bottom: 1.42rem
+  &-container-horizontal>.swiper-pagination-bullets
+    width: auto
+    bottom: 0
+  &-pagination
+    &-bullets
+      width: 100%
+    &-bullet
+      background: rgba($light, 0.3)
+      &-active
+        background-color: $light
+  &-button
+    &-prev, &-next
+      bottom: 0
+      top: auto
+      background-size: 2.958rem
+      width: 3rem
+      height: 1rem
+      &::after
+        display: none
+    &-prev
+      left: 0
+      background: url('../img/arrow-prev.svg') no-repeat center
+    &-next
+      background: url('../img/arrow-next.svg') no-repeat center
+      
