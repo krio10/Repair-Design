@@ -125,7 +125,7 @@
       line-height: 1.4
       margin: auto
       margin-bottom: 2.95rem
-    &__image
+    &__wrap-img
       margin-bottom: 1.6rem
     &__pricetag
       padding: 0.91rem 4rem
@@ -178,7 +178,7 @@
         margin-top: -0.3rem
         margin-left: 0.35rem
         margin-bottom: 0.9rem
-    &__image
+    &__wrap-img
       &::before
         display: none
     &__text
@@ -203,3 +203,7 @@
           content: '...'
     &-pricetag
       text-align: center
+@media screen and ( max-width: 320px )
+  .types
+    &__text
+      margin-right: 0

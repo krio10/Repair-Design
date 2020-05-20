@@ -990,7 +990,7 @@ h3 {
       line-height: 1.4;
       margin: auto;
       margin-bottom: 2.95rem; }
-    .design__image {
+    .design__wrap-img {
       margin-bottom: 1.6rem; }
     .design__pricetag {
       padding: 0.91rem 4rem;
@@ -1040,7 +1040,7 @@ h3 {
       margin-top: -0.3rem;
       margin-left: 0.35rem;
       margin-bottom: 0.9rem; }
-  .design__image::before {
+  .design__wrap-img::before {
     display: none; }
   .design__text {
     margin: -13.1rem 0 0 -0.1rem;
@@ -1062,3 +1062,7 @@ h3 {
       content: '...'; }
   .card-pricetag {
     text-align: center; } }
+
+@media screen and (max-width: 320px) {
+  .types__text {
+    margin-right: 0; } }
