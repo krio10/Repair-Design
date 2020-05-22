@@ -343,9 +343,9 @@ template {
     color: #ffffff; }
 
 .label {
+  font-size: 1.071rem;
   font-style: normal;
-  font-weight: normal;
-  letter-spacing: 0.063rem; }
+  font-weight: normal; }
   .label--light {
     color: rgba(255, 255, 255, 0.5); }
 
@@ -353,13 +353,12 @@ template {
   font-family: 'FuturaMediumC', sans-serif;
   font-style: normal;
   font-weight: 500;
-  font-size: 1.485rem;
+  font-size: 1.285rem;
   line-height: 1.785rem;
   background-color: transparent;
   border: none;
   border-bottom: 1px solid rgba(54, 54, 54, 0.3);
-  color: #ffffff;
-  padding: 0.5rem 0; }
+  color: #ffffff; }
   .input::-webkit-input-placeholder {
     color: #ffffff; }
   .input::-moz-placeholder {
@@ -382,9 +381,9 @@ template {
   align-items: center;
   font-style: normal;
   font-weight: normal;
-  font-size: 1.27rem;
+  font-size: 1.142rem;
   line-height: 1.571rem;
-  letter-spacing: 0.035rem; }
+  margin-bottom: 0.5rem; }
   .policy__label::before {
     content: '';
     width: 18px;
@@ -419,7 +418,10 @@ template {
   flex-basis: 32%; }
 
 .col-50 {
-  width: 50%; }
+  width: 44%; }
+
+.col-54 {
+  width: 56%; }
 
 *, *:before, *:after {
   box-sizing: border-box; }
@@ -713,8 +715,6 @@ h3 {
     flex-basis: 50%;
     margin-bottom: 1.42rem;
     max-width: 13.6rem; }
-    .swiper-slide__text:nth-child(2) {
-      margin-right: 4.5rem; }
     .swiper-slide__text:last-of-type {
       margin-bottom: 7.32rem; }
   .swiper-slide__heading {
@@ -781,6 +781,12 @@ h3 {
   padding: 1.214rem 2.1rem 1.214rem 2.9rem;
   box-shadow: 5px 5px 10px rgba(227, 184, 115, 0.3); }
 
+.types__wrap-img {
+  display: block;
+  margin: auto;
+  width: 100%;
+  max-width: 28.1rem; }
+
 .design {
   background: linear-gradient(to bottom, #ffffff 52.9%, #131313 47.1%); }
   .design__section-title {
@@ -797,6 +803,7 @@ h3 {
   .design__card-title {
     margin-left: 0.15rem; }
   .design__wrap-img {
+    width: 100%;
     position: relative;
     margin-bottom: 1.3rem;
     max-width: 28.1rem; }
@@ -835,45 +842,53 @@ h3 {
   .modal__dialog {
     position: relative;
     min-width: 36.142rem;
+    max-height: 36.357rem;
+    padding-top: 2.357rem;
+    padding-bottom: 1.928rem;
     background: #131313 url("../img/bg-lines.svg") no-repeat center;
-    padding: 2.1rem 3.3rem 1.928rem 4.3rem;
     color: #ffffff; }
   .modal__close {
     position: absolute;
-    right: 0.2rem;
-    top: 0.09rem;
+    right: 1.2rem;
+    top: 0.9rem;
     width: 28px;
     height: 28px;
     background: transparent url("../img/close.svg") no-repeat center;
     border: none;
-    margin: 12px;
     cursor: pointer; }
   .modal__title {
     font-family: 'Yeseva One', cursive;
     font-weight: normal;
-    font-size: 1.54rem;
+    font-size: 1.357rem;
     text-align: center;
-    margin: 0.5rem 1.1rem 1.928rem 0;
-    line-height: 2.3rem;
-    max-width: 33.757rem;
-    letter-spacing: 0.029rem; }
+    line-height: 1.99rem;
+    max-width: 25.36rem;
+    margin-top: 0;
+    margin-right: 5.142rem;
+    margin-bottom: 1.928rem;
+    margin-left: 5.142rem; }
   .modal__form {
     display: flex;
-    flex-direction: column; }
+    flex-direction: column;
+    padding-left: 3.2rem;
+    padding-right: 3.2rem; }
   .modal__input {
-    margin-bottom: 3.428rem; }
+    padding-bottom: 0.5rem; }
     .modal__input:last-of-type {
-      margin-bottom: 0.1rem; }
+      margin-bottom: -0.2rem; }
   .modal__policy {
-    margin-bottom: 3.2rem; }
+    margin-bottom: 2.1rem; }
   .modal__button {
     align-self: flex-end;
     min-width: 213px;
     min-height: 51px;
-    margin-right: 1rem; }
+    margin-right: 0.5rem; }
 
 .form__label {
-  margin: 0.49rem auto 0 0; }
+  margin-bottom: 0.1rem; }
+
+.form__input {
+  margin-bottom: 3.3rem; }
 
 @media screen and (max-width: 1200px) {
   html {
@@ -940,6 +955,12 @@ h3 {
       .instagram__link:hover::after {
         background-color: #ffffff; } }
 
+@media screen and (max-width: 768px) {
+  .col-50 {
+    width: 60%; }
+  .col-54 {
+    width: 90%; } }
+
 @media screen and (max-width: 576px) {
   .menu {
     font-size: 12px; }
@@ -995,7 +1016,23 @@ h3 {
     .design__pricetag {
       padding: 0.91rem 4rem;
       font-size: 1.25rem;
-      text-align: center; } }
+      text-align: center; }
+  .col-50 {
+    width: 60%; }
+  .col-54 {
+    width: 70%; }
+  .swiper-slide__heading {
+    min-width: 11.83rem;
+    font-size: 1.166rem;
+    margin-bottom: 0.7rem; }
+  .swiper-slide__text {
+    max-width: 10.5rem; }
+    .swiper-slide__text:last-of-type {
+      margin-bottom: 4.62rem; }
+  .swiper-slide__value {
+    font-size: 1.166rem; }
+  .swiper-button-prev, .swiper-button-next {
+    width: 3.5rem; } }
 
 @media screen and (max-height: 615px) {
   .hero__scroll-down {
@@ -1016,7 +1053,9 @@ h3 {
   .section-title__image {
     margin-bottom: 2.814rem; }
   .types__card {
-    margin-bottom: 6.18rem; }
+    margin-bottom: 6.18rem;
+    margin-right: auto;
+    margin-left: auto; }
   .types__section-title {
     margin-bottom: 3.4rem; }
   .types__text {
@@ -1029,8 +1068,8 @@ h3 {
   .types__pricetag {
     left: 0;
     bottom: -1.39rem;
-    padding: 1.014rem 2.5rem;
-    min-width: 15.88rem;
+    padding: 1.014rem 2.2rem;
+    max-width: 15.869rem;
     min-height: 2rem; }
   .design__icon {
     margin-bottom: 1.5rem; }
@@ -1061,8 +1100,22 @@ h3 {
     .card__item--ellipsis::after {
       content: '...'; }
   .card-pricetag {
-    text-align: center; } }
-
-@media screen and (max-width: 320px) {
-  .types__text {
-    margin-right: 0; } }
+    text-align: center; }
+  .modal__dialog {
+    min-width: 70%;
+    max-height: 70%; }
+  .modal__title {
+    margin-top: 2rem;
+    margin-right: 1rem;
+    margin-left: 1rem; }
+  .section-title__text {
+    font-size: 1.166rem;
+    max-width: 25.41rem;
+    line-height: 1.96rem; }
+  .section-title__word {
+    margin-bottom: 1.79rem; }
+    .section-title__word::after {
+      display: none; }
+  .projects__text {
+    min-width: 25.41rem;
+    margin-bottom: 1.8rem; } }

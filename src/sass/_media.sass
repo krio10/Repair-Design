@@ -71,6 +71,12 @@
         color: $light
         &::after
           background-color: $light
+@media screen and ( max-width:  768px )
+  .col      
+    &-50
+      width: 60%
+    &-54
+      width: 90%            
 @media screen and ( max-width: 576px )
   .menu
     font-size: 12px  
@@ -131,6 +137,26 @@
       padding: 0.91rem 4rem
       font-size: 1.25rem
       text-align: center
+  .col      
+    &-50
+      width: 60%
+    &-54
+      width: 70%             
+  .swiper
+    &-slide
+      &__heading
+        min-width: 11.83rem
+        font-size: 1.166rem
+        margin-bottom: 0.7rem
+      &__text
+        max-width: 10.5rem
+        &:last-of-type
+          margin-bottom: 4.62rem              
+      &__value
+        font-size: 1.166rem
+    &-button
+      &-prev, &-next
+        width: 3.5rem         
 @media screen and ( max-height: 615px )
   .hero
     &__scroll-down
@@ -154,6 +180,8 @@
   .types
     &__card
       margin-bottom: 6.18rem
+      margin-right: auto
+      margin-left: auto
     &__section-title
       margin-bottom: 3.4rem
     &__text
@@ -166,8 +194,8 @@
     &__pricetag
       left: 0
       bottom: -1.39rem    
-      padding: 1.014rem 2.5rem
-      min-width: 15.88rem
+      padding: 1.014rem 2.2rem
+      max-width: 15.869rem
       min-height: 2rem
   .design
     &__icon
@@ -203,7 +231,26 @@
           content: '...'
     &-pricetag
       text-align: center
-@media screen and ( max-width: 320px )
-  .types
+  .modal
+    &__dialog
+      min-width: 70%
+      max-height: 70%
+    &__title
+      margin-top: 2rem
+      margin-right: 1rem
+      margin-left: 1rem
+  .section
+    &-title
+      &__text
+        font-size: 1.166rem      
+        max-width: 25.41rem
+        line-height: 1.96rem      
+      &__word
+        margin-bottom: 1.79rem
+        &::after
+          display: none     
+  .projects
     &__text
-      margin-right: 0
+      min-width: 25.41rem
+      margin-bottom: 1.8rem
+      
