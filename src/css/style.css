@@ -936,6 +936,9 @@ h3 {
   color: #ffffff;
   border-bottom-color: #E3B873; }
 
+.pointer {
+  cursor: pointer; }
+
 .modal {
   opacity: 0;
   visibility: hidden;

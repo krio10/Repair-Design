@@ -90,26 +90,61 @@ $(document).ready(function () {
   var stepsNext = $('.steps-swiper-button-next');
   var stepsPrev = $('.steps-swiper-button-prev');
   var bullets = $('.steps-swiper-pagination');
+
   const stepBulletsOffset = 22;
+
   stepsNext.css('left', stepsPrev.width() + stepBulletsOffset + bullets.width() + stepBulletsOffset);
   bullets.css('left', stepsPrev.width() + stepBulletsOffset);
 
   var stepsLink = $('.steps__link');
   var active = $('.active');
   var curStep = $('.cur-step');
+  var index = 1;
+
+  stepsLink.mouseenter(function() {
+    $(this).toggleClass('pointer');
+  });
+
+  stepsLink.mouseleave(function() {
+    $(this).toggleClass('pointer');
+  });
+  
+  function setCountText(index) {
+    curStep.text(index + '/6');
+    if (stepsLink.hasClass('active')) { // Cleen active
+      stepsLink.removeClass('active');
+      stepsLink.children().removeClass('active');
+    };
+  };
 
   stepsLink.click(function() {
     index = $(this).attr('data-index');
     for (let i=0; i<2; i++) {
       stepsSwiper[i].slideTo(index, 400, false);
     }
-    console.log('current num = ' + $('.swiper-slide').attr('data-swiper-slide-index'));
-    if (stepsLink.hasClass('active')) {
-      stepsLink.removeClass('active');
-      stepsLink.children().removeClass('active');
-    }
+    setCountText(index);
     $(this).addClass('active');
     $(this).children().addClass('active');
-    curStep.text(index + '/6');
   });
+
+  stepsNext.click(function() {
+    if (index < 6) {
+      index++;
+    }
+    else {
+      index = 1
+    }
+    setCountText(index);
+  });
+
+  stepsPrev.click(function() {
+    if (index > 1) {
+      index--;
+    }
+    else {
+      index = 6
+    }
+    setCountText(index);
+  });  
+
 });
