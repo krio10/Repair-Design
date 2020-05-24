@@ -91,10 +91,23 @@ $(document).ready(function () {
   var stepsPrev = $('.steps-swiper-button-prev');
   var bullets = $('.steps-swiper-pagination');
 
-  const stepBulletsOffset = 22;
+  var stepBulletsOffset = 22;
+  var buttonsWidth = 41;
+  resizeBullets();
+  $( window ).resize(function() {
+    if ($(window).width() < 1276) {
+      stepBulletsOffset = 3;
+    }
+    else {
+      stepBulletsOffset = 22;
+    }
+    resizeBullets();
+  });
 
-  stepsNext.css('left', stepsPrev.width() + stepBulletsOffset + bullets.width() + stepBulletsOffset);
-  bullets.css('left', stepsPrev.width() + stepBulletsOffset);
+  function resizeBullets() {
+    stepsNext.css('left', stepsPrev.width() + stepBulletsOffset + bullets.width() + stepBulletsOffset);
+    bullets.css('left', stepsPrev.width() + stepBulletsOffset);
+  };
 
   var stepsLink = $('.steps__link');
   var active = $('.active');

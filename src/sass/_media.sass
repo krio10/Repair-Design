@@ -4,6 +4,15 @@
   .nav
     &__item
       margin-right: 0.7rem
+  .steps
+    &-text
+      min-width: 20.071rem
+    &-left
+      width: 35%
+    &__swiper-right
+      width: 60%
+    &-text__paragraph
+      max-width: none
 @media screen and ( max-width: 992px )
   .nav
     display: none
@@ -27,6 +36,24 @@
       color: $light
   .projects-row
     align-items: center
+  .steps
+    &-row
+      align-items: center
+      flex-direction: column
+    &__title
+      padding-top: 2rem
+    &-text__paragraph
+      max-width: none
+    &__swiper-left
+      width: 40%
+      margin-top: 0
+  .swiper
+    &-slide
+      width: 100%      
+      &__text
+        max-width: none
+      &__value
+        max-width: none      
 @media screen and ( min-width: 992px )
   .logo
     &__link
@@ -76,13 +103,14 @@
     align-items: center  
   .col      
     &-44
-      width: 100%
+      width: 91%
     &-56
-      width: 100%
-  .swiper
-    &-slide
-      &__text
-        max-width: none
+      width: 94%
+  .steps    
+    &__links
+      left: 0
+  .cur-step
+    padding-left: 0
 @media screen and ( max-width: 576px )
   .menu
     font-size: 12px  
@@ -157,7 +185,9 @@
         font-size: 1.166rem
     &-button
       &-prev, &-next
-        width: 3.5rem         
+        width: 3.5rem
+  .steps
+    display: none        
 @media screen and ( max-height: 615px )
   .hero
     &__scroll-down

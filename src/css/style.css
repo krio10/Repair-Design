@@ -829,6 +829,8 @@ h3 {
 .steps {
   background-color: #131313;
   margin-top: -50px; }
+  .steps-row {
+    flex-wrap: wrap; }
   .steps__work {
     padding-bottom: 0; }
   .steps__title {
@@ -872,21 +874,21 @@ h3 {
   .steps__swiper {
     padding-top: 6.571rem; }
     .steps__swiper-left {
-      width: 25.5%;
+      width: 37.3%;
       margin-top: -5rem;
       padding-bottom: 1rem; }
     .steps__swiper-right {
-      width: 62.3%;
+      width: 62.1%;
       margin-top: 0.4rem;
       padding-bottom: 5rem; }
   .steps-text {
     font-size: 1.071rem;
     line-height: 1.785rem;
     color: #ffffff;
-    min-width: 22.871rem; }
+    min-width: 23.671rem; }
     .steps-text__paragraph {
       margin-top: 0.2rem;
-      margin-bottom: 1.1rem; }
+      margin-bottom: 1.2rem; }
   .steps__text {
     margin-top: 0.8rem;
     margin-bottom: -1.8rem; }
@@ -1012,7 +1014,15 @@ h3 {
   html {
     font-size: 12px; }
   .nav__item {
-    margin-right: 0.7rem; } }
+    margin-right: 0.7rem; }
+  .steps-text {
+    min-width: 20.071rem; }
+  .steps-left {
+    width: 35%; }
+  .steps__swiper-right {
+    width: 60%; }
+  .steps-text__paragraph {
+    max-width: none; } }
 
 @media screen and (max-width: 992px) {
   .nav {
@@ -1033,7 +1043,23 @@ h3 {
     .design__section-title {
       color: #ffffff; }
   .projects-row {
-    align-items: center; } }
+    align-items: center; }
+  .steps-row {
+    align-items: center;
+    flex-direction: column; }
+  .steps__title {
+    padding-top: 2rem; }
+  .steps-text__paragraph {
+    max-width: none; }
+  .steps__swiper-left {
+    width: 40%;
+    margin-top: 0; }
+  .swiper-slide {
+    width: 100%; }
+    .swiper-slide__text {
+      max-width: none; }
+    .swiper-slide__value {
+      max-width: none; } }
 
 @media screen and (min-width: 992px) {
   .logo__link {
@@ -1077,11 +1103,13 @@ h3 {
     flex-direction: column;
     align-items: center; }
   .col-44 {
-    width: 100%; }
+    width: 91%; }
   .col-56 {
-    width: 100%; }
-  .swiper-slide__text {
-    max-width: none; } }
+    width: 94%; }
+  .steps__links {
+    left: 0; }
+  .cur-step {
+    padding-left: 0; } }
 
 @media screen and (max-width: 576px) {
   .menu {
@@ -1150,7 +1178,9 @@ h3 {
   .swiper-slide__value {
     font-size: 1.166rem; }
   .swiper-button-prev, .swiper-button-next {
-    width: 3.5rem; } }
+    width: 3.5rem; }
+  .steps {
+    display: none; } }
 
 @media screen and (max-height: 615px) {
   .hero__scroll-down {
