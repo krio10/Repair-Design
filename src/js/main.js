@@ -83,16 +83,16 @@ $(document).ready(function () {
   var projectsPrev = $('.projects-swiper-button-prev');
   var bullets = $('.projects-swiper-pagination');
 
-  const bulletsOffset = 24;
-  projectsNext.css('left', projectsPrev.width() + bulletsOffset + bullets.width() + bulletsOffset);
-  bullets.css('left', projectsPrev.width() + bulletsOffset);
+  const projBulletsOffset = 22;
+  projectsNext.css('left', projectsPrev.width() + projBulletsOffset + bullets.width() + projBulletsOffset);
+  bullets.css('left', projectsPrev.width() + projBulletsOffset);
 
   var stepsNext = $('.steps-swiper-button-next');
   var stepsPrev = $('.steps-swiper-button-prev');
   var bullets = $('.steps-swiper-pagination');
-
-  stepsNext.css('left', stepsPrev.width() + bulletsOffset + bullets.width() + bulletsOffset);
-  bullets.css('left', stepsPrev.width() + bulletsOffset);
+  const stepBulletsOffset = 22;
+  stepsNext.css('left', stepsPrev.width() + stepBulletsOffset + bullets.width() + stepBulletsOffset);
+  bullets.css('left', stepsPrev.width() + stepBulletsOffset);
 
   var stepsLink = $('.steps__link');
   var active = $('.active');
@@ -103,14 +103,13 @@ $(document).ready(function () {
     for (let i=0; i<2; i++) {
       stepsSwiper[i].slideTo(index, 400, false);
     }
+    console.log('current num = ' + $('.swiper-slide').attr('data-swiper-slide-index'));
     if (stepsLink.hasClass('active')) {
       stepsLink.removeClass('active');
       stepsLink.children().removeClass('active');
     }
     $(this).addClass('active');
     $(this).children().addClass('active');
-    if (curStep.attr('data-current') == index) {
-      curStep.text(index + '/6');
-    }
+    curStep.text(index + '/6');
   });
 });
