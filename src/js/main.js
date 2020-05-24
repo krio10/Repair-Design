@@ -54,21 +54,63 @@ $(document).ready(function () {
   });
 
   //initialize swiper when document ready
-  var mySwiper = new Swiper ('.swiper-container', {
+  var mySwiper = new Swiper ('.projects-swiper', {
     loop: true,
     pagination: {
-      el: '.swiper-pagination',
+      el: '.projects-swiper-pagination',
       type: 'bullets',
     },
     navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
+      nextEl: '.projects-swiper-button-next',
+      prevEl: '.projects-swiper-button-prev',
     },
   });
-  var next = $('.swiper-button-next');
-  var prev = $('.swiper-button-prev');
-  var bullets = $('.swiper-pagination');
-  const bulletsOffset = 25;
-  next.css('left', prev.width() + bulletsOffset + bullets.width() + bulletsOffset);
-  bullets.css('left', prev.width() + bulletsOffset);
+
+  //initialize swiper when document ready
+  var stepsSwiper = new Swiper ('.steps-swiper', {
+    loop: true,
+    pagination: {
+      el: '.steps-swiper-pagination',
+      type: 'bullets',
+    },
+    navigation: {
+      nextEl: '.steps-swiper-button-next',
+      prevEl: '.steps-swiper-button-prev',
+    },
+  });
+
+  var projectsNext = $('.projects-swiper-button-next');
+  var projectsPrev = $('.projects-swiper-button-prev');
+  var bullets = $('.projects-swiper-pagination');
+
+  const bulletsOffset = 24;
+  projectsNext.css('left', projectsPrev.width() + bulletsOffset + bullets.width() + bulletsOffset);
+  bullets.css('left', projectsPrev.width() + bulletsOffset);
+
+  var stepsNext = $('.steps-swiper-button-next');
+  var stepsPrev = $('.steps-swiper-button-prev');
+  var bullets = $('.steps-swiper-pagination');
+
+  stepsNext.css('left', stepsPrev.width() + bulletsOffset + bullets.width() + bulletsOffset);
+  bullets.css('left', stepsPrev.width() + bulletsOffset);
+
+  var stepsLink = $('.steps__link');
+  var active = $('.active');
+  var curStep = $('.cur-step');
+
+  stepsLink.click(function() {
+    index = $(this).attr('data-index');
+    for (let i=0; i<2; i++) {
+      stepsSwiper[i].slideTo(index, 400, false);
+    }
+    if (stepsLink.hasClass('active')) {
+      stepsLink.removeClass('active');
+      stepsLink.children().removeClass('active');
+    }
+    $(this).addClass('active');
+    $(this).children().addClass('active');
+    if (curStep.attr('data-current') == index) {
+      curStep.text(index + '/6');
+    }
+  });
 });

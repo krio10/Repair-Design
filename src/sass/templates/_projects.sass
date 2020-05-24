@@ -1,4 +1,16 @@
 .projects
+  padding-top: 156px
+  position: relative
+  background: $dark url('../img/projects/project-bg-lines.svg') no-repeat center / cover
+  height: 100vh
+  &::before
+    content: ''
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    margin-bottom: 2.2rem
   &__text
     margin-bottom: 2.2rem
 .swiper
@@ -33,11 +45,15 @@
   &-container-horizontal>.swiper-pagination-bullets
     width: auto
     bottom: 0
+    .swiper-pagination-bullet
+      margin: 0 8px
+      width: 9.5px
+      height: 9.5px  
   &-pagination
     &-bullets
       width: 100%
     &-bullet
-      background: rgba($light, 0.3)
+      background: $light
       &-active
         background-color: $light
   &-button
@@ -45,12 +61,12 @@
       bottom: 0
       top: auto
       background-size: 2.958rem
-      width: 3rem
+      width: 41px
       height: 1rem
       &::after
         display: none
     &-prev
-      left: 0
+      left: 1px
       background: url('../img/arrow-prev.svg') no-repeat center
     &-next
       background: url('../img/arrow-next.svg') no-repeat center

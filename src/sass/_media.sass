@@ -12,9 +12,6 @@
       display: none
     &__content
       margin-left: 0
-  .row
-    flex-direction: column
-    align-items: center
   .types, .design
     &__card
       margin-bottom: 6.58rem
@@ -27,7 +24,9 @@
     background: none
     background-color: $dark_secondary
     &__section-title
-      color: $light 
+      color: $light
+  .projects-row
+    align-items: center
 @media screen and ( min-width: 992px )
   .logo
     &__link
@@ -72,11 +71,18 @@
         &::after
           background-color: $light
 @media screen and ( max-width:  768px )
+  .row
+    flex-direction: column
+    align-items: center  
   .col      
-    &-50
-      width: 60%
-    &-54
-      width: 90%            
+    &-44
+      width: 100%
+    &-56
+      width: 100%
+  .swiper
+    &-slide
+      &__text
+        max-width: none
 @media screen and ( max-width: 576px )
   .menu
     font-size: 12px  
@@ -137,11 +143,6 @@
       padding: 0.91rem 4rem
       font-size: 1.25rem
       text-align: center
-  .col      
-    &-50
-      width: 60%
-    &-54
-      width: 70%             
   .swiper
     &-slide
       &__heading
@@ -149,7 +150,7 @@
         font-size: 1.166rem
         margin-bottom: 0.7rem
       &__text
-        max-width: 10.5rem
+        max-width: 47.7%
         &:last-of-type
           margin-bottom: 4.62rem              
       &__value
@@ -185,7 +186,7 @@
     &__section-title
       margin-bottom: 3.4rem
     &__text
-      margin: -11.5rem 5.6rem 0 0
+      margin: -11.5rem 0 0 0
       box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.05)
     &__list
       line-height: 1.9rem
@@ -219,7 +220,7 @@
     &__pricetag
       bottom: -1.7rem
       left: 0
-      min-width: 15.86rem
+      max-width: 15.86rem
       padding-top: 0.9rem
     &__item
       display: none
@@ -231,6 +232,8 @@
           content: '...'
     &-pricetag
       text-align: center
+    &-text
+      max-width: 22.5rem
   .modal
     &__dialog
       min-width: 70%
@@ -251,6 +254,5 @@
           display: none     
   .projects
     &__text
-      min-width: 25.41rem
       margin-bottom: 1.8rem
-      
+       
