@@ -359,15 +359,15 @@ template {
   border: none;
   border-bottom: 1px solid rgba(54, 54, 54, 0.3);
   color: #ffffff; }
-  .input::-webkit-input-placeholder {
+  .input--light::-webkit-input-placeholder {
     color: #ffffff; }
-  .input::-moz-placeholder {
+  .input--light::-moz-placeholder {
     color: #ffffff; }
-  .input:-ms-input-placeholder {
+  .input--light:-ms-input-placeholder {
     color: #ffffff; }
-  .input::-ms-input-placeholder {
+  .input--light::-ms-input-placeholder {
     color: #ffffff; }
-  .input::placeholder {
+  .input--light::placeholder {
     color: #ffffff; }
 
 .policy__checkbox {
@@ -705,7 +705,8 @@ h3 {
   color: #ffffff; }
 
 .projects {
-  padding-top: 156px; }
+  padding-top: 156px;
+  padding-bottom: 30rem; }
   .projects__text {
     margin-bottom: 2.2rem; }
 
@@ -769,6 +770,73 @@ h3 {
 
 .swiper-button-next {
   background: url("../img/arrow-next.svg") no-repeat center; }
+
+.control {
+  padding: 77px 0; }
+  .control__wrap {
+    margin-top: -30.4rem; }
+  .control__section-title {
+    margin-bottom: 2.214rem; }
+    .control__section-title--light {
+      color: #ffffff; }
+  .control__video {
+    position: relative;
+    display: flex;
+    margin: auto;
+    max-width: 58.357rem;
+    min-height: 31rem;
+    background: #131313 url("../img/video-mask.jpg") center no-repeat;
+    box-shadow: 0px 20px 50px rgba(0, 0, 0, 0.15);
+    margin-bottom: 4.428rem; }
+    .control__video::before {
+      position: absolute;
+      content: '';
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.8); }
+  .control__text {
+    font-weight: normal;
+    font-size: 1.428rem;
+    line-height: 2.43rem;
+    text-align: center;
+    color: #363636;
+    max-width: 40.685rem;
+    margin: auto;
+    margin-bottom: 4.285rem; }
+    .control__text::before {
+      content: '';
+      display: block;
+      width: 3.928rem;
+      height: 2px;
+      background-color: #E3B873;
+      border-radius: 30px;
+      margin: auto;
+      margin-bottom: 1.9rem; }
+  .control__form {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 55.128rem;
+    margin: auto; }
+  .control__input {
+    line-height: 2.085rem;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    flex-basis: 30%; }
+  .control__label {
+    margin-bottom: -0.2rem; }
+  .control__button {
+    padding: 1.2857rem 4.785rem; }
+  .control__policy {
+    flex-basis: 100%;
+    margin-top: 1.185rem; }
+    .control__policy-label {
+      justify-content: center; }
+
+.video__play {
+  position: relative;
+  margin: auto; }
 
 .types__section-title {
   margin-bottom: 2.1rem; }
