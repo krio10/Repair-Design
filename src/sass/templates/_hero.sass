@@ -32,12 +32,14 @@
   &__title
     margin-top: 0
     margin-bottom: 0.97rem
+    animation: slideRight 1s linear alternate-reverse
   &__text
     margin-top: 0
     font-size: 1.57rem
     line-height: 2.24rem
     max-width: 35.71rem
     margin-bottom: 3.1rem
+    animation: slideRight 1s linear alternate-reverse    
   &__button
     margin-right: 1.228rem
     min-width: 207px
@@ -58,6 +60,10 @@
     bottom: 0
     min-width: 17.6rem
     min-height: 6.92rem
+    animation-name: bouncing
+    animation-duration: 1s
+    animation-delay: 4s
+    animation-iteration-count: 3
     &::after
       content: ''
       background: url('../img/arrow-down.svg') no-repeat center
