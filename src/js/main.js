@@ -160,4 +160,5 @@ $(document).ready(function () {
     setCountText(index);
   });  
 
+  new WOW().init();
 });
