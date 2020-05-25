@@ -1078,6 +1078,42 @@ h3 {
 .form__input {
   margin-bottom: 3.3rem; }
 
+@-webkit-keyframes slideRight {
+  form {
+    margin-left: 0; }
+  to {
+    margin-left: 150px; } }
+
+@keyframes slideRight {
+  form {
+    margin-left: 0; }
+  to {
+    margin-left: 150px; } }
+
+@-webkit-keyframes rotate {
+  0% {
+    transform: rotate(0deg); }
+  100% {
+    transform: rotate(360deg); } }
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg); }
+  100% {
+    transform: rotate(360deg); } }
+
+@-webkit-keyframes bouncing {
+  0% {
+    bottom: 0; }
+  100% {
+    bottom: 10px; } }
+
+@keyframes bouncing {
+  0% {
+    bottom: 0; }
+  100% {
+    bottom: 10px; } }
+
 @media screen and (max-width: 1200px) {
   html {
     font-size: 12px; }

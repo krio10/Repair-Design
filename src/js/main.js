@@ -36,15 +36,6 @@ $(document).ready(function () {
     }
   }); 
 
-  /* функция плавного появления кнопки возврата вначало при прокрутке страницы вниз и плавного скрывания этой кнопки при прокрутке страницы вверх */
-  $(window).scroll(function (){
-    if ($(this).scrollTop() > $(window).height()-150 && $(window).width() > 576) {
-      backTop.fadeIn();
-    } else {
-      backTop.fadeOut();
-    }
-  });
-
   // Функция плавной прокрутки страницы вверх при нажатии кнопки со стрелкой вверх
   backTop.click(function (){
     $("body,html").animate({
@@ -110,6 +101,7 @@ $(document).ready(function () {
   };
 
   var stepsLink = $('.steps__link');
+  var stepLink = $('.step__link');
   var active = $('.active');
   var curStep = $('.cur-step');
   var index = 1;
@@ -161,4 +153,33 @@ $(document).ready(function () {
   });  
 
   new WOW().init();
+  var element = $('.card-pricetag');
+
+    /* функция плавного появления кнопки возврата вначало при прокрутке страницы вниз и плавного скрывания этой кнопки при прокрутке страницы вверх и запуска анимации при появлении элемента на экране при прокручивании страницы */
+    $(window).scroll(function (){
+      if ($(this).scrollTop() > $(window).height()-150 && $(window).width() > 576) {
+        backTop.fadeIn();
+      } else {
+        backTop.fadeOut();
+      }
+
+      var win = $(this);
+      element.each(function (index, value) { 
+        if ( win.scrollTop() >= $(this).offset().top-$(window).height()-150) {
+        console.log('$(this).scrollTop()=' + win.scrollTop());
+        console.log('$(this).offset().top=' + $(this).offset().top);
+        $(this).css('animation-name', 'bouncing');
+        $(this).css('animation-duration', '0.5s');
+        $(this).css('animation-iteration-count', '3');
+        $(this).css('animation-timing-function', 'linear');
+        //$(this).css('animation-fill-mode', 'alternate-reverse');
+      } else {
+        $(this).css('animation-name', '');
+        $(this).css('animation-duration', '');
+        $(this).css('animation-iteration-count', '');
+        $(this).css('animation-timing-function', '');
+        //$(this).css('animation-fill-mode', '');
+      }
+    });
+  });  
 });
