@@ -111,6 +111,10 @@
       left: 0
   .cur-step
     padding-left: 0
+  .control
+    &__button
+      padding-left: 1.9rem
+      padding-right: 1.9rem
 @media screen and ( max-width: 576px )
   .menu
     font-size: 12px  
@@ -124,6 +128,9 @@
   .title
     font-size: 1.91rem
   .hero
+    height: 50rem
+    &::after
+      display: none
     &__scroll-down
       display: none
     &__content
@@ -142,6 +149,8 @@
       display: block
       min-width: 28.2rem
       margin-bottom: 2.16rem
+  .projects
+    padding-top: 4rem
   .section-title
     &__heading
       font-size: 1.83rem
@@ -186,8 +195,63 @@
     &-button
       &-prev, &-next
         width: 3.5rem
+  .control
+    background-color: $dark
+    padding-bottom: 0
+    &__wrap
+      margin-top: -31.7rem
+    &__title
+      margin-bottom: 1.7rem
+    &__video
+      min-height: 18.55rem
+      background-size: contain 
+      margin-bottom: 1.528rem
+    &__text
+      font-weight: normal
+      font-size: 1.166rem
+      line-height: 2rem
+      text-align: center
+      color: $light
+      margin-bottom: 2.185rem
+      &::before
+        margin-bottom: 1.3rem     
+        width: 4.628rem
+    &__form
+      flex-direction: column
+      margin-left: -0.1rem
+    &__label
+      font-weight: normal
+      font-size: 1.25rem
+      line-height: 1.666rem
+      color: rgba($light, 0.5)
+    &__input
+      width: 100%
+      font-weight: normal
+      font-size: 1.5rem
+      line-height: 2.083rem
+      color: $light
+      border-bottom: 1px solid rgb(54, 54, 54)
+      margin-bottom: 4.9rem
+      padding-bottom: 0.4rem
+    &__button
+      order: 3
+      padding: 1.5rem 3.485rem 1.5rem 2.985rem
+      margin-bottom: -2rem
+    &__policy
+      margin-top: -4.215rem
+      margin-bottom: 4.6rem
+      &-label
+        justify-content: flex-start
+        color: $light
+        font-weight: normal
+        font-size: 1.333rem
+        line-height: 1.833rem               
+  .video
+    &__play
+      width: 20%
+      height: 20%
   .steps
-    display: none        
+    display: none
 @media screen and ( max-height: 615px )
   .hero
     &__scroll-down
@@ -196,19 +260,43 @@
   .logo
     font-size: 1.01rem
   .hero
+    height: 39.7rem
     &__title
+      margin-top: 5.63rem
       max-width: 25rem
     &__text
       max-width: 26.5rem
     &__button
       width: 100%
       min-width: 85%
-  .section-title
-    &__heading
-      margin-bottom: 1.4rem
-    &__image
-      margin-bottom: 2.814rem
+  .section
+    &-title
+      &__text
+        font-size: 1.166rem      
+        max-width: 25.41rem
+        line-height: 1.96rem      
+      &__word
+        margin-bottom: 1.99rem
+        &::after
+          display: none     
+      &__image
+        margin-bottom: 2.814rem
+  .swiper
+    &-slide
+      min-width: 91%
+      width: 100%
+      &__heading
+        min-width: 11.83rem
+      &__image
+        margin-top: 2.8rem
+        object-fit: cover
+        width: 100%
+        height: 100%
   .types
+    margin-top: 0
+    padding-top: 5.4rem
+    &__title
+      margin-bottom: 1.5rem
     &__card
       margin-bottom: 6.18rem
       margin-right: auto
@@ -272,17 +360,14 @@
       margin-top: 2rem
       margin-right: 1rem
       margin-left: 1rem
-  .section
-    &-title
-      &__text
-        font-size: 1.166rem      
-        max-width: 25.41rem
-        line-height: 1.96rem      
-      &__word
-        margin-bottom: 1.79rem
-        &::after
-          display: none     
   .projects
+    padding-top: 6.1rem
     &__text
-      margin-bottom: 1.8rem
-       
+      margin-bottom: 1.7rem
+    &-swiper
+      margin-bottom: 0.2rem
+  .col      
+    &-44
+      width: 100%
+    &-56
+      width: 100%
