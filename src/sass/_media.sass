@@ -9,6 +9,9 @@
       min-width: 20.071rem
     &-left
       width: 35%
+    &__right
+      width: 60%
+      margin-right: 0
     &__swiper-right
       width: 60%
     &-text__paragraph
@@ -36,17 +39,6 @@
       color: $light
   .projects-row
     align-items: center
-  .steps
-    &-row
-      align-items: center
-      flex-direction: column
-    &__title
-      padding-top: 2rem
-    &-text__paragraph
-      max-width: none
-    &__swiper-left
-      width: 40%
-      margin-top: 0
   .swiper
     &-slide
       width: 100%      
@@ -54,6 +46,8 @@
         max-width: none
       &__value
         max-width: none      
+  .steps
+    display: none
 @media screen and ( min-width: 992px )
   .logo
     &__link
@@ -106,9 +100,6 @@
       width: 91%
     &-56
       width: 94%
-  .steps    
-    &__links
-      left: 0
   .cur-step
     padding-left: 0
   .control
@@ -250,8 +241,6 @@
     &__play
       width: 20%
       height: 20%
-  .steps
-    display: none
 @media screen and ( max-height: 615px )
   .hero
     &__scroll-down

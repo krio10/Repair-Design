@@ -106,20 +106,18 @@ $(document).ready(function () {
   var curStep = $('.cur-step');
   var index = 1;
 
-  stepsLink.mouseenter(function() {
-    $(this).toggleClass('pointer');
-  });
-
-  stepsLink.mouseleave(function() {
-    $(this).toggleClass('pointer');
-  });
-  
   function setCountText(index) {
     curStep.text(index + '/6');
-    if (stepsLink.hasClass('active')) { // Cleen active
+    if (stepsLink.hasClass('active')) { // Clean active
       stepsLink.removeClass('active');
       stepsLink.children().removeClass('active');
     };
+    stepsLink.each(function () { 
+      if (index == $(this).attr('data-index')) {
+        $(this).addClass('active');
+        $(this).children().addClass('active');        
+      }
+    });    
   };
 
   stepsLink.click(function() {
@@ -128,8 +126,6 @@ $(document).ready(function () {
       stepsSwiper[i].slideTo(index, 400, false);
     }
     setCountText(index);
-    $(this).addClass('active');
-    $(this).children().addClass('active');
   });
 
   stepsNext.click(function() {
