@@ -2,7 +2,6 @@ $(document).ready(function () {
   var modal = $('.modal'),
       modalBtn = $('[data-toggle=modal]'),
       closeBtn = $('.modal__close'),
-      sendRequestBtn = $('.modal__button'),
       backTop = $('.back-top')
   
   modal.hide();
@@ -13,10 +12,6 @@ $(document).ready(function () {
   });
 
   closeBtn.on('click', function () {
-    modal.hide();
-  });
-
-  sendRequestBtn.on('submit', function () {
     modal.hide();
   });
 
@@ -200,40 +195,10 @@ $(document).ready(function () {
     });
   });
 
-  var validateObject = {
-    errorClass: "invalid",
-    rules: {
-      // simple rule, converted to {required:true} строчное правило
-      userName: {
-        required: true,
-        minlength: 2,
-        maxlength: 15
-      },
-      userQuestion: "required",
-      userPhone: "required",
-      // compound rule правило-объект
-      userEmail: {
-        required: true,
-        email: true
-      }
-    }, // Сообщения
-    messages: {
-      userName: {
-        required: "Заполните поле",
-        minlength: "Имя не короче двух букв"        
-      },
-      userQuestion: "Заполните поле",
-      userPhone: "Заполните поле",
-      userEmail: {
-        required: "Введите корректный email",
-        email: "Введите в формате: name@domain.com"
-      }
-    }
-  };
-
   // Валидация формы
   $('.modal__form').validate({
     errorClass: "invalid",
+    errorElement: "div",
     rules: {
       // simple rule, converted to {required:true} строчное правило
       userName: {
@@ -251,18 +216,23 @@ $(document).ready(function () {
     messages: {
       userName: {
         required: "Заполните поле",
-        minlength: "Имя не короче двух букв"        
+        minlength: "Имя должно быть не короче двух букв",
+        maxlength: "Имя должно быть не более 15 букв"        
       },
       userPhone: "Заполните поле",
       userEmail: {
         required: "Введите корректный email",
         email: "Введите в формате: name@domain.com"
       }
-    }
+    },
+    submitHandler: function(form) {
+      form.submit();
+    }    
   });
 
   $('.control__form').validate({
     errorClass: "invalid",
+    errorElement: "div",
     rules: {
       // simple rule, converted to {required:true} строчное правило
       userName: {
@@ -291,6 +261,7 @@ $(document).ready(function () {
   });
   $('.footer__form').validate({
     errorClass: "invalid",
+    errorElement: "div",
     rules: {
       // simple rule, converted to {required:true} строчное правило
       userName: {
