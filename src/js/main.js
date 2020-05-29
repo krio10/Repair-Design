@@ -207,6 +207,7 @@ $(document).ready(function () {
         maxlength: 15
       },
       userPhone: "required",
+      policyCheckbox: "required",
       // compound rule правило-объект
       userEmail: {
         required: true,
@@ -220,6 +221,7 @@ $(document).ready(function () {
         maxlength: "Имя должно быть не более 15 букв"        
       },
       userPhone: "Заполните поле",
+      policyCheckbox: "Требуется ваше согласие",      
       userEmail: {
         required: "Введите корректный email",
         email: "Введите в формате: name@domain.com"
@@ -241,6 +243,7 @@ $(document).ready(function () {
         maxlength: 15
       },
       userPhone: "required",
+      policyCheckbox: "required",      
       // compound rule правило-объект
       userEmail: {
         required: true,
@@ -253,6 +256,7 @@ $(document).ready(function () {
         minlength: "Имя не короче двух букв"        
       },
       userPhone: "Заполните поле",
+      policyCheckbox: "Требуется ваше согласие",      
       userEmail: {
         required: "Введите корректный email",
         email: "Введите в формате: name@domain.com"
@@ -271,6 +275,7 @@ $(document).ready(function () {
       },
       userQuestion: "required",
       userPhone: "required",
+      policyCheckbox: "required",      
       // compound rule правило-объект
       userEmail: {
         required: true,
@@ -283,6 +288,7 @@ $(document).ready(function () {
         minlength: "Имя не короче двух букв"        
       },
       userQuestion: "Заполните поле",
+      policyCheckbox: "Требуется ваше согласие",
       userPhone: "Заполните поле",
       userEmail: {
         required: "Введите корректный email",
