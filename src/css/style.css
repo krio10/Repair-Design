@@ -395,7 +395,7 @@ template {
   .policy__label--center {
     justify-content: center; }
 
-label.invalid {
+div.invalid {
   color: tomato; }
 
 input.invalid {
