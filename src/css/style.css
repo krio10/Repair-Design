@@ -854,8 +854,8 @@ h3 {
   .control__label {
     margin-bottom: -0.2rem; }
   .control__button {
-    min-width: 13.95rem;
-    padding: 1.3857rem 3.985rem 1.2857rem 4.985rem; }
+    min-width: 14.45rem;
+    padding: 1.3857rem 3.285rem 1.2857rem 3.285rem; }
   .control__policy {
     flex-basis: 100%;
     margin-top: 1.185rem; }
@@ -1331,7 +1331,10 @@ h3 {
     .instagram__link:hover {
       color: #ffffff; }
       .instagram__link:hover::after {
-        background-color: #ffffff; } }
+        background-color: #ffffff; }
+  .control__button:hover {
+    color: #ffffff;
+    background-color: #131313; } }
 
 @media screen and (max-width: 768px) {
   .row {
