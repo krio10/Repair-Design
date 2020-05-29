@@ -2,6 +2,7 @@ $(document).ready(function () {
   var modal = $('.modal'),
       modalBtn = $('[data-toggle=modal]'),
       closeBtn = $('.modal__close'),
+      sendRequestBtn = $('.modal__button'),
       backTop = $('.back-top')
   
   modal.hide();
@@ -12,6 +13,10 @@ $(document).ready(function () {
   });
 
   closeBtn.on('click', function () {
+    modal.hide();
+  });
+
+  sendRequestBtn.on('submit', function () {
     modal.hide();
   });
 
@@ -193,6 +198,129 @@ $(document).ready(function () {
         $(this).css('animation-fill-mode', '');
       }
     });
+  });
 
-  });  
+  var validateObject = {
+    errorClass: "invalid",
+    rules: {
+      // simple rule, converted to {required:true} строчное правило
+      userName: {
+        required: true,
+        minlength: 2,
+        maxlength: 15
+      },
+      userQuestion: "required",
+      userPhone: "required",
+      // compound rule правило-объект
+      userEmail: {
+        required: true,
+        email: true
+      }
+    }, // Сообщения
+    messages: {
+      userName: {
+        required: "Заполните поле",
+        minlength: "Имя не короче двух букв"        
+      },
+      userQuestion: "Заполните поле",
+      userPhone: "Заполните поле",
+      userEmail: {
+        required: "Введите корректный email",
+        email: "Введите в формате: name@domain.com"
+      }
+    }
+  };
+
+  // Валидация формы
+  $('.modal__form').validate({
+    errorClass: "invalid",
+    rules: {
+      // simple rule, converted to {required:true} строчное правило
+      userName: {
+        required: true,
+        minlength: 2,
+        maxlength: 15
+      },
+      userPhone: "required",
+      // compound rule правило-объект
+      userEmail: {
+        required: true,
+        email: true
+      }
+    }, // Сообщения
+    messages: {
+      userName: {
+        required: "Заполните поле",
+        minlength: "Имя не короче двух букв"        
+      },
+      userPhone: "Заполните поле",
+      userEmail: {
+        required: "Введите корректный email",
+        email: "Введите в формате: name@domain.com"
+      }
+    }
+  });
+
+  $('.control__form').validate({
+    errorClass: "invalid",
+    rules: {
+      // simple rule, converted to {required:true} строчное правило
+      userName: {
+        required: true,
+        minlength: 2,
+        maxlength: 15
+      },
+      userPhone: "required",
+      // compound rule правило-объект
+      userEmail: {
+        required: true,
+        email: true
+      }
+    }, // Сообщения
+    messages: {
+      userName: {
+        required: "Заполните поле",
+        minlength: "Имя не короче двух букв"        
+      },
+      userPhone: "Заполните поле",
+      userEmail: {
+        required: "Введите корректный email",
+        email: "Введите в формате: name@domain.com"
+      }
+    }
+  });
+  $('.footer__form').validate({
+    errorClass: "invalid",
+    rules: {
+      // simple rule, converted to {required:true} строчное правило
+      userName: {
+        required: true,
+        minlength: 2,
+        maxlength: 15
+      },
+      userQuestion: "required",
+      userPhone: "required",
+      // compound rule правило-объект
+      userEmail: {
+        required: true,
+        email: true
+      }
+    }, // Сообщения
+    messages: {
+      userName: {
+        required: "Заполните поле",
+        minlength: "Имя не короче двух букв"        
+      },
+      userQuestion: "Заполните поле",
+      userPhone: "Заполните поле",
+      userEmail: {
+        required: "Введите корректный email",
+        email: "Введите в формате: name@domain.com"
+      }
+    }
+  });
+
+  // маска для номера телефона
+  $('[type=tel]').mask('+7(000) 000-00-00', {placeholder: "+7 (___) ___-__-__"});
+  
 });

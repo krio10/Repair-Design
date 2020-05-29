@@ -392,6 +392,14 @@ template {
     border-radius: 1px;
     cursor: pointer;
     margin-right: 0.64rem; }
+  .policy__label--center {
+    justify-content: center; }
+
+label.invalid {
+  color: tomato; }
+
+input.invalid {
+  border-bottom: 1px solid tomato; }
 
 .back-top {
   position: fixed;
@@ -1025,6 +1033,51 @@ h3 {
 .pointer {
   cursor: pointer; }
 
+.footer {
+  background: #131313 url("/img/footer-bg.jpg") no-repeat center; }
+  .footer__wrap {
+    background-color: #181818;
+    max-width: 63.071rem;
+    margin: auto;
+    padding: 2.457rem 12.964rem;
+    margin-bottom: 3.715rem; }
+  .footer__title {
+    font-family: 'Yeseva One', cursive;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.428rem;
+    line-height: 2rem;
+    text-align: center;
+    text-transform: uppercase;
+    margin: auto;
+    margin-bottom: 3.271rem; }
+  .footer__form {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 37.142rem;
+    margin: auto; }
+  .footer__input {
+    line-height: 1.285rem;
+    padding: 0; }
+    .footer__input-group {
+      display: flex;
+      flex-direction: column;
+      flex-basis: 44.7%;
+      margin-bottom: 0.525rem; }
+      .footer__input-group--full-width {
+        flex-basis: 100%;
+        margin-bottom: -0.7rem; }
+  .footer__policy {
+    flex-basis: 100%;
+    margin-bottom: 3.003rem; }
+  .footer__button {
+    margin: auto;
+    padding: 1.285rem 4.785rem; }
+  .footer__menu {
+    background-color: #131313;
+    padding: 4.285rem 0; }
+
 .modal {
   opacity: 0;
   visibility: hidden;
@@ -1046,14 +1099,14 @@ h3 {
   .modal__dialog {
     position: relative;
     min-width: 36.142rem;
-    max-height: 36.357rem;
+    min-height: 35.357rem;
     padding-top: 2.357rem;
     padding-bottom: 1.928rem;
     background: #131313 url("../img/bg-lines.svg") no-repeat center;
     color: #ffffff; }
   .modal__close {
     position: absolute;
-    right: 1.2rem;
+    right: 1.1rem;
     top: 0.9rem;
     width: 28px;
     height: 28px;
@@ -1078,21 +1131,25 @@ h3 {
     padding-right: 3.2rem; }
   .modal__input {
     padding-bottom: 0.5rem; }
-    .modal__input:last-of-type {
-      margin-bottom: -0.2rem; }
+    .modal__input-group {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 2.2rem; }
   .modal__policy {
-    margin-bottom: 2.1rem; }
+    margin-top: -3.5rem;
+    margin-bottom: 2.2rem; }
   .modal__button {
     align-self: flex-end;
-    min-width: 213px;
+    max-width: 213px;
     min-height: 51px;
-    margin-right: 0.5rem; }
+    margin-right: 0.6rem;
+    padding: 1.1rem 3.2rem; }
 
 .form__label {
   margin-bottom: 0.1rem; }
 
 .form__input {
-  margin-bottom: 3.3rem; }
+  margin-bottom: 1.1rem; }
 
 @-webkit-keyframes slideRight {
   form {
