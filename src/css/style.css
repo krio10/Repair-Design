@@ -847,6 +847,7 @@ h3 {
   .control__input {
     line-height: 2.085rem;
     padding: 0;
+    color: #131313;
     display: flex;
     flex-direction: column;
     flex-basis: 30%; }
@@ -1050,7 +1051,7 @@ h3 {
     text-align: center;
     text-transform: uppercase;
     margin: auto;
-    margin-bottom: 3.271rem; }
+    margin-bottom: 3.171rem; }
   .footer__form {
     display: flex;
     justify-content: space-between;
@@ -1059,17 +1060,19 @@ h3 {
     margin: auto; }
   .footer__input {
     line-height: 1.285rem;
-    padding: 0; }
+    padding: 0;
+    padding-bottom: 0.6rem; }
     .footer__input-group {
       display: flex;
       flex-direction: column;
-      flex-basis: 44.7%;
-      margin-bottom: 0.525rem; }
+      flex-basis: 44.5%;
+      margin-bottom: 2.225rem; }
       .footer__input-group--full-width {
         flex-basis: 100%;
         margin-bottom: -0.7rem; }
   .footer__policy {
     flex-basis: 100%;
+    margin-top: 1.5rem;
     margin-bottom: 3.003rem; }
   .footer__button {
     margin: auto;
@@ -1342,7 +1345,13 @@ h3 {
     padding-left: 0; }
   .control__button {
     padding-left: 1.9rem;
-    padding-right: 1.9rem; } }
+    padding-right: 1.9rem; }
+  .footer__container {
+    width: 100%; }
+  .footer__wrap {
+    width: 100%;
+    padding-right: 0;
+    padding-left: 0; } }
 
 @media screen and (max-width: 576px) {
   .menu {
@@ -1471,7 +1480,52 @@ h3 {
         line-height: 1.833rem; }
   .video__play {
     width: 20%;
-    height: 20%; } }
+    height: 20%; }
+  .footer__wrap {
+    width: 100%;
+    padding-right: 0;
+    padding-left: 0; }
+  .footer__title {
+    font-size: 1.679rem;
+    line-height: 2rem;
+    margin-bottom: 4.371rem; }
+  .footer__form {
+    flex-direction: column;
+    margin-left: 1.5rem;
+    margin-right: 1.5rem; }
+  .footer__input {
+    width: 100%;
+    font-weight: normal;
+    font-size: 1.5rem;
+    line-height: 2.083rem;
+    color: #ffffff;
+    border-bottom: 1px solid #363636;
+    padding-bottom: 0.4rem; }
+    .footer__input-group {
+      flex-basis: 100%;
+      margin-bottom: 3.9rem; }
+  .footer__label {
+    font-size: 1.25rem;
+    line-height: 1.666rem;
+    margin-bottom: -0.1rem; }
+  .footer__button {
+    font-size: 1.3rem;
+    padding: 1.5rem 3.485rem 1.4rem 3.585rem;
+    margin: 0;
+    margin-bottom: -2rem;
+    max-width: 100%; }
+  .footer__policy {
+    width: 100%;
+    margin-top: -4.615rem;
+    margin-bottom: 5.1rem;
+    margin-right: 0;
+    margin-left: 0; }
+    .footer__policy-label {
+      justify-content: flex-start;
+      color: #ffffff;
+      font-weight: normal;
+      font-size: 1.333rem;
+      line-height: 1.833rem; } }
 
 @media screen and (max-height: 615px) {
   .hero__scroll-down {
