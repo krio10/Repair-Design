@@ -404,8 +404,8 @@ input.invalid {
 .back-top {
   position: fixed;
   z-index: 2000;
-  bottom: 3%;
-  right: 2%;
+  bottom: 1%;
+  right: 1%;
   background: url("../img/arrow-up.svg") no-repeat center;
   width: 30px;
   height: 30px;
@@ -1346,10 +1346,9 @@ h3 {
   .control__button {
     padding-left: 1.9rem;
     padding-right: 1.9rem; }
-  .footer__container {
-    width: 100%; }
   .footer__wrap {
     width: 100%;
+    margin: auto;
     padding-right: 0;
     padding-left: 0; } }
 
@@ -1621,6 +1620,8 @@ h3 {
     text-align: center; }
   .card-text {
     max-width: 22.5rem; }
+  .footer__container {
+    width: 100%; }
   .modal__dialog {
     min-width: 70%;
     max-height: 70%; }
