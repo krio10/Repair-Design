@@ -48,6 +48,9 @@
         max-width: none      
   .steps
     display: none
+  .footer
+    &__map
+      width: 58rem
 @media screen and ( min-width: 992px )
   .logo
     &__link
@@ -116,7 +119,10 @@
       width: 100%
       margin: auto
       padding-right: 0
-      padding-left: 0      
+      padding-left: 0
+      margin-bottom: 4rem
+    &__map
+      width: 40rem      
 @media screen and ( max-width: 576px )
   .menu
     font-size: 12px  
@@ -260,7 +266,7 @@
     &__title
       font-size: 1.679rem
       line-height: 2rem
-      margin-bottom: 4.371rem      
+      margin-bottom: 4.271rem      
     &__form
       flex-direction: column
       margin-left: 1.5rem
@@ -268,7 +274,7 @@
     &__input
       width: 100%
       font-weight: normal
-      font-size: 1.5rem
+      font-size: 1.4rem
       line-height: 2.083rem
       color: $light
       border-bottom: 1px solid rgb(54, 54, 54)
@@ -284,7 +290,7 @@
       font-size: 1.3rem
       padding: 1.5rem 3.485rem 1.4rem 3.585rem
       margin: 0
-      margin-bottom: -2rem
+      margin-bottom: 0
       max-width: 100%
     &__policy
       width: 100%
@@ -298,8 +304,12 @@
         font-weight: normal
         font-size: 1.333rem
         line-height: 1.833rem
+    &__map
+      width: 30rem
+      height: 20rem          
   .policy
     &__label
+      font-size: 1.342rem
       &--center
         justify-content: flex-start                   
 @media screen and ( max-height: 615px )
@@ -403,8 +413,35 @@
     &-text
       max-width: 22.5rem
   .footer
+    background: $dark
+    &__wrap
+      margin-bottom: 3.3rem
     &__container
-      width: 100%    
+      width: 100%
+    &__address
+      width: 100%
+    &__title
+      &--address
+        font-size: 1.5rem
+        line-height: 2.1rem
+        max-width: 26.1rem
+        margin-bottom: 1.457rem
+        order: 2
+    &__icons
+      order: 3
+    &__icon
+      width: 4.2rem
+      height: 4.2rem
+      margin-right: 0.3rem
+      margin-left: 0.4rem
+    &__map
+      width: 28.3rem
+      height: 21.3rem
+      margin: auto
+      margin-bottom: 3.272rem
+      order: 0
+    &__menu
+      display: none
   .modal
     &__dialog
       min-width: 70%

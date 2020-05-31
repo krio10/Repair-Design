@@ -1057,6 +1057,18 @@ h3 {
     text-transform: uppercase;
     margin: auto;
     margin-bottom: 3.171rem; }
+    .footer__title--address {
+      font-family: 'Yeseva One', cursive;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 1.428rem;
+      line-height: 2rem;
+      text-align: center;
+      text-transform: uppercase;
+      margin: auto;
+      color: #E3B873;
+      max-width: 38.271rem;
+      margin-bottom: 1.657rem; }
   .footer__form {
     display: flex;
     justify-content: space-between;
@@ -1082,9 +1094,25 @@ h3 {
   .footer__button {
     margin: auto;
     padding: 1.285rem 4.785rem; }
+  .footer__icons {
+    margin: auto;
+    margin-bottom: 3rem;
+    display: flex;
+    justify-content: center; }
+  .footer__icon {
+    padding: 0 0.5rem; }
   .footer__menu {
     background-color: #131313;
     padding: 4.285rem 0; }
+  .footer__address {
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+  .footer__map {
+    width: 66.071rem;
+    height: 33.21rem;
+    margin: auto;
+    margin-bottom: 4.672rem; }
 
 .modal {
   opacity: 0;
@@ -1299,7 +1327,9 @@ h3 {
     .swiper-slide__value {
       max-width: none; }
   .steps {
-    display: none; } }
+    display: none; }
+  .footer__map {
+    width: 58rem; } }
 
 @media screen and (min-width: 992px) {
   .logo__link {
@@ -1358,7 +1388,10 @@ h3 {
     width: 100%;
     margin: auto;
     padding-right: 0;
-    padding-left: 0; } }
+    padding-left: 0;
+    margin-bottom: 4rem; }
+  .footer__map {
+    width: 40rem; } }
 
 @media screen and (max-width: 576px) {
   .menu {
@@ -1495,7 +1528,7 @@ h3 {
   .footer__title {
     font-size: 1.679rem;
     line-height: 2rem;
-    margin-bottom: 4.371rem; }
+    margin-bottom: 4.271rem; }
   .footer__form {
     flex-direction: column;
     margin-left: 1.5rem;
@@ -1503,7 +1536,7 @@ h3 {
   .footer__input {
     width: 100%;
     font-weight: normal;
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     line-height: 2.083rem;
     color: #ffffff;
     border-bottom: 1px solid #363636;
@@ -1519,7 +1552,7 @@ h3 {
     font-size: 1.3rem;
     padding: 1.5rem 3.485rem 1.4rem 3.585rem;
     margin: 0;
-    margin-bottom: -2rem;
+    margin-bottom: 0;
     max-width: 100%; }
   .footer__policy {
     width: 100%;
@@ -1533,8 +1566,13 @@ h3 {
       font-weight: normal;
       font-size: 1.333rem;
       line-height: 1.833rem; }
-  .policy__label--center {
-    justify-content: flex-start; } }
+  .footer__map {
+    width: 30rem;
+    height: 20rem; }
+  .policy__label {
+    font-size: 1.342rem; }
+    .policy__label--center {
+      justify-content: flex-start; } }
 
 @media screen and (max-height: 615px) {
   .hero__scroll-down {
@@ -1630,8 +1668,35 @@ h3 {
     text-align: center; }
   .card-text {
     max-width: 22.5rem; }
-  .footer__container {
-    width: 100%; }
+  .footer {
+    background: #131313; }
+    .footer__wrap {
+      margin-bottom: 3.3rem; }
+    .footer__container {
+      width: 100%; }
+    .footer__address {
+      width: 100%; }
+    .footer__title--address {
+      font-size: 1.5rem;
+      line-height: 2.1rem;
+      max-width: 26.1rem;
+      margin-bottom: 1.457rem;
+      order: 2; }
+    .footer__icons {
+      order: 3; }
+    .footer__icon {
+      width: 4.2rem;
+      height: 4.2rem;
+      margin-right: 0.3rem;
+      margin-left: 0.4rem; }
+    .footer__map {
+      width: 28.3rem;
+      height: 21.3rem;
+      margin: auto;
+      margin-bottom: 3.272rem;
+      order: 0; }
+    .footer__menu {
+      display: none; }
   .modal__dialog {
     min-width: 70%;
     max-height: 70%; }
