@@ -229,6 +229,12 @@ $(document).ready(function () {
     },
     submitHandler: function(form) {
       form.submit();
+    },
+    errorPlacement: function(error, element) {
+      if (element.attr("type") == "checkbox") {
+        return element.next('label').append(error);
+      }
+      error.insertAfter($(element));
     }    
   });
 
@@ -261,7 +267,13 @@ $(document).ready(function () {
         required: "Введите корректный email",
         email: "Введите в формате: name@domain.com"
       }
-    }
+    },
+    errorPlacement: function(error, element) {
+      if (element.attr("type") == "checkbox") {
+        return element.next('label').append(error);
+      }
+      error.insertAfter($(element));
+    }    
   });
   $('.footer__form').validate({
     errorClass: "invalid",
@@ -294,7 +306,13 @@ $(document).ready(function () {
         required: "Введите корректный email",
         email: "Введите в формате: name@domain.com"
       }
-    }
+    },
+    errorPlacement: function(error, element) {
+      if (element.attr("type") == "checkbox") {
+        return element.next('label').append(error);
+      }
+      error.insertAfter($(element));
+    }    
   });
 
   // маска для номера телефона
