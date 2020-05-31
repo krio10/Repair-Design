@@ -1100,7 +1100,8 @@ h3 {
     display: flex;
     justify-content: center; }
   .footer__icon {
-    padding: 0 0.5rem; }
+    margin-right: 0.7rem;
+    margin-left: 0.4rem; }
   .footer__menu {
     background-color: #131313;
     padding: 4.285rem 0; }
