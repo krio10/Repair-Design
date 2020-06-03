@@ -373,7 +373,7 @@ template {
 .policy__checkbox {
   opacity: 0;
   visibility: hidden; }
-  .policy__checkbox:checked + .policy__label::before {
+  .policy__checkbox:checked ~ .policy__label::before {
     background: #E3B873 url("../img/check.svg") no-repeat center/0.8rem; }
 
 .policy__label {
@@ -396,18 +396,31 @@ template {
     justify-content: center; }
 
 div.invalid {
+  position: absolute;
+  top: 3.7rem;
+  color: tomato; }
+
+div.invalid-center {
+  position: absolute;
+  top: 3.7rem;
   color: tomato;
-  display: flex;
-  justify-content: center; }
+  margin-left: 11rem; }
 
 div#policyCheckbox-error {
-  margin-bottom: -2.7rem;
-  display: flex;
-  justify-content: center; }
+  position: absolute;
+  top: 3.7rem; }
+
+div#user-name-error {
+  margin-left: 0; }
+
+div#user-phone-error {
+  margin-left: 0; }
+
+div#user-question-error {
+  margin-left: 0; }
 
 input.invalid {
-  border-bottom: 1px solid tomato;
-  margin-bottom: 0; }
+  border-bottom: 1px solid tomato; }
 
 .back-top {
   position: fixed;
@@ -859,7 +872,8 @@ h3 {
     .control__input-group {
       display: flex;
       flex-direction: column;
-      flex-basis: 30%; }
+      flex-basis: 30%;
+      position: relative; }
   .control__label {
     margin-bottom: -0.2rem; }
   .control__button {
@@ -867,9 +881,46 @@ h3 {
     padding: 1.3857rem 3.285rem 1.2857rem 3.285rem; }
   .control__policy {
     flex-basis: 100%;
-    margin-top: 1.185rem; }
+    margin-top: 1.185rem;
+    position: relative; }
     .control__policy-label {
+      display: flex;
+      align-items: center;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 1.142rem;
+      line-height: 1.571rem;
+      margin-bottom: 0.5rem;
       justify-content: center; }
+      .control__policy-label::before {
+        content: '';
+        width: 18px;
+        height: 18px;
+        border: 1px solid #E3B873;
+        border-radius: 1px;
+        cursor: pointer;
+        margin-right: 0.64rem; }
+      .control__policy-label--center {
+        justify-content: center; }
+    .control__policy-checkbox {
+      opacity: 0;
+      visibility: hidden; }
+      .control__policy-checkbox:checked ~ .control__policy-label::before {
+        background-color: #E3B873;
+        background: #E3B873 url("../img/check.svg") no-repeat center/0.8rem; }
+
+#control-user-name-error {
+  margin-left: 0; }
+
+#control-user-phone-error {
+  margin-left: 0; }
+
+#controlPolicyCheckbox-error {
+  position: absolute;
+  top: 3.7rem;
+  display: block;
+  margin: 0;
+  left: 36.6%; }
 
 .video__play {
   position: relative;
@@ -1088,14 +1139,16 @@ h3 {
       display: flex;
       flex-direction: column;
       flex-basis: 44.5%;
-      margin-bottom: 2.225rem; }
+      margin-bottom: 2.225rem;
+      position: relative; }
       .footer__input-group--full-width {
         flex-basis: 100%;
         margin-bottom: -0.7rem; }
   .footer__policy {
     flex-basis: 100%;
     margin-top: 1.5rem;
-    margin-bottom: 3.003rem; }
+    margin-bottom: 3.003rem;
+    position: relative; }
   .footer__button {
     margin: auto;
     padding: 1.285rem 4.785rem; }
@@ -1176,8 +1229,10 @@ h3 {
     .modal__input-group, .modal-msg__input-group {
       display: flex;
       flex-direction: column;
-      margin-bottom: 2.2rem; }
+      margin-bottom: 2.2rem;
+      position: relative; }
   .modal__policy, .modal-msg__policy {
+    position: relative;
     margin-top: -3.5rem;
     margin-bottom: 2.2rem; }
   .modal__button, .modal-msg__button {

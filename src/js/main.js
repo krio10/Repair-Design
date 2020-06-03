@@ -204,64 +204,86 @@ $(document).ready(function () {
   });
 
   // Валидация формы
-  var validateObject = {
-    errorClass: "invalid",
-    errorElement: "div",
-    rules: {
-      // simple rule, converted to {required:true} строчное правило
-      userName: {
-        required: true,
-        minlength: 2,
-        maxlength: 15
-      },
-      userPhone: "required",
-      policyCheckbox: "required",
-      userQuestion: "required",
-      // compound rule правило-объект
-      userEmail: {
-        required: true,
-        email: true
-      }
-    }, // Сообщения
-    messages: {
-      userName: {
-        required: "Заполните поле",
-        minlength: "Имя должно быть не короче 2 букв",
-        maxlength: "Имя должно быть не более 15 букв"        
-      },
-      userPhone: "Заполните поле",
-      policyCheckbox: "Требуется ваше согласие",
-      userQuestion: "Заполните поле",      
-      userEmail: {
-        required: "Введите корректный email",
-        email: "Введите в формате: name@domain.com"
-      }
+  var rules = {
+    // simple rule, converted to {required:true} строчное правило
+    userName: {
+      required: true,
+      minlength: 2,
+      maxlength: 15
     },
-    /*
-    errorPlacement: function(error, element) {
-      if (element.attr("type") == "checkbox") {
-        return element.next('label').append(error);
-      }
-      error.insertAfter($(element));
-    },*/ 
-    submitHandler: function(form) {
-      $.ajax({
-        type: "POST",
-        url: "send.php",
-        data: $(form).serialize(),
-        success: function (response) {
-         // console.log('Ajax сработал. Ответ сервера ' + response);
-         // alert('Форма отправлена. Мы свяжемся с вами через 10 минут.');
-          $(form)[0].reset();
-          modal.hide();
-          modalMsg.show()
-        }
-      });
+    userPhone: {
+      required: true,
+      minlength: 17,
+      maxlength: 17
+    },
+    policyCheckbox: "required",
+    controlPolicyCheckbox: "required",
+    userQuestion: "required",
+    // compound rule правило-объект
+    userEmail: {
+      required: true,
+      email: true
     }
   };
+   // Сообщения
+  var messages = {
+    userName: {
+      required: "Заполните поле",
+      minlength: "Имя должно быть не короче 2 букв",
+      maxlength: "Имя должно быть не более 15 букв"        
+    },
+    userPhone: {
+      required: "Заполните поле",
+      minlength: "Введите номер телефона в формате: +7(000) 000-00-00",
+      maxlength: "Введите номер телефона в формате: +7(000) 000-00-00"        
+    },
+    policyCheckbox: "Требуется ваше согласие",
+    controlPolicyCheckbox: "Требуется ваше согласие",
+    userQuestion: "Заполните поле",      
+    userEmail: {
+      required: "Введите корректный email",
+      email: "Введите в формате: name@domain.com"
+    }
+  },
+  /*
+  errorPlacement: function(error, element) {
+    if (element.attr("type") == "checkbox") {
+      return element.next('label').append(error);
+    }
+    error.insertAfter($(element));
+  },*/ 
+ submitHandler = function (form) {
+    $.ajax({
+      type: "POST",
+      url: "send.php",
+      data: $(form).serialize(),
+      success: function (response) {
+       // console.log('Ajax сработал. Ответ сервера ' + response);
+       // alert('Форма отправлена. Мы свяжемся с вами через 10 минут.');
+        $(form)[0].reset();
+        modal.hide();
+        modalMsg.show()
+      }
+    });
+  };
 
+  var validateObjectModal = {
+    errorClass: "invalid",
+    errorElement: "div",
+    rules,
+    messages,
+    submitHandler
+  };
 
-  $('.modal__form').validate(validateObject);
+  var validateObject = {
+    errorClass: "invalid-center",
+    errorElement: "div",
+    rules,
+    messages,
+    submitHandler
+  };
+
+  $('.modal__form').validate(validateObjectModal);
   $('.control__form').validate(validateObject);
   $('.footer__form').validate(validateObject);
 

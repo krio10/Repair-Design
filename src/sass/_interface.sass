@@ -37,7 +37,7 @@
   &__checkbox
     opacity: 0
     visibility: hidden
-    &:checked +
+    &:checked ~
       .policy__label
         &::before
           background: $primary url('../img/check.svg') no-repeat center / 0.8rem
@@ -61,17 +61,26 @@
       justify-content: center
 div
   &.invalid
+    position: absolute
+    top: 3.7rem
     color: tomato
-    display: flex
-    justify-content: center    
+  &.invalid-center
+    position: absolute
+    top: 3.7rem
+    color: tomato
+    margin-left: 11rem 
   &#policyCheckbox-error
-    margin-bottom: -2.7rem
-    display: flex
-    justify-content: center
+    position: absolute
+    top: 3.7rem
+  &#user-name-error
+    margin-left: 0
+  &#user-phone-error
+    margin-left: 0
+  &#user-question-error
+    margin-left: 0
 input
   &.invalid
     border-bottom: 1px solid tomato
-    margin-bottom: 0
 .back-top
   position: fixed
   z-index: 2000
