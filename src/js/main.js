@@ -1,7 +1,9 @@
 $(document).ready(function () {
   var modal = $('.modal'),
+      modalMsg = $('.modal-msg'),
       modalBtn = $('[data-toggle=modal]'),
       closeBtn = $('.modal__close'),
+      closeMsgBtn = $('.modal-msg__close'),
       backTop = $('.back-top')
   
   modal.hide();
@@ -35,6 +37,12 @@ $(document).ready(function () {
       modal.hide();
     }
   }); 
+
+  modalMsg.hide();
+  closeMsgBtn.on('click', function () {
+    modalMsg.hide();
+  });
+
 
   // Функция плавной прокрутки страницы вверх при нажатии кнопки со стрелкой вверх
   backTop.click(function (){
@@ -196,7 +204,7 @@ $(document).ready(function () {
   });
 
   // Валидация формы
-  $('.modal__form').validate({
+  var validateObject = {
     errorClass: "invalid",
     errorElement: "div",
     rules: {
@@ -208,6 +216,7 @@ $(document).ready(function () {
       },
       userPhone: "required",
       policyCheckbox: "required",
+      userQuestion: "required",
       // compound rule правило-объект
       userEmail: {
         required: true,
@@ -217,124 +226,66 @@ $(document).ready(function () {
     messages: {
       userName: {
         required: "Заполните поле",
-        minlength: "Имя должно быть не короче двух букв",
+        minlength: "Имя должно быть не короче 2 букв",
         maxlength: "Имя должно быть не более 15 букв"        
       },
       userPhone: "Заполните поле",
-      policyCheckbox: "Требуется ваше согласие",      
-      userEmail: {
-        required: "Введите корректный email",
-        email: "Введите в формате: name@domain.com"
-      }
-    },
-    submitHandler: function(form) {
-      form.submit();
-    },
-    errorPlacement: function(error, element) {
-      if (element.attr("type") == "checkbox") {
-        return element.next('label').append(error);
-      }
-      error.insertAfter($(element));
-    }    
-  });
-
-  $('.control__form').validate({
-    errorClass: "invalid",
-    errorElement: "div",
-    rules: {
-      // simple rule, converted to {required:true} строчное правило
-      userName: {
-        required: true,
-        minlength: 2,
-        maxlength: 15
-      },
-      userPhone: "required",
-      policyCheckbox: "required",      
-      // compound rule правило-объект
-      userEmail: {
-        required: true,
-        email: true
-      }
-    }, // Сообщения
-    messages: {
-      userName: {
-        required: "Заполните поле",
-        minlength: "Имя не короче двух букв"        
-      },
-      userPhone: "Заполните поле",
-      policyCheckbox: "Требуется ваше согласие",      
-      userEmail: {
-        required: "Введите корректный email",
-        email: "Введите в формате: name@domain.com"
-      }
-    },
-    errorPlacement: function(error, element) {
-      if (element.attr("type") == "checkbox") {
-        return element.next('label').append(error);
-      }
-      error.insertAfter($(element));
-    }    
-  });
-  $('.footer__form').validate({
-    errorClass: "invalid",
-    errorElement: "div",
-    rules: {
-      // simple rule, converted to {required:true} строчное правило
-      userName: {
-        required: true,
-        minlength: 2,
-        maxlength: 15
-      },
-      userQuestion: "required",
-      userPhone: "required",
-      policyCheckbox: "required",      
-      // compound rule правило-объект
-      userEmail: {
-        required: true,
-        email: true
-      }
-    }, // Сообщения
-    messages: {
-      userName: {
-        required: "Заполните поле",
-        minlength: "Имя не короче двух букв"        
-      },
-      userQuestion: "Заполните поле",
       policyCheckbox: "Требуется ваше согласие",
-      userPhone: "Заполните поле",
+      userQuestion: "Заполните поле",      
       userEmail: {
         required: "Введите корректный email",
         email: "Введите в формате: name@domain.com"
       }
     },
+    /*
     errorPlacement: function(error, element) {
       if (element.attr("type") == "checkbox") {
         return element.next('label').append(error);
       }
       error.insertAfter($(element));
-    }    
-  });
+    },*/ 
+    submitHandler: function(form) {
+      $.ajax({
+        type: "POST",
+        url: "send.php",
+        data: $(form).serialize(),
+        success: function (response) {
+         // console.log('Ajax сработал. Ответ сервера ' + response);
+         // alert('Форма отправлена. Мы свяжемся с вами через 10 минут.');
+          $(form)[0].reset();
+          modal.hide();
+          modalMsg.show()
+        }
+      });
+    }
+  };
+
+
+  $('.modal__form').validate(validateObject);
+  $('.control__form').validate(validateObject);
+  $('.footer__form').validate(validateObject);
 
   // маска для номера телефона
-  $('[type=tel]').mask('+7(000) 000-00-00', {placeholder: "+7 (___) ___-__-__"});
+  $('[type=tel]').mask('+7(000) 000-00-00', {placeholder: "Ваш номер телефона:"});
   
   // создание карты
   ymaps.ready(function () {
     var myMap = new ymaps.Map('map', {
-            center: [47.259879, 39.720168],
-            zoom: 9
-        }, {
-            searchControlProvider: 'yandex#search'
+          center: [47.259879, 39.720168],
+          zoom: 9
+        },
+        {
+          searchControlProvider: 'yandex#search'
         }),
 
         // Создаём макет содержимого.
         MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
-            '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
+          '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
         ),
 
         myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
-            hintContent: 'Офис №345',
-            balloonContent: 'Вход со двора'
+          hintContent: 'Офис №345',
+          balloonContent: 'Вход со двора'
         }, {
             // Опции.
             // Необходимо указать данный тип макета.

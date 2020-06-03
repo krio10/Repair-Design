@@ -1,4 +1,4 @@
-.modal
+.modal, .modal-msg
   opacity: 0
   visibility: hidden
   z-index: 199
@@ -69,7 +69,18 @@
     margin-bottom: 0.1rem
   &__input
     margin-bottom: 1.1rem
-
+.modal-msg
+  &__dialog
+    position: relative
+    min-width: 36.142rem
+    min-height: 10rem
+    padding-top: 2rem
+    padding-bottom: 2rem
+    background-color: $dark
+    color: $light
+div
+  &#modal-user-email-error
+    margin-bottom: 1.5rem
 
 
 

@@ -396,10 +396,18 @@ template {
     justify-content: center; }
 
 div.invalid {
-  color: tomato; }
+  color: tomato;
+  display: flex;
+  justify-content: center; }
+
+div#policyCheckbox-error {
+  margin-bottom: -2.7rem;
+  display: flex;
+  justify-content: center; }
 
 input.invalid {
-  border-bottom: 1px solid tomato; }
+  border-bottom: 1px solid tomato;
+  margin-bottom: 0; }
 
 .back-top {
   position: fixed;
@@ -863,10 +871,6 @@ h3 {
     .control__policy-label {
       justify-content: center; }
 
-.policy__label::before {
-  background-color: #E3B873;
-  background: #E3B873 url("../img/check.svg") no-repeat center/0.8rem; }
-
 .video__play {
   position: relative;
   margin: auto; }
@@ -1040,7 +1044,7 @@ h3 {
   cursor: pointer; }
 
 .footer {
-  background: #131313 url("/img/footer-bg.jpg") no-repeat center; }
+  background: #131313 url("../img/footer-bg.jpg") no-repeat center; }
   .footer__wrap {
     background-color: #181818;
     max-width: 63.071rem;
@@ -1078,7 +1082,8 @@ h3 {
   .footer__input {
     line-height: 1.285rem;
     padding: 0;
-    padding-bottom: 0.6rem; }
+    padding-bottom: 0.6rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15); }
     .footer__input-group {
       display: flex;
       flex-direction: column;
@@ -1115,7 +1120,7 @@ h3 {
     margin: auto;
     margin-bottom: 4.672rem; }
 
-.modal {
+.modal, .modal-msg {
   opacity: 0;
   visibility: hidden;
   z-index: 199;
@@ -1130,10 +1135,10 @@ h3 {
   display: flex;
   align-items: center;
   justify-content: center; }
-  .modal--visible {
+  .modal--visible, .modal-msg--visible {
     opacity: 1;
     visibility: visible; }
-  .modal__dialog {
+  .modal__dialog, .modal-msg__dialog {
     position: relative;
     min-width: 36.142rem;
     min-height: 35.357rem;
@@ -1141,7 +1146,7 @@ h3 {
     padding-bottom: 1.928rem;
     background: #131313 url("../img/bg-lines.svg") no-repeat center;
     color: #ffffff; }
-  .modal__close {
+  .modal__close, .modal-msg__close {
     position: absolute;
     right: 1.1rem;
     top: 0.9rem;
@@ -1150,7 +1155,7 @@ h3 {
     background: transparent url("../img/close.svg") no-repeat center;
     border: none;
     cursor: pointer; }
-  .modal__title {
+  .modal__title, .modal-msg__title {
     font-family: 'Yeseva One', cursive;
     font-weight: normal;
     font-size: 1.357rem;
@@ -1161,21 +1166,21 @@ h3 {
     margin-right: 5.142rem;
     margin-bottom: 1.928rem;
     margin-left: 5.142rem; }
-  .modal__form {
+  .modal__form, .modal-msg__form {
     display: flex;
     flex-direction: column;
     padding-left: 3.2rem;
     padding-right: 3.2rem; }
-  .modal__input {
+  .modal__input, .modal-msg__input {
     padding-bottom: 0.5rem; }
-    .modal__input-group {
+    .modal__input-group, .modal-msg__input-group {
       display: flex;
       flex-direction: column;
       margin-bottom: 2.2rem; }
-  .modal__policy {
+  .modal__policy, .modal-msg__policy {
     margin-top: -3.5rem;
     margin-bottom: 2.2rem; }
-  .modal__button {
+  .modal__button, .modal-msg__button {
     align-self: flex-end;
     max-width: 213px;
     min-height: 51px;
@@ -1187,6 +1192,18 @@ h3 {
 
 .form__input {
   margin-bottom: 1.1rem; }
+
+.modal-msg__dialog {
+  position: relative;
+  min-width: 36.142rem;
+  min-height: 10rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  background-color: #131313;
+  color: #ffffff; }
+
+div#modal-user-email-error {
+  margin-bottom: 1.5rem; }
 
 @-webkit-keyframes slideRight {
   form {
