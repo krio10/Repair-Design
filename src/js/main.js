@@ -242,7 +242,7 @@ $(document).ready(function () {
     userQuestion: "Заполните поле",      
     userEmail: {
       required: "Введите корректный email",
-      email: "Введите в формате: name@domain.com"
+      email: "Введите корректный email"
     }
   },
   /*
