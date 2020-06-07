@@ -218,6 +218,7 @@ $(document).ready(function () {
     },
     policyCheckbox: "required",
     controlPolicyCheckbox: "required",
+    footerPolicyCheckbox: "required",
     userQuestion: "required",
     // compound rule правило-объект
     userEmail: {
@@ -239,6 +240,7 @@ $(document).ready(function () {
     },
     policyCheckbox: "Требуется ваше согласие",
     controlPolicyCheckbox: "Требуется ваше согласие",
+    footerPolicyCheckbox: "Требуется ваше согласие",    
     userQuestion: "Заполните поле",      
     userEmail: {
       required: "Введите корректный email",
