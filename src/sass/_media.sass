@@ -5,6 +5,7 @@
     &__item
       margin-right: 0.7rem
   .steps
+    height: 45vh
     &-text
       min-width: 20.071rem
     &-left
@@ -16,6 +17,24 @@
       width: 60%
     &-text__paragraph
       max-width: none
+  .team
+    padding-top: 3rem
+    &-and-clients
+      margin-top: -0.5rem
+    &__container
+      margin-top: -3rem
+    &__card
+      padding: 0
+      &-icon
+        top: -2rem
+        left: -2rem
+    &__text
+      width: 90%
+      padding-bottom: 0
+    &__wrap-img
+      max-width: 100%
+    &__experience
+      bottom: 0
 @media screen and ( max-width: 992px )
   .nav
     display: none
@@ -35,6 +54,8 @@
   .design
     background: none
     background-color: $dark_secondary
+    padding-bottom: 2.5rem
+    margin-bottom: 0
     &__section-title
       color: $light
   .projects-row
@@ -48,9 +69,39 @@
         max-width: none      
   .steps
     display: none
+  .team
+    padding-top: 3rem
+    background: $dark_secondary
+    &-and-clients
+      background-color: $dark_secondary
+      background-image: none
+      margin-top: -0.5rem
+      height: 83vh
+    &__container
+      margin-top: -3rem
+    &__card
+      padding: 0
+      &-icon
+        top: -2rem
+        left: -2rem
+    &__subtitle
+      color: $light
+    &__text
+      width: 90%
+    &__wrap-img
+      max-width: 100%
+    &__experience
+      bottom: 0
+  .col-26
+    width: 100%
+    display: flex
+    justify-content: center
+    margin-bottom: 3rem
+  .clients
+    display: none
   .footer
     &__map
-      width: 58rem
+      width: 91%
 @media screen and ( min-width: 992px )
   .logo
     &__link
@@ -133,8 +184,6 @@
       padding-right: 0
       padding-left: 0
       margin-bottom: 4rem
-    &__map
-      width: 40rem      
 @media screen and ( max-width: 576px )
   .menu
     font-size: 12px  
@@ -185,7 +234,7 @@
       display: block
   .design
     background-color: $dark_secondary
-    padding-bottom: 6.3rem
+    padding-bottom: 0.4rem
     &__section-title
       color: $light
     &__section-subtitle
@@ -283,7 +332,11 @@
     &__play
       width: 20%
       height: 20%
+  .team
+    &__subtitle
+      display: none          
   .footer
+    background: $dark_secondary    
     &__wrap
       width: 100%
       padding-right: 5%
@@ -330,7 +383,6 @@
         font-size: 1.333rem
         line-height: 1.833rem
     &__map
-      width: 30rem
       height: 20rem
     &__title
       &--address
@@ -340,6 +392,7 @@
       font-size: 1.342rem
       &--center
         justify-content: flex-start
+        margin-left: 0
   .modal
     &-msg__dialog
       min-width: 96%
@@ -458,8 +511,39 @@
       text-align: center
     &-text
       max-width: 22.5rem
+  .team
+    &__title
+      margin-bottom: 1.2rem
+    &__section-subtitle
+      font-size: 1.25rem
+      line-height: 1.666rem
+      margin-bottom: 6.88rem
+    &__icon
+      margin-bottom: 1.7rem
+    &__wrap-img
+      min-width: 80.997%
+      width: 100%
+    &__card-icon
+      width: 5.8rem
+      height: 5.8rem
+      top: -2.9rem
+      left: -2.7rem
+    &__text
+      max-width: 85.4%
+      margin-top: -6.7rem
+      padding-top: 1.771rem
+    &__card-title
+      font-size: 1.5rem
+      margin-bottom: -0.9rem
+    &__position
+      font-size: 1.5rem
+      margin-bottom: 1.9rem
+    &__experience
+      font-size: 1.083rem
+      padding: 1.028rem 0.5rem 1.128rem 0.5rem 
+  .col-26
+    margin-bottom: 6.2rem      
   .footer
-    background: $dark
     &__wrap
       margin-bottom: 1.2rem
     &__container
