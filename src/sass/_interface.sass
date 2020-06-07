@@ -33,6 +33,8 @@
   &--light
     &::placeholder
       color: $light
+    &::-moz-placeholder, :-moz-placeholder
+      opacity: 1
 .policy
   &__checkbox
     opacity: 0
@@ -59,11 +61,7 @@
       margin-right: 0.64rem
     &--center
       justify-content: center
-      font-family: 'Futura Book', sans-serif
-      font-style: normal
-      font-weight: normal
-      font-size: 1.142rem
-      line-height: 1.571rem      
+      margin-left: -1.7rem
 div
   &.invalid
     position: absolute
@@ -79,10 +77,13 @@ div
     top: 3.7rem
   &#user-name-error
     margin-left: 0
+    top: 4.1rem
   &#user-phone-error
     margin-left: 0
+    top: 4.1rem
   &#user-question-error
     margin-left: 0
+    top: 4.1rem
 input
   &.invalid
     border-bottom: 1px solid tomato

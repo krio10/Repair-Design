@@ -1,10 +1,21 @@
 .footer
-  background: $dark url('../img/footer-bg.jpg') no-repeat center
+  background: $dark url('../img/footer-bg.png') no-repeat center
+  background-size: cover
+  padding-top: 4.1rem
+  margin-top: -3.1rem
+  &::before
+    content: ''
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    background-color:  rgba(#000000, 1)
   &__wrap
-    background: $dark url('../img/footer-lines-bg.svg') no-repeat center    
+    background: $dark url('../img/footer-line-bg.svg') no-repeat center    
     max-width: 63.071rem
-    margin: auto
     padding: 2.457rem 12.964rem
+    margin: auto
+    margin-top: -20rem
     margin-bottom: 3.715rem
   &__title
     font-family: 'Yeseva One', cursive
@@ -27,7 +38,7 @@
       margin: auto
       color: $primary
       max-width: 38.271rem
-      margin-bottom: 1.657rem
+      margin-bottom: 1.457rem
   &__form
     display: flex
     justify-content: space-between
@@ -39,7 +50,7 @@
     font-style: normal
     font-weight: normal
     font-size: 1.285rem
-    line-height: 1.285rem
+    line-height: 1.385rem
     padding: 0
     padding-bottom: 0.6rem
     border-bottom: 1px solid rgba($light, 0.15)
@@ -54,14 +65,14 @@
         margin-bottom: -0.7rem
   &__policy
     flex-basis: 100%
-    margin-top: 1.5rem
+    margin-top: 1.7rem
     margin-bottom: 3.003rem
     position: relative
   &__button
-    font-family: 'FuturaDemiC', sans-serif
+    font-family: 'Futura Demi', sans-serif
     font-style: normal
     font-weight: 500
-    font-size: 0.974rem
+    font-size: 1.071rem
     line-height: 1.285rem
     margin: auto
     padding: 1.185rem 4.185rem
@@ -71,8 +82,8 @@
     display: flex
     justify-content: center
   &__icon
-    margin-right: 0.7rem
-    margin-left: 0.4rem    
+    margin-right: 1.4rem
+    margin-left: -0.4rem    
   &__menu
     background-color: $dark
     padding: 4.285rem 0
@@ -81,7 +92,7 @@
     flex-direction: column
     align-items: center
   &__map
-    width: 66.071rem
+    width: 67.771rem
     height: 33.21rem
     margin: auto
     margin-bottom: 4.672rem

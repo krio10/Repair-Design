@@ -234,8 +234,8 @@ $(document).ready(function () {
     },
     userPhone: {
       required: "Заполните поле",
-      minlength: "Введите номер телефона в формате: +7(000) 000-00-00",
-      maxlength: "Введите номер телефона в формате: +7(000) 000-00-00"        
+      minlength: "Введите полный номер телефона",
+      maxlength: "Введите полный номер телефона"        
     },
     policyCheckbox: "Требуется ваше согласие",
     controlPolicyCheckbox: "Требуется ваше согласие",
@@ -267,7 +267,7 @@ $(document).ready(function () {
     });
   };
 
-  var validateObjectModal = {
+  var validateObject = {
     errorClass: "invalid",
     errorElement: "div",
     rules,
@@ -275,15 +275,7 @@ $(document).ready(function () {
     submitHandler
   };
 
-  var validateObject = {
-    errorClass: "invalid-center",
-    errorElement: "div",
-    rules,
-    messages,
-    submitHandler
-  };
-
-  $('.modal__form').validate(validateObjectModal);
+  $('.modal__form').validate(validateObject);
   $('.control__form').validate(validateObject);
   $('.footer__form').validate(validateObject);
 
