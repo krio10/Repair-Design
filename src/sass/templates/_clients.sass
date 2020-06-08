@@ -1,69 +1,37 @@
 .clients
   &__section-title
-    margin-bottom: 5rem
+    margin-bottom: 3.5rem
   &__title
     margin-left: 0
     margin-right: 0
   &__icon
     margin-bottom: 1.3rem
   &__section-subtitle
-    margin: 0 auto 3.68rem auto
+    margin: 0 auto
     max-width: 25.714rem
     line-height: 1.85rem
   &__row
     justify-content: space-around
   &__card
-    padding: 0 0 0 0
-  &__repair
-    display: flex
-    justify-content: space-between
-    align-items: center   
-    background-color: $primary
-    padding: 0.1rem 0.485rem 0.1rem 1.485rem
-    margin-bottom: 0
-    max-width: 20.982rem
-    &-icon
-      width: 32px
-      height: 32px
-      margin: 0
-    &-text
-      font-family: 'Yeseva One', cursive
-      font-style: normal
-      font-weight: normal
-      font-size: 1.214rem
-      line-height: 1.714rem
-      text-align: center
-      text-transform: uppercase
-      background-color: $primary
-      color: $light
-      padding-left: 0.5rem
-      padding-right: 1.1rem
-      min-width: 4rem
-      &--lowercase
-        text-transform: lowercase
-      &--after
-        content: ''
-        display: inline-block
-        background-color: $light
-        height: 3.6rem
-        width: 1px
-        margin-right: 1.2rem
-        top: 0
-        bottom: 0          
+    position: relative
+    padding: 1.714rem 2.216rem 0 1.428rem
+    background-color: $light
+    box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.04)
   &__card-title
+    margin-top: -0.814rem
     margin-bottom: -1.1rem 
     padding: 0.1rem 0.1rem
     font-family: 'Yeseva One', cursive
     font-style: normal
     font-weight: normal
     font-size: 1.285rem
-    line-height: 1.785rem
-    max-width: 14.714rem
+    line-height: 1.685rem
+    max-width: 14.614rem
   &__client
     display: flex
     justify-content: flex-start
     align-items: center
-    margin-bottom: -0.9rem
+    margin-bottom: -1.6rem
   &__image
     width: 5.5rem
     height: auto
@@ -76,4 +44,49 @@
     font-size: 1.071rem
     line-height: 1.928rem
     max-width: 23.14rem
-    min-height: 21rem
+    min-height: 24.1rem
+    margin-right: 0
+  &__repair
+    position: absolute
+    display: flex
+    justify-content: space-between
+    align-items: center   
+    background-color: $primary
+    padding: 0rem 0.485rem 0.1rem 1.185rem
+    left: 0
+    bottom: -1.8rem
+    box-shadow: 5px 5px 20px rgba(227, 184, 115, 0.5)
+    &-icon
+      width: 32px
+      height: 32px
+      &__area
+        margin: 0
+        margin-right: 0.8rem
+      &__duration
+        margin: 0
+        margin-right: 1.1rem
+    &-text
+      font-family: 'Yeseva One', cursive
+      font-style: normal
+      font-weight: normal
+      font-size: 1.214rem
+      line-height: 1.714rem
+      text-align: center
+      text-transform: uppercase
+      background-color: $primary
+      color: $light
+      padding-left: 0
+      padding-right: 0
+      margin-right: 1.3rem
+      min-width: 4rem
+      &--lowercase
+        text-transform: lowercase
+      &--after
+        content: ''
+        display: inline-block
+        background-color: $light
+        height: 3.7rem
+        width: 1px
+        margin-right: 1.2rem
+        top: 0
+        bottom: 0          

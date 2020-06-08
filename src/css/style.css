@@ -450,6 +450,9 @@ input.invalid {
   justify-content: space-between; }
 
 .col-30 {
+  flex-basis: 30%; }
+
+.col-32 {
   flex-basis: 32%; }
 
 .col-44 {
@@ -1005,11 +1008,12 @@ h3 {
 .steps {
   background-color: #131313;
   margin-top: -94.9px;
-  height: 93vh; }
+  height: 86.8vh; }
   .steps-row {
     flex-wrap: wrap; }
   .steps__work {
-    padding-bottom: 0; }
+    padding-bottom: 0;
+    width: 86.2%; }
   .steps__title {
     margin-bottom: 0; }
   .steps-title {
@@ -1046,16 +1050,17 @@ h3 {
     margin-bottom: 0.735rem; }
   .steps__right {
     margin-top: -1.3rem;
-    margin-right: -1.4rem;
-    width: 68.3%; }
+    margin-right: -2.5rem;
+    width: 67.9%; }
   .steps__swiper {
     padding-top: 6.571rem; }
     .steps__swiper-left {
       width: 37.3%;
-      margin-top: -5rem;
+      margin-top: -4.9rem;
+      margin-left: -0.1rem;
       padding-bottom: 1rem; }
     .steps__swiper-right {
-      width: 60.9%;
+      width: 61.8%;
       margin-top: 0.4rem;
       padding-bottom: 5.8rem; }
   .steps-text {
@@ -1068,7 +1073,7 @@ h3 {
       margin-bottom: 1.2rem; }
   .steps__text {
     margin-top: 0.8rem;
-    margin-bottom: -1.8rem; }
+    margin-bottom: -1.85rem; }
   .steps-box {
     display: flex;
     justify-content: flex-end;
@@ -1124,7 +1129,7 @@ h3 {
     background: url("../img/team-bg-lines.svg") no-repeat center/cover;
     height: 158.9vh; }
   .team__container {
-    margin-top: -27.7rem; }
+    margin-top: -22.2rem; }
   .team__section-title {
     margin-bottom: 2rem; }
   .team__title {
@@ -1171,7 +1176,8 @@ h3 {
     background-color: #E3B873;
     color: #ffffff; }
   .team__card-title {
-    margin-bottom: -1.1rem;
+    margin-bottom: -1rem;
+    margin-left: 0;
     padding: 0 0.2rem;
     font-family: 'Yeseva One', cursive;
     font-style: normal;
@@ -1190,8 +1196,9 @@ h3 {
     flex-direction: column;
     width: 16.642rem;
     margin: -5.7rem auto 1.3rem auto;
-    padding: 1.571rem 0 0 0;
-    text-align: center; }
+    padding: 1.471rem 0 0 0;
+    text-align: center;
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.05); }
   .team__subtitle {
     text-align: center;
     font-size: 1.428rem;
@@ -1209,7 +1216,7 @@ h3 {
       margin-bottom: 0.7rem; }
 
 .clients__section-title {
-  margin-bottom: 5rem; }
+  margin-bottom: 3.5rem; }
 
 .clients__title {
   margin-left: 0;
@@ -1219,7 +1226,7 @@ h3 {
   margin-bottom: 1.3rem; }
 
 .clients__section-subtitle {
-  margin: 0 auto 3.68rem auto;
+  margin: 0 auto;
   max-width: 25.714rem;
   line-height: 1.85rem; }
 
@@ -1227,60 +1234,27 @@ h3 {
   justify-content: space-around; }
 
 .clients__card {
-  padding: 0 0 0 0; }
-
-.clients__repair {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #E3B873;
-  padding: 0.1rem 0.485rem 0.1rem 1.485rem;
-  margin-bottom: 0;
-  max-width: 20.982rem; }
-  .clients__repair-icon {
-    width: 32px;
-    height: 32px;
-    margin: 0; }
-  .clients__repair-text {
-    font-family: 'Yeseva One', cursive;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 1.214rem;
-    line-height: 1.714rem;
-    text-align: center;
-    text-transform: uppercase;
-    background-color: #E3B873;
-    color: #ffffff;
-    padding-left: 0.5rem;
-    padding-right: 1.1rem;
-    min-width: 4rem; }
-    .clients__repair-text--lowercase {
-      text-transform: lowercase; }
-    .clients__repair-text--after {
-      content: '';
-      display: inline-block;
-      background-color: #ffffff;
-      height: 3.6rem;
-      width: 1px;
-      margin-right: 1.2rem;
-      top: 0;
-      bottom: 0; }
+  position: relative;
+  padding: 1.714rem 2.216rem 0 1.428rem;
+  background-color: #ffffff;
+  box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.04); }
 
 .clients__card-title {
+  margin-top: -0.814rem;
   margin-bottom: -1.1rem;
   padding: 0.1rem 0.1rem;
   font-family: 'Yeseva One', cursive;
   font-style: normal;
   font-weight: normal;
   font-size: 1.285rem;
-  line-height: 1.785rem;
-  max-width: 14.714rem; }
+  line-height: 1.685rem;
+  max-width: 14.614rem; }
 
 .clients__client {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  margin-bottom: -0.9rem; }
+  margin-bottom: -1.6rem; }
 
 .clients__image {
   width: 5.5rem;
@@ -1295,7 +1269,53 @@ h3 {
   font-size: 1.071rem;
   line-height: 1.928rem;
   max-width: 23.14rem;
-  min-height: 21rem; }
+  min-height: 24.1rem;
+  margin-right: 0; }
+
+.clients__repair {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #E3B873;
+  padding: 0rem 0.485rem 0.1rem 1.185rem;
+  left: 0;
+  bottom: -1.8rem;
+  box-shadow: 5px 5px 20px rgba(227, 184, 115, 0.5); }
+  .clients__repair-icon {
+    width: 32px;
+    height: 32px; }
+    .clients__repair-icon__area {
+      margin: 0;
+      margin-right: 0.8rem; }
+    .clients__repair-icon__duration {
+      margin: 0;
+      margin-right: 1.1rem; }
+  .clients__repair-text {
+    font-family: 'Yeseva One', cursive;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.214rem;
+    line-height: 1.714rem;
+    text-align: center;
+    text-transform: uppercase;
+    background-color: #E3B873;
+    color: #ffffff;
+    padding-left: 0;
+    padding-right: 0;
+    margin-right: 1.3rem;
+    min-width: 4rem; }
+    .clients__repair-text--lowercase {
+      text-transform: lowercase; }
+    .clients__repair-text--after {
+      content: '';
+      display: inline-block;
+      background-color: #ffffff;
+      height: 3.7rem;
+      width: 1px;
+      margin-right: 1.2rem;
+      top: 0;
+      bottom: 0; }
 
 .footer {
   background: #131313 url("../img/footer-bg.png") no-repeat center;
@@ -1606,11 +1626,15 @@ div#modal-user-email-error {
     padding-top: 3rem; }
     .team-and-clients {
       margin-top: -0.5rem;
-      height: 143vh; }
+      height: 156vh; }
     .team__container {
-      margin-top: -3rem; }
+      margin-top: 6rem; }
+    .team__section-subtitle {
+      margin-bottom: 6.68rem; }
     .team__card {
-      padding: 0; }
+      padding-top: 0;
+      padding-left: 0;
+      padding-right: 0; }
       .team__card-icon {
         top: -2rem;
         left: -2rem; }
@@ -1658,7 +1682,7 @@ div#modal-user-email-error {
     .team-and-clients {
       background-color: #252525;
       background-image: none;
-      margin-top: -0.5rem; }
+      height: 85vh; }
     .team__container {
       margin-top: -3rem; }
     .team__card {
@@ -1670,8 +1694,6 @@ div#modal-user-email-error {
       color: #ffffff; }
     .team__text {
       width: 90%; }
-    .team__wrap-img {
-      max-width: 100%; }
     .team__experience {
       bottom: 0; }
   .col-26 {
@@ -1748,6 +1770,8 @@ div#modal-user-email-error {
     margin-right: auto; }
   #controlPolicyCheckbox-error {
     top: 3rem; }
+  .team-and-clients {
+    height: 146vh; }
   .footer__wrap {
     width: 100%;
     margin: auto;
@@ -2052,25 +2076,23 @@ div#modal-user-email-error {
   .design__wrap-img::before {
     display: none; }
   .design__text {
-    margin: -13.1rem 0 0 -0.1rem;
+    margin: -13.2rem 0 0 -0.1rem;
     max-width: 22.4rem;
     min-height: 14.8rem;
     padding-bottom: 0; }
   .design__list {
     padding: 0 0 3.4rem 1.2rem; }
   .design__pricetag {
-    bottom: -1.7rem;
+    bottom: -1.5rem;
     left: 0;
-    max-width: 15.86rem;
-    padding-top: 0.9rem; }
+    min-width: 15.98rem;
+    padding-left: 3.5rem; }
   .design__item {
     display: none; }
   .card__item {
     line-height: 1.9rem; }
     .card__item--ellipsis::after {
       content: '...'; }
-  .card-pricetag {
-    text-align: center; }
   .card-text {
     max-width: 22.5rem; }
   .team-and-clients {
@@ -2122,7 +2144,7 @@ div#modal-user-email-error {
   .footer__input {
     width: 100%;
     font-size: 1.5rem;
-    line-height: 2.183rem;
+    line-height: 2.283rem;
     padding-bottom: 0.3rem;
     border-bottom: 1px solid #ffffff; }
     .footer__input-group {
@@ -2139,7 +2161,9 @@ div#modal-user-email-error {
   .footer__title--address {
     font-size: 1.5rem;
     line-height: 2.1rem;
-    max-width: 83.5%;
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
     margin-bottom: 1.757rem;
     order: 2; }
   .footer__icons {
@@ -2173,8 +2197,6 @@ div#modal-user-email-error {
     font-size: 1.333rem;
     width: 100%;
     min-width: 100%; }
-  div#policyCheckbox-error {
-    top: 4.8rem; }
   .projects {
     padding-top: 6.1rem; }
     .projects__text {

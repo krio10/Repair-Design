@@ -21,11 +21,15 @@
     padding-top: 3rem
     &-and-clients
       margin-top: -0.5rem
-      height: 143vh
+      height: 156vh
     &__container
-      margin-top: -3rem
+      margin-top: 6rem
+    &__section-subtitle
+      margin-bottom: 6.68rem
     &__card
-      padding: 0
+      padding-top: 0
+      padding-left: 0
+      padding-right: 0
       &-icon
         top: -2rem
         left: -2rem
@@ -76,7 +80,7 @@
     &-and-clients
       background-color: $dark_secondary
       background-image: none
-      margin-top: -0.5rem
+      height: 85vh      
     &__container
       margin-top: -3rem
     &__card
@@ -88,8 +92,6 @@
       color: $light
     &__text
       width: 90%
-    &__wrap-img
-      max-width: 100%
     &__experience
       bottom: 0
   .col-26
@@ -176,7 +178,10 @@
       margin-left: auto
       margin-right: auto
   #controlPolicyCheckbox-error
-      top: 3rem      
+      top: 3rem
+  .team
+    &-and-clients
+      height: 146vh            
   .footer
     &__wrap
       width: 100%
@@ -490,17 +495,17 @@
       &::before
         display: none
     &__text
-      margin: -13.1rem 0 0 -0.1rem
+      margin: -13.2rem 0 0 -0.1rem
       max-width: 22.4rem
       min-height: 14.8rem
       padding-bottom: 0    
     &__list
       padding: 0 0 3.4rem 1.2rem
     &__pricetag
-      bottom: -1.7rem
+      bottom: -1.5rem
       left: 0
-      max-width: 15.86rem
-      padding-top: 0.9rem
+      min-width: 15.98rem
+      padding-left: 3.5rem
     &__item
       display: none
   .card
@@ -509,8 +514,6 @@
       &--ellipsis
         &::after
           content: '...'
-    &-pricetag
-      text-align: center
     &-text
       max-width: 22.5rem
   .team
@@ -564,7 +567,7 @@
     &__input
       width: 100%
       font-size: 1.5rem
-      line-height: 2.183rem
+      line-height: 2.283rem
       padding-bottom: 0.3rem
       border-bottom: 1px solid $light      
       &-group
@@ -582,7 +585,9 @@
       &--address
         font-size: 1.5rem
         line-height: 2.1rem
-        max-width: 83.5%
+        width: 100%
+        margin-left: 0
+        margin-right: 0
         margin-bottom: 1.757rem
         order: 2
     &__icons
@@ -618,8 +623,6 @@
       font-size: 1.333rem
       width: 100%
       min-width: 100%
-  div#policyCheckbox-error
-    top: 4.8rem
   .projects
     padding-top: 6.1rem
     &__text
