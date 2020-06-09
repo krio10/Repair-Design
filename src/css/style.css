@@ -1007,13 +1007,13 @@ h3 {
 
 .steps {
   background-color: #131313;
-  margin-top: -94.9px;
-  height: 86.8vh; }
+  margin-top: -94.9px; }
   .steps-row {
     flex-wrap: wrap; }
   .steps__work {
     padding-bottom: 0;
-    width: 86.2%; }
+    width: 86.2%;
+    margin-bottom: 19rem; }
   .steps__title {
     margin-bottom: 0; }
   .steps-title {
@@ -1123,13 +1123,13 @@ h3 {
   cursor: pointer; }
 
 .team {
-  background: linear-gradient(to bottom, #131313 49%, rgba(255, 255, 255, 0) 49%, rgba(255, 255, 255, 0) 51%);
+  background: linear-gradient(to bottom, #131313 52%, rgba(255, 255, 255, 0) 52%, rgba(255, 255, 255, 0) 48%);
   margin-bottom: 7.1rem; }
   .team-and-clients {
-    background: url("../img/team-bg-lines.svg") no-repeat center/cover;
-    height: 158.9vh; }
+    background: url("../img/team-bg-lines.svg") no-repeat center/cover; }
   .team__container {
-    margin-top: -22.2rem; }
+    margin-top: -22.2rem;
+    padding-top: 3rem; }
   .team__section-title {
     margin-bottom: 2rem; }
   .team__title {
@@ -1172,7 +1172,7 @@ h3 {
     text-transform: uppercase;
     bottom: -1.9rem;
     left: 0;
-    padding: 0.928rem 0.8rem 0.928rem 0.5rem;
+    padding: 0.928rem 0.4rem 0.928rem 0.5rem;
     background-color: #E3B873;
     color: #ffffff; }
   .team__card-title {
@@ -1187,9 +1187,13 @@ h3 {
     text-align: center;
     min-width: 13.714rem; }
   .team__wrap-img {
-    width: 100%;
-    position: relative;
-    max-width: 28.1rem; }
+    display: flex;
+    justify-content: center;
+    width: 272px;
+    overflow: hidden; }
+  .team__image {
+    width: 272px;
+    height: 358px; }
   .team__text {
     display: flex;
     justify-content: center;
@@ -1215,107 +1219,99 @@ h3 {
       margin: auto;
       margin-bottom: 0.7rem; }
 
-.clients__section-title {
-  margin-bottom: 3.5rem; }
-
-.clients__title {
-  margin-left: 0;
-  margin-right: 0; }
-
-.clients__icon {
-  margin-bottom: 1.3rem; }
-
-.clients__section-subtitle {
-  margin: 0 auto;
-  max-width: 25.714rem;
-  line-height: 1.85rem; }
-
-.clients__row {
-  justify-content: space-around; }
-
-.clients__card {
-  position: relative;
-  padding: 1.714rem 2.216rem 0 1.428rem;
-  background-color: #ffffff;
-  box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.04); }
-
-.clients__card-title {
-  margin-top: -0.814rem;
-  margin-bottom: -1.1rem;
-  padding: 0.1rem 0.1rem;
-  font-family: 'Yeseva One', cursive;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 1.285rem;
-  line-height: 1.685rem;
-  max-width: 14.614rem; }
-
-.clients__client {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  margin-bottom: -1.6rem; }
-
-.clients__image {
-  width: 5.5rem;
-  height: auto;
-  border-radius: 50%;
-  margin-right: 1.2rem; }
-
-.clients__feedback {
-  padding: 1.571rem 0 0 0;
-  text-align: start;
-  color: #959595;
-  font-size: 1.071rem;
-  line-height: 1.928rem;
-  max-width: 23.14rem;
-  min-height: 24.1rem;
-  margin-right: 0; }
-
-.clients__repair {
-  position: absolute;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #E3B873;
-  padding: 0rem 0.485rem 0.1rem 1.185rem;
-  left: 0;
-  bottom: -1.8rem;
-  box-shadow: 5px 5px 20px rgba(227, 184, 115, 0.5); }
-  .clients__repair-icon {
-    width: 32px;
-    height: 32px; }
-    .clients__repair-icon__area {
-      margin: 0;
-      margin-right: 0.8rem; }
-    .clients__repair-icon__duration {
-      margin: 0;
-      margin-right: 1.1rem; }
-  .clients__repair-text {
+.clients {
+  padding-bottom: 29rem; }
+  .clients__section-title {
+    margin-bottom: 3.5rem; }
+  .clients__title {
+    margin-left: 0;
+    margin-right: 0; }
+  .clients__icon {
+    margin-bottom: 1.3rem; }
+  .clients__section-subtitle {
+    margin: 0 auto;
+    max-width: 25.714rem;
+    line-height: 1.85rem; }
+  .clients__row {
+    justify-content: space-around; }
+  .clients__card {
+    position: relative;
+    padding: 1.714rem 2.216rem 0 1.428rem;
+    background-color: #ffffff;
+    box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.04); }
+  .clients__card-title {
+    margin-top: -0.814rem;
+    margin-bottom: -1.1rem;
+    padding: 0.1rem 0.1rem;
     font-family: 'Yeseva One', cursive;
     font-style: normal;
     font-weight: normal;
-    font-size: 1.214rem;
-    line-height: 1.714rem;
-    text-align: center;
-    text-transform: uppercase;
+    font-size: 1.285rem;
+    line-height: 1.685rem;
+    max-width: 14.614rem; }
+  .clients__client {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: -1.6rem; }
+  .clients__image {
+    width: 5.5rem;
+    height: auto;
+    border-radius: 50%;
+    margin-right: 1.2rem; }
+  .clients__feedback {
+    padding: 1.571rem 0 0 0;
+    text-align: start;
+    color: #959595;
+    font-size: 1.071rem;
+    line-height: 1.928rem;
+    max-width: 23.14rem;
+    min-height: 24.1rem;
+    margin-right: 0; }
+  .clients__repair {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     background-color: #E3B873;
-    color: #ffffff;
-    padding-left: 0;
-    padding-right: 0;
-    margin-right: 1.3rem;
-    min-width: 4rem; }
-    .clients__repair-text--lowercase {
-      text-transform: lowercase; }
-    .clients__repair-text--after {
-      content: '';
-      display: inline-block;
-      background-color: #ffffff;
-      height: 3.7rem;
-      width: 1px;
-      margin-right: 1.2rem;
-      top: 0;
-      bottom: 0; }
+    padding: 0rem 0.485rem 0.1rem 1.185rem;
+    left: 0;
+    bottom: -1.8rem;
+    box-shadow: 5px 5px 20px rgba(227, 184, 115, 0.5); }
+    .clients__repair-icon {
+      width: 32px;
+      height: 32px; }
+      .clients__repair-icon__area {
+        margin: 0;
+        margin-right: 0.8rem; }
+      .clients__repair-icon__duration {
+        margin: 0;
+        margin-right: 1.1rem; }
+    .clients__repair-text {
+      font-family: 'Yeseva One', cursive;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 1.214rem;
+      line-height: 1.714rem;
+      text-align: center;
+      text-transform: uppercase;
+      background-color: #E3B873;
+      color: #ffffff;
+      padding-left: 0;
+      padding-right: 0;
+      margin-right: 1.3rem;
+      min-width: 4rem; }
+      .clients__repair-text--lowercase {
+        text-transform: lowercase; }
+      .clients__repair-text--after {
+        content: '';
+        display: inline-block;
+        background-color: #ffffff;
+        height: 3.7rem;
+        width: 1px;
+        margin-right: 1.2rem;
+        top: 0;
+        bottom: 0; }
 
 .footer {
   background: #131313 url("../img/footer-bg.png") no-repeat center;
@@ -1354,6 +1350,7 @@ h3 {
       line-height: 2rem;
       text-align: center;
       text-transform: uppercase;
+      max-width: 39.071rem;
       margin: auto;
       color: #E3B873;
       margin-bottom: 1.457rem; }
@@ -1609,42 +1606,35 @@ div#modal-user-email-error {
     font-size: 12px; }
   .nav__item {
     margin-right: 0.7rem; }
-  .steps {
-    height: 45vh; }
-    .steps-text {
-      min-width: 20.071rem; }
-    .steps-left {
-      width: 35%; }
-    .steps__right {
-      width: 60%;
-      margin-right: 0; }
-    .steps__swiper-right {
-      width: 60%; }
-    .steps-text__paragraph {
-      max-width: none; }
-  .team {
-    padding-top: 3rem; }
-    .team-and-clients {
-      margin-top: -0.5rem;
-      height: 156vh; }
-    .team__container {
-      margin-top: 6rem; }
-    .team__section-subtitle {
-      margin-bottom: 6.68rem; }
-    .team__card {
-      padding-top: 0;
-      padding-left: 0;
-      padding-right: 0; }
-      .team__card-icon {
-        top: -2rem;
-        left: -2rem; }
-    .team__text {
-      width: 90%;
-      padding-bottom: 0; }
-    .team__wrap-img {
-      max-width: 100%; }
-    .team__experience {
-      bottom: 0; } }
+  .steps-text {
+    min-width: 20.071rem; }
+  .steps-left {
+    width: 35%; }
+  .steps__right {
+    width: 60%;
+    margin-right: 0; }
+  .steps__swiper-right {
+    width: 60%; }
+  .steps-text__paragraph {
+    max-width: none; }
+  .team-and-clients {
+    margin-top: -0.5rem; }
+  .team__section-subtitle {
+    margin-bottom: 6.68rem; }
+  .team__card {
+    padding-top: 0;
+    padding-left: 0;
+    padding-right: 0; }
+    .team__card-icon {
+      top: -2rem;
+      left: -2rem; }
+  .team__text {
+    width: 90%;
+    padding-bottom: 0; }
+  .team__wrap-img {
+    max-width: 100%; }
+  .team__experience {
+    bottom: 0; } }
 
 @media screen and (max-width: 992px) {
   .nav {
@@ -1662,7 +1652,7 @@ div#modal-user-email-error {
   .design {
     background: none;
     background-color: #252525;
-    padding-bottom: 2.5rem;
+    padding-bottom: 0;
     margin-bottom: 0; }
     .design__section-title {
       color: #ffffff; }
@@ -1677,21 +1667,27 @@ div#modal-user-email-error {
   .steps {
     display: none; }
   .team {
-    padding-top: 3rem;
-    background: #252525; }
+    background: #252525;
+    margin-bottom: 3.1rem; }
     .team-and-clients {
       background-color: #252525;
-      background-image: none;
-      height: 85vh; }
+      background-image: none; }
     .team__container {
-      margin-top: -3rem; }
+      margin-top: 0; }
     .team__card {
       padding: 0; }
       .team__card-icon {
         top: -2rem;
         left: -2rem; }
     .team__subtitle {
+      padding-bottom: 21rem;
       color: #ffffff; }
+    .team__wrap-img {
+      width: 230px;
+      overflow: hidden; }
+    .team__image {
+      width: 250px;
+      height: unset; }
     .team__text {
       width: 90%; }
     .team__experience {
@@ -1701,6 +1697,10 @@ div#modal-user-email-error {
     display: flex;
     justify-content: center;
     margin-bottom: 3rem; }
+  .col-44 {
+    width: 43%; }
+  .col-56 {
+    width: 53.9%; }
   .clients {
     display: none; }
   .footer__map {
@@ -1754,6 +1754,8 @@ div#modal-user-email-error {
     width: 91%; }
   .col-56 {
     width: 94%; }
+  .section__subtitle {
+    max-width: 32.92rem; }
   .cur-step {
     padding-left: 0; }
   .control__form {
@@ -1770,14 +1772,17 @@ div#modal-user-email-error {
     margin-right: auto; }
   #controlPolicyCheckbox-error {
     top: 3rem; }
-  .team-and-clients {
-    height: 146vh; }
+  .team__wrap-img {
+    width: 304px;
+    overflow: hidden; }
+  .team__image {
+    width: 304px;
+    height: unset; }
   .footer__wrap {
     width: 100%;
-    margin: auto;
-    padding-right: 0;
-    padding-left: 0;
-    margin-bottom: 4rem; } }
+    margin-bottom: 4rem;
+    padding-left: 15%;
+    padding-right: 15%; } }
 
 @media screen and (max-width: 576px) {
   .menu {
@@ -1790,28 +1795,26 @@ div#modal-user-email-error {
     display: none; }
   .title {
     font-size: 1.91rem; }
-  .hero {
-    height: 50rem; }
-    .hero::after {
-      display: none; }
-    .hero__scroll-down {
-      display: none; }
-    .hero__content {
-      max-width: 100%; }
-    .hero__title {
-      max-width: 25rem;
-      margin-bottom: 0.93rem; }
-    .hero__text {
-      font-size: 1.5rem;
-      font-style: normal;
-      font-weight: normal;
-      line-height: 1.4;
-      max-width: 26.5rem;
-      margin-bottom: 2.6rem; }
-    .hero__button {
-      display: block;
-      min-width: 28.2rem;
-      margin-bottom: 2.16rem; }
+  .hero::after {
+    display: none; }
+  .hero__scroll-down {
+    display: none; }
+  .hero__content {
+    max-width: 100%; }
+  .hero__title {
+    max-width: 25rem;
+    margin-bottom: 0.93rem; }
+  .hero__text {
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1.4;
+    max-width: 26.5rem;
+    margin-bottom: 2.6rem; }
+  .hero__button {
+    display: block;
+    min-width: 28.2rem;
+    margin-bottom: 2.16rem; }
   .projects {
     padding-top: 4rem; }
   .section-title__heading {
@@ -1876,7 +1879,7 @@ div#modal-user-email-error {
         width: 4.628rem; }
     .control__form {
       flex-direction: column;
-      margin-left: -0.1rem; }
+      margin-left: 0.3rem; }
     .control__label {
       font-weight: normal;
       font-size: 1.25rem;
@@ -1926,8 +1929,8 @@ div#modal-user-email-error {
   .video__play {
     width: 20%;
     height: 20%; }
-  .team-and-clients {
-    height: 128vh; }
+  .team__container {
+    padding-bottom: 19rem; }
   .team__subtitle {
     display: none; }
   .footer {
@@ -1986,6 +1989,8 @@ div#modal-user-email-error {
     .policy__label--center {
       justify-content: flex-start;
       margin-left: 0; }
+  #footerPolicyCheckbox-error {
+    left: 0; }
   .modal-msg__dialog {
     min-width: 96%; }
   .modal__dialog {
@@ -2006,7 +2011,10 @@ div#modal-user-email-error {
   .logo {
     font-size: 1.01rem; }
   .hero {
-    height: 39.7rem; }
+    height: unset;
+    padding-top: 6.316rem; }
+    .hero__container {
+      padding: 0 0.3rem 3rem 0.3rem; }
     .hero__title {
       margin-top: 5.63rem;
       max-width: 25rem; }
@@ -2014,7 +2022,10 @@ div#modal-user-email-error {
       max-width: 26.5rem; }
     .hero__button {
       width: 100%;
-      min-width: 85%; }
+      min-width: unset;
+      padding-left: 0.7rem;
+      padding-right: 0.1rem;
+      margin-right: 0; }
   .section-title__text {
     font-size: 1.166rem;
     max-width: 25.41rem;
@@ -2036,16 +2047,24 @@ div#modal-user-email-error {
       object-fit: cover;
       width: 100%;
       height: 100%; }
+  .control__wrap {
+    width: 91.366%;
+    margin-top: -37.1rem; }
+  .control__title {
+    padding-left: 0.3rem; }
   .control__text {
-    min-width: 100%; }
+    width: 100%;
+    padding-left: 0.3rem; }
   .control__button {
-    min-width: 100%;
-    font-size: 1.25rem; }
+    width: 100%;
+    font-size: 1.25rem;
+    padding: 1.5rem 2.685rem; }
   .types {
     margin-top: 0;
-    padding-top: 5.4rem; }
+    padding-top: 5.3rem; }
     .types__title {
-      margin-bottom: 1.5rem; }
+      margin-bottom: 1.5rem;
+      margin-left: 0.3rem; }
     .types__card {
       margin-bottom: 6.18rem;
       margin-right: auto;
@@ -2053,7 +2072,7 @@ div#modal-user-email-error {
     .types__section-title {
       margin-bottom: 3.4rem; }
     .types__text {
-      margin: -11.5rem 0 0 0;
+      margin: -11.6rem 0 0 0;
       box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.05); }
     .types__list {
       line-height: 1.9rem;
@@ -2062,9 +2081,10 @@ div#modal-user-email-error {
     .types__pricetag {
       left: 0;
       bottom: -1.39rem;
-      padding: 1.014rem 2.2rem;
-      max-width: 15.869rem;
-      min-height: 2rem; }
+      padding: 0.914rem 2rem 0.914rem 2.7rem;
+      min-height: 2rem;
+      font-size: 1.25rem;
+      min-width: 15.98rem; }
   .design__icon {
     margin-bottom: 1.5rem; }
   .design__card {
@@ -2089,14 +2109,17 @@ div#modal-user-email-error {
     padding-left: 3.5rem; }
   .design__item {
     display: none; }
+  .card__title {
+    margin-left: 0.55rem; }
   .card__item {
     line-height: 1.9rem; }
     .card__item--ellipsis::after {
       content: '...'; }
   .card-text {
     max-width: 22.5rem; }
-  .team-and-clients {
-    height: 135.5vh; }
+  .team__container {
+    padding-top: 0.1rem;
+    padding-bottom: 12.6rem; }
   .team__title {
     margin-bottom: 1.2rem; }
   .team__section-subtitle {
@@ -2106,23 +2129,27 @@ div#modal-user-email-error {
   .team__icon {
     margin-bottom: 1.7rem; }
   .team__wrap-img {
-    min-width: 80.997%;
+    width: 100%;
+    overflow: hidden; }
+  .team__image {
     width: 100%; }
   .team__card {
-    margin-left: auto;
+    margin-left: 2.8rem;
     margin-right: auto; }
     .team__card-icon {
       width: 5.8rem;
       height: 5.8rem;
       top: -2.9rem;
       left: -2.7rem; }
+    .team__card-title {
+      font-size: 1.5rem;
+      margin-bottom: -0.9rem;
+      margin-left: 0.15rem; }
   .team__text {
-    max-width: 85.4%;
+    width: 76.554%;
+    margin-left: 2.7rem;
     margin-top: -6.7rem;
     padding-top: 1.771rem; }
-  .team__card-title {
-    font-size: 1.5rem;
-    margin-bottom: -0.9rem; }
   .team__position {
     font-size: 1.5rem;
     margin-bottom: 1.9rem; }
@@ -2133,7 +2160,7 @@ div#modal-user-email-error {
     margin-bottom: 6.2rem;
     align-items: center; }
   .footer__wrap {
-    margin-bottom: 1.2rem; }
+    margin-bottom: 1.4rem; }
   .footer__container {
     width: 100%; }
   .footer__title {
@@ -2145,7 +2172,7 @@ div#modal-user-email-error {
     width: 100%;
     font-size: 1.5rem;
     line-height: 2.283rem;
-    padding-bottom: 0.3rem;
+    padding-bottom: 0.25rem;
     border-bottom: 1px solid #ffffff; }
     .footer__input-group {
       flex-basis: 100%;
@@ -2198,9 +2225,12 @@ div#modal-user-email-error {
     width: 100%;
     min-width: 100%; }
   .projects {
-    padding-top: 6.1rem; }
+    padding-top: 1.2rem; }
+    .projects__container {
+      width: 89.366%; }
     .projects__text {
-      margin-bottom: 1.7rem; }
+      margin-bottom: 2rem;
+      line-height: 1.86rem; }
     .projects-swiper {
       margin-bottom: 0.2rem; }
   .col-44 {

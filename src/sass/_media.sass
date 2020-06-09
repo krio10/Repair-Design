@@ -5,7 +5,6 @@
     &__item
       margin-right: 0.7rem
   .steps
-    height: 45vh
     &-text
       min-width: 20.071rem
     &-left
@@ -18,12 +17,8 @@
     &-text__paragraph
       max-width: none
   .team
-    padding-top: 3rem
     &-and-clients
       margin-top: -0.5rem
-      height: 156vh
-    &__container
-      margin-top: 6rem
     &__section-subtitle
       margin-bottom: 6.68rem
     &__card
@@ -59,7 +54,7 @@
   .design
     background: none
     background-color: $dark_secondary
-    padding-bottom: 2.5rem
+    padding-bottom: 0
     margin-bottom: 0
     &__section-title
       color: $light
@@ -75,30 +70,41 @@
   .steps
     display: none
   .team
-    padding-top: 3rem
     background: $dark_secondary
+    margin-bottom: 3.1rem
     &-and-clients
       background-color: $dark_secondary
       background-image: none
-      height: 85vh      
     &__container
-      margin-top: -3rem
+      margin-top: 0
     &__card
       padding: 0
       &-icon
         top: -2rem
         left: -2rem
     &__subtitle
+      padding-bottom: 21rem
       color: $light
+    &__wrap-img
+      width: 230px
+      overflow: hidden
+    &__image
+      width: 250px
+      height: unset
     &__text
       width: 90%
     &__experience
       bottom: 0
-  .col-26
-    width: 100%
-    display: flex
-    justify-content: center
-    margin-bottom: 3rem
+  .col
+    &-26
+      width: 100%
+      display: flex
+      justify-content: center
+      margin-bottom: 3rem
+    &-44
+      width: 43%
+    &-56
+      width: 53.9%    
   .clients
     display: none
   .footer
@@ -161,6 +167,9 @@
       width: 91%
     &-56
       width: 94%
+  .section
+    &__subtitle
+      max-width: 32.92rem
   .cur-step
     padding-left: 0
   .control
@@ -180,15 +189,18 @@
   #controlPolicyCheckbox-error
       top: 3rem
   .team
-    &-and-clients
-      height: 146vh            
+    &__wrap-img
+      width: 304px
+      overflow: hidden
+    &__image
+      width: 304px
+      height: unset         
   .footer
     &__wrap
       width: 100%
-      margin: auto
-      padding-right: 0
-      padding-left: 0
       margin-bottom: 4rem
+      padding-left: 15%
+      padding-right: 15%
 @media screen and ( max-width: 576px )
   .menu
     font-size: 12px  
@@ -202,7 +214,6 @@
   .title
     font-size: 1.91rem
   .hero
-    height: 50rem
     &::after
       display: none
     &__scroll-down
@@ -292,7 +303,7 @@
         width: 4.628rem
     &__form
       flex-direction: column
-      margin-left: -0.1rem
+      margin-left: 0.3rem
     &__label
       font-weight: normal
       font-size: 1.25rem
@@ -338,8 +349,8 @@
       width: 20%
       height: 20%
   .team
-    &-and-clients
-      height: 128vh    
+    &__container
+      padding-bottom: 19rem
     &__subtitle
       display: none          
   .footer
@@ -400,6 +411,8 @@
       &--center
         justify-content: flex-start
         margin-left: 0
+  #footerPolicyCheckbox-error
+    left: 0        
   .modal
     &-msg__dialog
       min-width: 96%
@@ -420,7 +433,10 @@
   .logo
     font-size: 1.01rem
   .hero
-    height: 39.7rem
+    height: unset
+    padding-top: 6.316rem
+    &__container
+      padding: 0 0.3rem 3rem 0.3rem
     &__title
       margin-top: 5.63rem
       max-width: 25rem
@@ -428,7 +444,10 @@
       max-width: 26.5rem
     &__button
       width: 100%
-      min-width: 85%
+      min-width: unset
+      padding-left: 0.7rem
+      padding-right: 0.1rem
+      margin-right: 0
   .section
     &-title
       &__text
@@ -453,16 +472,24 @@
         width: 100%
         height: 100%
   .control
+    &__wrap
+      width: 91.366%
+      margin-top: -37.1rem
+    &__title
+      padding-left: 0.3rem
     &__text
-      min-width: 100%
+      width: 100%
+      padding-left: 0.3rem
     &__button
-      min-width: 100%
+      width: 100%
       font-size: 1.25rem
+      padding: 1.5rem 2.685rem
   .types
     margin-top: 0
-    padding-top: 5.4rem
+    padding-top: 5.3rem
     &__title
       margin-bottom: 1.5rem
+      margin-left: 0.3rem
     &__card
       margin-bottom: 6.18rem
       margin-right: auto
@@ -470,7 +497,7 @@
     &__section-title
       margin-bottom: 3.4rem
     &__text
-      margin: -11.5rem 0 0 0
+      margin: -11.6rem 0 0 0
       box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.05)
     &__list
       line-height: 1.9rem
@@ -479,9 +506,10 @@
     &__pricetag
       left: 0
       bottom: -1.39rem    
-      padding: 1.014rem 2.2rem
-      max-width: 15.869rem
+      padding: 0.914rem 2rem 0.914rem 2.7rem
       min-height: 2rem
+      font-size: 1.25rem
+      min-width: 15.98rem
   .design
     &__icon
       margin-bottom: 1.5rem    
@@ -509,6 +537,8 @@
     &__item
       display: none
   .card
+    &__title
+      margin-left: 0.55rem
     &__item
       line-height: 1.9rem
       &--ellipsis
@@ -517,34 +547,40 @@
     &-text
       max-width: 22.5rem
   .team
-    &-and-clients
-      height: 135.5vh       
+    &__container
+      padding-top: 0.1rem
+      padding-bottom: 12.6rem
     &__title
       margin-bottom: 1.2rem
-    &__section-subtitle
-      font-size: 1.25rem
-      line-height: 1.666rem
-      margin-bottom: 6.88rem
+    &__section
+      &-subtitle
+        font-size: 1.25rem
+        line-height: 1.666rem
+        margin-bottom: 6.88rem
     &__icon
       margin-bottom: 1.7rem
     &__wrap-img
-      min-width: 80.997%
+      width: 100%
+      overflow: hidden
+    &__image
       width: 100%
     &__card
-      margin-left: auto
+      margin-left: 2.8rem
       margin-right: auto
       &-icon
         width: 5.8rem
         height: 5.8rem
         top: -2.9rem
         left: -2.7rem
+      &-title
+        font-size: 1.5rem
+        margin-bottom: -0.9rem
+        margin-left: 0.15rem            
     &__text
-      max-width: 85.4%
+      width: 76.554%
+      margin-left: 2.7rem
       margin-top: -6.7rem
       padding-top: 1.771rem
-    &__card-title
-      font-size: 1.5rem
-      margin-bottom: -0.9rem
     &__position
       font-size: 1.5rem
       margin-bottom: 1.9rem
@@ -556,7 +592,7 @@
     align-items: center      
   .footer
     &__wrap
-      margin-bottom: 1.2rem
+      margin-bottom: 1.4rem
     &__container
       width: 100%
     &__title
@@ -568,7 +604,7 @@
       width: 100%
       font-size: 1.5rem
       line-height: 2.283rem
-      padding-bottom: 0.3rem
+      padding-bottom: 0.25rem
       border-bottom: 1px solid $light      
       &-group
         flex-basis: 100%
@@ -624,9 +660,12 @@
       width: 100%
       min-width: 100%
   .projects
-    padding-top: 6.1rem
+    padding-top: 1.2rem
+    &__container
+      width: 89.366%    
     &__text
-      margin-bottom: 1.7rem
+      margin-bottom: 2rem
+      line-height: 1.86rem
     &-swiper
       margin-bottom: 0.2rem
   .col      
