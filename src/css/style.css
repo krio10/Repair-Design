@@ -462,8 +462,7 @@ input.invalid {
   width: 55%; }
 
 .col-26 {
-  width: 26.8%;
-  margin: 0 1.4rem; }
+  flex-basis: 26.8%; }
 
 *, *:before, *:after {
   box-sizing: border-box; }
@@ -1124,7 +1123,7 @@ h3 {
 
 .team {
   background: linear-gradient(to bottom, #131313 52%, rgba(255, 255, 255, 0) 52%, rgba(255, 255, 255, 0) 48%);
-  margin-bottom: 7.1rem; }
+  margin-bottom: 7rem; }
   .team-and-clients {
     background: url("../img/team-bg-lines.svg") no-repeat center/cover; }
   .team__container {
@@ -1132,36 +1131,66 @@ h3 {
     padding-top: 3rem; }
   .team__section-title {
     margin-bottom: 2rem; }
+  .team__section-subtitle {
+    margin: 0 auto 3.58rem auto;
+    color: #ffffff;
+    max-width: 32rem;
+    line-height: 1.85rem; }
   .team__title {
     color: #ffffff;
     margin-left: 0;
     margin-right: 0; }
   .team__icon {
     margin-bottom: 1.3rem; }
-  .team__section-subtitle {
-    margin: 0 auto 3.68rem auto;
-    color: #ffffff;
-    max-width: 32rem;
-    line-height: 1.85rem; }
   .team__row {
-    justify-content: center; }
+    display: flex;
+    justify-content: center;
+    align-items: center; }
   .team__card {
+    padding-left: 35px;
+    padding-right: 35px;
+    padding-top: 35px;
     position: relative;
-    padding: 2.4rem 2.3rem 2.4rem 2.3rem; }
+    padding-bottom: 4.8rem; }
     .team__card-icon {
       position: absolute;
+      top: 0;
+      left: 0;
       display: flex;
       justify-content: center;
-      top: -0.1rem;
-      left: -0.3rem;
-      width: 5rem;
-      height: 5rem;
+      width: 70px;
+      height: 70px;
       background-color: #E3B873;
-      z-index: 10; }
+      z-index: 100;
+      box-shadow: 0px 5px 20px rgba(227, 184, 115, 0.5); }
+    .team__card-title {
+      margin-bottom: -1rem;
+      margin-left: 0;
+      padding: 0 0.2rem;
+      font-family: 'Yeseva One', cursive;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 1.285rem;
+      line-height: 1.785rem;
+      text-align: center;
+      min-width: 13.714rem; }
+  .team__wrap-img {
+    width: 274px;
+    height: 360px; }
+  .team__image {
+    -o-object-fit: cover;
+    object-fit: cover;
+    height: 100%; }
+  .team__text {
+    width: 16.642rem;
+    margin: -5.9rem auto 0 auto;
+    padding: 1.471rem 0 0 0;
+    text-align: center;
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.05); }
   .team__position {
     font-size: 1.285rem;
     color: #959595;
-    margin-bottom: 1.7rem; }
+    margin-bottom: 2.5rem; }
   .team__experience {
     font-family: 'Yeseva One', cursive;
     font-style: normal;
@@ -1170,39 +1199,12 @@ h3 {
     line-height: 1.428rem;
     text-align: center;
     text-transform: uppercase;
-    bottom: -1.9rem;
-    left: 0;
-    padding: 0.928rem 0.4rem 0.928rem 0.5rem;
+    margin-bottom: -1.9rem;
+    margin-left: 0;
+    margin-right: 0;
+    padding: 1.028rem 3.2rem;
     background-color: #E3B873;
     color: #ffffff; }
-  .team__card-title {
-    margin-bottom: -1rem;
-    margin-left: 0;
-    padding: 0 0.2rem;
-    font-family: 'Yeseva One', cursive;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 1.285rem;
-    line-height: 1.785rem;
-    text-align: center;
-    min-width: 13.714rem; }
-  .team__wrap-img {
-    display: flex;
-    justify-content: center;
-    width: 272px;
-    overflow: hidden; }
-  .team__image {
-    width: 272px;
-    height: 358px; }
-  .team__text {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    width: 16.642rem;
-    margin: -5.7rem auto 1.3rem auto;
-    padding: 1.471rem 0 0 0;
-    text-align: center;
-    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.05); }
   .team__subtitle {
     text-align: center;
     font-size: 1.428rem;
@@ -1223,15 +1225,15 @@ h3 {
   padding-bottom: 29rem; }
   .clients__section-title {
     margin-bottom: 3.5rem; }
+  .clients__section-subtitle {
+    margin: 0 auto;
+    max-width: 25.714rem;
+    line-height: 1.85rem; }
   .clients__title {
     margin-left: 0;
     margin-right: 0; }
   .clients__icon {
     margin-bottom: 1.3rem; }
-  .clients__section-subtitle {
-    margin: 0 auto;
-    max-width: 25.714rem;
-    line-height: 1.85rem; }
   .clients__row {
     justify-content: space-around; }
   .clients__card {
@@ -1239,16 +1241,16 @@ h3 {
     padding: 1.714rem 2.216rem 0 1.428rem;
     background-color: #ffffff;
     box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.04); }
-  .clients__card-title {
-    margin-top: -0.814rem;
-    margin-bottom: -1.1rem;
-    padding: 0.1rem 0.1rem;
-    font-family: 'Yeseva One', cursive;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 1.285rem;
-    line-height: 1.685rem;
-    max-width: 14.614rem; }
+    .clients__card-title {
+      margin-top: -0.814rem;
+      margin-bottom: -1rem;
+      padding: 0.1rem 0.2rem;
+      font-family: 'Yeseva One', cursive;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 1.285rem;
+      line-height: 1.685rem;
+      max-width: 14.614rem; }
   .clients__client {
     display: flex;
     justify-content: flex-start;
@@ -1617,24 +1619,8 @@ div#modal-user-email-error {
     width: 60%; }
   .steps-text__paragraph {
     max-width: none; }
-  .team-and-clients {
-    margin-top: -0.5rem; }
-  .team__section-subtitle {
-    margin-bottom: 6.68rem; }
   .team__card {
-    padding-top: 0;
-    padding-left: 0;
-    padding-right: 0; }
-    .team__card-icon {
-      top: -2rem;
-      left: -2rem; }
-  .team__text {
-    width: 90%;
-    padding-bottom: 0; }
-  .team__wrap-img {
-    max-width: 100%; }
-  .team__experience {
-    bottom: 0; } }
+    padding-right: 10px; } }
 
 @media screen and (max-width: 992px) {
   .nav {
@@ -1651,7 +1637,7 @@ div#modal-user-email-error {
     display: block; }
   .design {
     background: none;
-    background-color: #252525;
+    background-color: #181818;
     padding-bottom: 0;
     margin-bottom: 0; }
     .design__section-title {
@@ -1667,40 +1653,27 @@ div#modal-user-email-error {
   .steps {
     display: none; }
   .team {
-    background: #252525;
+    background: #181818;
     margin-bottom: 3.1rem; }
     .team-and-clients {
-      background-color: #252525;
+      background-color: #181818;
       background-image: none; }
     .team__container {
       margin-top: 0; }
-    .team__card {
-      padding: 0; }
-      .team__card-icon {
-        top: -2rem;
-        left: -2rem; }
     .team__subtitle {
       padding-bottom: 21rem;
       color: #ffffff; }
-    .team__wrap-img {
-      width: 230px;
-      overflow: hidden; }
-    .team__image {
-      width: 250px;
-      height: unset; }
-    .team__text {
-      width: 90%; }
     .team__experience {
-      bottom: 0; }
-  .col-26 {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    margin-bottom: 3rem; }
+      padding: 1.028rem 3.243rem; }
   .col-44 {
     width: 43%; }
   .col-56 {
     width: 53.9%; }
+  .team__wrap-img {
+    width: 200px;
+    height: 263px; }
+  .team__text {
+    margin-top: -4.2rem; }
   .clients {
     display: none; }
   .footer__map {
@@ -1774,10 +1747,12 @@ div#modal-user-email-error {
     top: 3rem; }
   .team__wrap-img {
     width: 304px;
-    overflow: hidden; }
-  .team__image {
-    width: 304px;
-    height: unset; }
+    height: 33.41rem; }
+  .team__text {
+    margin-top: -8rem;
+    width: 19.442rem; }
+  .team__experience {
+    padding: 1.028rem 4.643rem; }
   .footer__wrap {
     width: 100%;
     margin-bottom: 4rem;
@@ -1828,8 +1803,9 @@ div#modal-user-email-error {
   .card__image {
     display: block; }
   .design {
-    background-color: #252525;
-    padding-bottom: 0.4rem; }
+    background-color: #181818;
+    padding-bottom: 0.4rem;
+    margin-bottom: -41.3px; }
     .design__section-title {
       color: #ffffff; }
     .design__section-subtitle {
@@ -1905,6 +1881,9 @@ div#modal-user-email-error {
         color: #ffffff; }
       .control__input::placeholder {
         color: #ffffff; }
+      .control__input::-moz-placeholder, .control__input :-moz-placeholder {
+        opacity: 1;
+        color: #ffffff; }
     .control__button {
       order: 3;
       width: 60%;
@@ -1929,12 +1908,21 @@ div#modal-user-email-error {
   .video__play {
     width: 20%;
     height: 20%; }
-  .team__container {
-    padding-bottom: 19rem; }
+  .team-and-clients {
+    background: #181818; }
+  .team__row {
+    padding-bottom: 15.4rem; }
   .team__subtitle {
     display: none; }
+  .team__card {
+    padding-bottom: 5.4rem; }
+  .team__text {
+    width: 20rem;
+    margin-top: -8.7rem; }
+  .team__experience {
+    padding: 1.028rem 4.9rem; }
   .footer {
-    background: #252525; }
+    background: #181818; }
     .footer__wrap {
       width: 100%;
       padding-right: 5%;
@@ -2117,97 +2105,92 @@ div#modal-user-email-error {
       content: '...'; }
   .card-text {
     max-width: 22.5rem; }
-  .team__container {
-    padding-top: 0.1rem;
-    padding-bottom: 12.6rem; }
   .team__title {
     margin-bottom: 1.2rem; }
   .team__section-subtitle {
     font-size: 1.25rem;
     line-height: 1.666rem;
-    margin-bottom: 6.88rem; }
+    margin-bottom: 3.98rem; }
   .team__icon {
     margin-bottom: 1.7rem; }
-  .team__wrap-img {
-    width: 100%;
-    overflow: hidden; }
-  .team__image {
-    width: 100%; }
   .team__card {
-    margin-left: 2.8rem;
+    width: 100%;
+    margin-left: 0;
     margin-right: auto; }
     .team__card-icon {
       width: 5.8rem;
-      height: 5.8rem;
-      top: -2.9rem;
-      left: -2.7rem; }
+      height: 5.8rem; }
     .team__card-title {
       font-size: 1.5rem;
       margin-bottom: -0.9rem;
       margin-left: 0.15rem; }
+  .team__wrap-img {
+    width: 100%;
+    height: 100%; }
   .team__text {
-    width: 76.554%;
-    margin-left: 2.7rem;
-    margin-top: -6.7rem;
-    padding-top: 1.771rem; }
+    margin-top: -6.6rem;
+    margin-left: auto;
+    padding-top: 1.82rem;
+    max-width: 19.289rem; }
   .team__position {
     font-size: 1.5rem;
-    margin-bottom: 1.9rem; }
+    margin-bottom: 3rem; }
   .team__experience {
     font-size: 1.083rem;
-    padding: 1.028rem 0.5rem 1.128rem 0.5rem; }
+    padding: 1.228rem 3.69rem 1.128rem 3.729rem; }
   .col-26 {
-    margin-bottom: 6.2rem;
-    align-items: center; }
-  .footer__wrap {
-    margin-bottom: 1.4rem; }
-  .footer__container {
-    width: 100%; }
-  .footer__title {
-    line-height: 1.9rem;
-    margin-bottom: 4.271rem; }
-  .footer__label {
-    margin-bottom: -0.15rem; }
-  .footer__input {
-    width: 100%;
-    font-size: 1.5rem;
-    line-height: 2.283rem;
-    padding-bottom: 0.25rem;
-    border-bottom: 1px solid #ffffff; }
-    .footer__input-group {
-      flex-basis: 100%;
-      margin-bottom: 3.9rem;
-      font-size: 1.4rem;
-      line-height: 2.183rem; }
-  .footer__button {
-    width: 100%;
-    font-size: 1.25rem;
-    padding: 1.5rem 3.485rem; }
-  .footer__address {
-    width: 100%; }
-  .footer__title--address {
-    font-size: 1.5rem;
-    line-height: 2.1rem;
-    width: 100%;
-    margin-left: 0;
-    margin-right: 0;
-    margin-bottom: 1.757rem;
-    order: 2; }
-  .footer__icons {
-    order: 3; }
-  .footer__icon {
-    width: 3.5rem;
-    height: 3.5rem;
-    margin-right: 0.6rem;
-    margin-left: 0.8rem; }
-  .footer__map {
-    width: 91%;
-    height: 21.3rem;
-    margin: auto;
-    margin-bottom: 3.372rem;
-    order: 0; }
-  .footer__menu {
-    display: none; }
+    margin-bottom: 0.2rem; }
+  .footer {
+    margin-top: -2.9rem; }
+    .footer__wrap {
+      margin-bottom: 1.4rem; }
+    .footer__container {
+      width: 100%; }
+    .footer__title {
+      line-height: 1.9rem;
+      margin-bottom: 4.271rem; }
+    .footer__label {
+      margin-bottom: -0.15rem; }
+    .footer__input {
+      width: 100%;
+      font-size: 1.5rem;
+      line-height: 2.283rem;
+      padding-bottom: 0.25rem;
+      border-bottom: 1px solid #ffffff; }
+      .footer__input-group {
+        flex-basis: 100%;
+        margin-bottom: 3.9rem;
+        font-size: 1.4rem;
+        line-height: 2.183rem; }
+    .footer__button {
+      width: 100%;
+      font-size: 1.25rem;
+      padding: 1.5rem 3.485rem; }
+    .footer__address {
+      width: 100%; }
+    .footer__title--address {
+      font-size: 1.5rem;
+      line-height: 2.1rem;
+      width: 100%;
+      margin-left: 0;
+      margin-right: 0;
+      margin-bottom: 1.757rem;
+      order: 2; }
+    .footer__icons {
+      order: 3; }
+    .footer__icon {
+      width: 3.5rem;
+      height: 3.5rem;
+      margin-right: 0.6rem;
+      margin-left: 0.8rem; }
+    .footer__map {
+      width: 91%;
+      height: 21.3rem;
+      margin: auto;
+      margin-bottom: 3.372rem;
+      order: 0; }
+    .footer__menu {
+      display: none; }
   .ymaps-2-1-76-map {
     width: 91%; }
   .modal__dialog {

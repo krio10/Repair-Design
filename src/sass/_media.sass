@@ -17,24 +17,8 @@
     &-text__paragraph
       max-width: none
   .team
-    &-and-clients
-      margin-top: -0.5rem
-    &__section-subtitle
-      margin-bottom: 6.68rem
     &__card
-      padding-top: 0
-      padding-left: 0
-      padding-right: 0
-      &-icon
-        top: -2rem
-        left: -2rem
-    &__text
-      width: 90%
-      padding-bottom: 0
-    &__wrap-img
-      max-width: 100%
-    &__experience
-      bottom: 0
+      padding-right: 10px
 @media screen and ( max-width: 992px )
   .nav
     display: none
@@ -53,7 +37,7 @@
       display: block
   .design
     background: none
-    background-color: $dark_secondary
+    background-color: $dark_primary
     padding-bottom: 0
     margin-bottom: 0
     &__section-title
@@ -70,41 +54,29 @@
   .steps
     display: none
   .team
-    background: $dark_secondary
+    background: $dark_primary
     margin-bottom: 3.1rem
     &-and-clients
-      background-color: $dark_secondary
+      background-color: $dark_primary
       background-image: none
     &__container
       margin-top: 0
-    &__card
-      padding: 0
-      &-icon
-        top: -2rem
-        left: -2rem
     &__subtitle
       padding-bottom: 21rem
       color: $light
-    &__wrap-img
-      width: 230px
-      overflow: hidden
-    &__image
-      width: 250px
-      height: unset
-    &__text
-      width: 90%
     &__experience
-      bottom: 0
+      padding: 1.028rem 3.243rem
   .col
-    &-26
-      width: 100%
-      display: flex
-      justify-content: center
-      margin-bottom: 3rem
     &-44
       width: 43%
     &-56
-      width: 53.9%    
+      width: 53.9%
+  .team
+    &__wrap-img
+      width: 200px
+      height: 263px
+    &__text
+      margin-top: -4.2rem
   .clients
     display: none
   .footer
@@ -162,7 +134,7 @@
   .row
     flex-direction: column
     align-items: center  
-  .col      
+  .col
     &-44
       width: 91%
     &-56
@@ -191,10 +163,12 @@
   .team
     &__wrap-img
       width: 304px
-      overflow: hidden
-    &__image
-      width: 304px
-      height: unset         
+      height: 33.41rem
+    &__text
+      margin-top: -8rem
+      width: 19.442rem
+    &__experience
+      padding: 1.028rem 4.643rem      
   .footer
     &__wrap
       width: 100%
@@ -249,8 +223,9 @@
     &__image
       display: block
   .design
-    background-color: $dark_secondary
+    background-color: $dark_primary
     padding-bottom: 0.4rem
+    margin-bottom: -41.3px
     &__section-title
       color: $light
     &__section-subtitle
@@ -321,6 +296,9 @@
       padding-bottom: 0.4rem
       &::placeholder
         color: $light
+      &::-moz-placeholder, :-moz-placeholder
+        opacity: 1
+        color: $light        
     &__button
       order: 3
       width: 60%
@@ -349,12 +327,21 @@
       width: 20%
       height: 20%
   .team
-    &__container
-      padding-bottom: 19rem
+    &-and-clients
+      background: $dark_primary
+    &__row
+      padding-bottom: 15.4rem      
     &__subtitle
-      display: none          
+      display: none
+    &__card
+      padding-bottom: 5.4rem
+    &__text
+      width: 20rem
+      margin-top: -8.7rem
+    &__experience
+      padding: 1.028rem 4.9rem 
   .footer
-    background: $dark_secondary    
+    background: $dark_primary    
     &__wrap
       width: 100%
       padding-right: 5%
@@ -547,50 +534,44 @@
     &-text
       max-width: 22.5rem
   .team
-    &__container
-      padding-top: 0.1rem
-      padding-bottom: 12.6rem
     &__title
       margin-bottom: 1.2rem
     &__section
       &-subtitle
         font-size: 1.25rem
         line-height: 1.666rem
-        margin-bottom: 6.88rem
+        margin-bottom: 3.98rem
     &__icon
       margin-bottom: 1.7rem
-    &__wrap-img
-      width: 100%
-      overflow: hidden
-    &__image
-      width: 100%
     &__card
-      margin-left: 2.8rem
+      width: 100%
+      margin-left: 0
       margin-right: auto
       &-icon
         width: 5.8rem
         height: 5.8rem
-        top: -2.9rem
-        left: -2.7rem
       &-title
         font-size: 1.5rem
         margin-bottom: -0.9rem
-        margin-left: 0.15rem            
+        margin-left: 0.15rem
+    &__wrap-img
+      width: 100%
+      height: 100%                    
     &__text
-      width: 76.554%
-      margin-left: 2.7rem
-      margin-top: -6.7rem
-      padding-top: 1.771rem
+      margin-top: -6.6rem
+      margin-left: auto
+      padding-top: 1.82rem
+      max-width: 19.289rem      
     &__position
       font-size: 1.5rem
-      margin-bottom: 1.9rem
+      margin-bottom: 3rem
     &__experience
       font-size: 1.083rem
-      padding: 1.028rem 0.5rem 1.128rem 0.5rem 
+      padding: 1.228rem 3.69rem 1.128rem 3.729rem
   .col-26
-    margin-bottom: 6.2rem
-    align-items: center      
+    margin-bottom: 0.2rem
   .footer
+    margin-top: -2.9rem    
     &__wrap
       margin-bottom: 1.4rem
     &__container

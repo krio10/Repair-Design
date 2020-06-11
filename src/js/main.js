@@ -243,7 +243,7 @@ $(document).ready(function () {
     footerPolicyCheckbox: "Требуется ваше согласие",    
     userQuestion: "Заполните поле",      
     userEmail: {
-      required: "Введите корректный email",
+      required: "Заполните поле",
       email: "Введите корректный email"
     }
   },
