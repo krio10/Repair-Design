@@ -359,8 +359,6 @@ template {
   border: none;
   border-bottom: 1px solid rgba(54, 54, 54, 0.3);
   color: #ffffff; }
-  .input--light::-webkit-input-placeholder {
-    color: #ffffff; }
   .input--light::-moz-placeholder {
     color: #ffffff; }
   .input--light:-ms-input-placeholder {
@@ -1871,8 +1869,6 @@ div#modal-user-email-error {
       border-bottom: 1px solid #ffffff;
       margin-bottom: 4.9rem;
       padding-bottom: 0.4rem; }
-      .control__input::-webkit-input-placeholder {
-        color: #ffffff; }
       .control__input::-moz-placeholder {
         color: #ffffff; }
       .control__input:-ms-input-placeholder {
